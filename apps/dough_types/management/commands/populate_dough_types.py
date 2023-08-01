@@ -10,7 +10,7 @@ class Command(BaseCommand):
         dough_types_data = [
             {
                 "type": "Средна",
-                "picture": "https://www.dominos.bg/gallery/pansizes/bgiparTraditional_panbg.png",
+                "picture": "/dough/bgiparTraditional_panbg.png",
                 "description": "Нашето традиционно тесто",
                 "price": 10.9
             }
@@ -18,7 +18,7 @@ class Command(BaseCommand):
 
             {
                 "type": "Средна",
-                "picture": "https://www.dominos.bg/gallery/pansizes/bgiparItalian_style_panbg.png",
+                "picture": "/dough/bgiparItalian_style_panbg.png",
                 "description": "Тесто италиански стил",
                 "price": 10.9
             }
@@ -26,7 +26,7 @@ class Command(BaseCommand):
 
             {
                 "type": "Средна",
-                "picture": "https://www.dominos.bg/gallery/pansizes/bgiparGluten_Freebg.png",
+                "picture": "/dough/bgiparGluten_Freebg.png",
                 "description": "Gluten Free Dough  (+ 3,10лв)",
                 "price": 14.0
             }
@@ -34,7 +34,7 @@ class Command(BaseCommand):
 
             {
                 "type": "Голяма",
-                "picture": "https://www.dominos.bg/gallery/pansizes/bgiparTraditional_panbg.png",
+                "picture": "/dough/bgiparTraditional_panbg.png",
                 "description": "Нашето традиционно тесто",
                 "price": 14.0
             }
@@ -42,7 +42,7 @@ class Command(BaseCommand):
 
             {
                 "type": "Голяма",
-                "picture": "https://www.dominos.bg/gallery/pansizes/bgiparItalian_style_panbg.png",
+                "picture": "/dough/bgiparItalian_style_panbg.png",
                 "description": "Тесто италиански стил",
                 "price": 14.0
             }
@@ -50,7 +50,7 @@ class Command(BaseCommand):
 
             {
                 "type": "Голяма",
-                "picture": "https://www.dominos.bg/gallery/pansizes/bgiparThin_and_crispy_panbg.png",
+                "picture": "/dough/bgiparThin_and_crispy_panbg.png",
                 "description": "Тънко и хрупкаво тесто",
                 "price": 14.0
             }
@@ -58,7 +58,7 @@ class Command(BaseCommand):
 
             {
                 "type": "Голяма",
-                "picture": "https://www.dominos.bg/gallery/pansizes/bgiparPhiladelphia_panbg.png",
+                "picture": "/dough/bgiparPhiladelphia_panbg.png",
                 "description": "Прясно омесено тесто с коричка пълнена със сирене Philadelphia (+2,50лв)",
                 "price": 16.5
             }
@@ -66,7 +66,7 @@ class Command(BaseCommand):
 
             {
                 "type": "Голяма",
-                "picture": "https://www.dominos.bg/gallery/pansizes/bgiparLarge_mozzarella_crustbg.png",
+                "picture": "/dough/bgiparLarge_mozzarella_crustbg.png",
                 "description": "Прясно омесено тесто с коричка, пълнена с моцарела (+2,50лв.)",
                 "price": 16.5
             }
@@ -74,7 +74,7 @@ class Command(BaseCommand):
 
             {
                 "type": "Голяма",
-                "picture": "https://www.dominos.bg/gallery/pansizes/bgiparLarge_pepperoni_crustbg.png",
+                "picture": "/dough/bgiparLarge_pepperoni_crustbg.png",
                 "description": "Прясно омесено тесто с коричка, пълнена с пеперони (+2,50лв.)",
                 "price": 16.5
             }
@@ -82,7 +82,7 @@ class Command(BaseCommand):
 
             {
                 "type": "Джъмбо",
-                "picture": "https://www.dominos.bg/gallery/pansizes/bgiparTraditional_panbg.png",
+                "picture": "/dough/bgiparTraditional_panbg.png",
                 "description": "Нашето традиционно тесто",
                 "price": 15.4
             }
@@ -90,7 +90,7 @@ class Command(BaseCommand):
 
             {
                 "type": "Джъмбо",
-                "picture": "https://www.dominos.bg/gallery/pansizes/bgiparItalian_style_panbg.png",
+                "picture": "/dough/bgiparItalian_style_panbg.png",
                 "description": "Тесто италиански стил",
                 "price": 15.4
             }

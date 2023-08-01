@@ -8,17 +8,22 @@ class Command(BaseCommand):
 
     def handle(self, *args, **kwargs):
         Vegetables = [
-            "Моцарела",
-            "Чедар сирене",
-            "Веган Моцарела",
-            "Краве сирене",
-            "Топено сиренее",
-            "Пармезан",
-            "Ементалл"
+            "Сушени доматии",
+            "Лук",
+            "Халапеньо-люти чушки",
+            "Пресни гъби",
+            "Карамелизиран лук",
+            "Ананас",
+            "Пресни зелени чушки",
+            "Кисeли краставички",
+            "Пресни домати",
+            "Царевица",
+            "Рукола",
+            "Черни маслини"
         ]
 
         for item in Vegetables:
-            dough_type = Vegetable.objects.create(
+            create_object = Vegetable.objects.create(
                 name=item,
             )
-            self.stdout.write(self.style.SUCCESS(f'Successfully created Vegetable: {dough_type}'))
+            self.stdout.write(self.style.SUCCESS(f'Successfully created Vegetable: {create_object}'))

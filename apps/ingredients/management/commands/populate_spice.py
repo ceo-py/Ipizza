@@ -15,7 +15,7 @@ class Command(BaseCommand):
         ]
 
         for item in Spices:
-            dough_type = Spice.objects.create(
+            create_object = Spice.objects.create(
                 name=item,
             )
-            self.stdout.write(self.style.SUCCESS(f'Successfully created Spice: {dough_type}'))
+            self.stdout.write(self.style.SUCCESS(f'Successfully created Spice: {create_object}'))

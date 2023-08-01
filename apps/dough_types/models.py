@@ -9,7 +9,7 @@ class DoughType(models.Model):
     )
 
     type = models.CharField(max_length=100, choices=DOUGH_SIZES)
-    picture = models.URLField()
+    picture = models.ImageField(upload_to='dough/')
     description = models.TextField()
     price = models.DecimalField(decimal_places=2, max_digits=6)
 

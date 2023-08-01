@@ -18,7 +18,7 @@ class Command(BaseCommand):
       ]
 
         for item in Cheeses:
-            dough_type = Cheese.objects.create(
+            create_object = Cheese.objects.create(
                 name=item,
             )
-            self.stdout.write(self.style.SUCCESS(f'Successfully created Cheese: {dough_type}'))
+            self.stdout.write(self.style.SUCCESS(f'Successfully created Cheese: {create_object}'))

@@ -20,7 +20,7 @@ class Command(BaseCommand):
         ]
 
         for item in Meats:
-            dough_type = Meat.objects.create(
+            create_object = Meat.objects.create(
                 name=item,
             )
-            self.stdout.write(self.style.SUCCESS(f'Successfully created Meat: {dough_type}'))
+            self.stdout.write(self.style.SUCCESS(f'Successfully created Meat: {create_object}'))

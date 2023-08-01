@@ -8,17 +8,13 @@ class Command(BaseCommand):
 
     def handle(self, *args, **kwargs):
         Sauces = [
-        "Моцарела",
-        "Чедар сирене",
-        "Веган Моцарела",
-        "Краве сирене",
-        "Топено сиренее",
-        "Пармезан",
-        "Ементалл"
+        "Сметана",
+        "Барбекю сос",
+        "Доматен сос"
       ]
 
         for item in Sauces:
-            dough_type = Sauce.objects.create(
+            create_object = Sauce.objects.create(
                 name=item,
             )
-            self.stdout.write(self.style.SUCCESS(f'Successfully created Sauces: {dough_type}'))
+            self.stdout.write(self.style.SUCCESS(f'Successfully created Sauces: {create_object}'))
