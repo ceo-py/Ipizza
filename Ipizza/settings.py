@@ -34,7 +34,9 @@ ALLOWED_HOSTS = []
 DEV_ADDED_APPS = ["apps.common",
                   "apps.ingredients",
                   "apps.pizza",
-                  "apps.dough_types",]
+                  "apps.dough_types",
+                  "apps.chicken",
+                  "apps.appetizer"]
 
 INSTALLED_APPS = [
     "django.contrib.admin",
