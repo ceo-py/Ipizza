@@ -6,18 +6,25 @@ The project is a web application for a pizza restaurant that offers a diverse me
 
 ## Features
 
-- **Pizza Management**: Users can create new pizza items with custom toppings, sauces, and crust types, providing flexibility in creating diverse pizza combinations.
+The application provides the following features:
 
-- **Dough Types**: The application supports various dough types, such as "Средна," "Голяма," and "Джъмбо," with their respective descriptions and prices.
+- **Menu Variety**: The restaurant offers a diverse menu, including pizza, drinks, sandwiches, salads, pasta, and other delicious items, catering to different tastes and preferences.
 
-- **Ingredients**: Users can add and manage a wide range of ingredients like spices, meats, vegetables, cheese, and sauces that can be used in pizza recipes.
+- **Customization**: Users can easily customize their orders by adding or removing toppings from the available items in the menu, allowing them to create personalized dishes.
 
-- **Tags**: The system allows users to tag pizza items with descriptive tags, making it easier for customers to filter and find their preferred pizza choices.
+- **Shopping Cart**: Customers can add multiple items to their cart and review their selections before proceeding to checkout.
 
-- **Image Uploads**: The application supports image uploads for pizza items, ingredients, and tags, making the menu visually appealing.
+- **Seamless Checkout**: The application offers a smooth and secure checkout process, enabling customers to make online payments for their orders.
 
-- **Database Backup**: A script is provided to create backups of the database in JSON format, facilitating easy data preservation.
+- **User Accounts**: Users can create accounts and log in to access additional features, such as order history and personalized preferences.
 
+- **Order Tracking**: Customers can track the status of their orders, providing them with real-time updates on their delivery or pick-up.
+
+- **Admin Panel**: The application provides an admin panel for restaurant staff to manage the menu, process orders, and view sales data.
+
+- **Responsive Design**: The web application is built with a responsive design, ensuring a seamless experience across various devices, including desktops, tablets, and mobile phones.
+
+Overall, the project aims to enhance the restaurant's efficiency and customer satisfaction by offering a convenient and user-friendly platform for ordering food and beverages.
 ## Database Diagram
 
 Below is the Entity-Relationship Diagram (ERD) representing the main models used in the database:
