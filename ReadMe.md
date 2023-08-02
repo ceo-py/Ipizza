@@ -1,8 +1,8 @@
-# Project Name
+# Ipizza
 
 ## Description
 
-This project, is a web application developed using Django, a high-level Python web framework. It aims to provide a user-friendly interface for managing a pizza restaurant's menu, allowing users to create, update, and delete pizza items with various toppings and crust types.
+The project is a web application for a pizza restaurant that offers a diverse menu, including pizza, drinks, sandwiches, salads, pasta, and more. Users can customize their orders by adding or removing toppings from the items in the menu. They can add desired items to the cart and proceed to make payments for their order. The application aims to provide a user-friendly interface for managing orders and enhancing the overall dining experience.
 
 ## Features
 
