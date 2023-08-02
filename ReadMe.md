@@ -22,7 +22,7 @@ This project, "Project Name," is a web application developed using Django, a hig
 
 Below is the Entity-Relationship Diagram (ERD) representing the main models used in the database:
 
-![Database Diagram](link-to-image)
+![Database Diagram](https://github.com/ceo-py/Ipizza/blob/master/diagram_db.png)
 
 ## Setup and Usage
 
@@ -62,11 +62,3 @@ Below is the Entity-Relationship Diagram (ERD) representing the main models used
 7. Access the admin panel at http://localhost:8000/admin/ and use the superuser credentials to log in.
 
 8. Begin managing the pizza menu and ingredients via the admin panel.
-
-## Contribution
-
-Contributions to the project are welcome! If you find any issues or have suggestions for improvement, feel free to open an issue or submit a pull request.
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](link-to-license-file) file for details.
