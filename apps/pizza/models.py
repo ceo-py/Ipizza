@@ -16,7 +16,7 @@ class Pizza(models.Model):
     vegetables = models.ManyToManyField(Vegetable, blank=True)
     cheese = models.ManyToManyField(Cheese, blank=True)
     sauce = models.ManyToManyField(Sauce, blank=True)
-    tag = models.ManyToManyField(Tag, blank=True)
+    tags = models.ManyToManyField(Tag, blank=True)
 
     def __str__(self):
         return self.name

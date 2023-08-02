@@ -5,7 +5,7 @@ from apps.pizza.models import Pizza
 
 # Register the PizzaAdmin class
 class PizzaAdmin(admin.ModelAdmin):
-    filter_horizontal = ('spices', 'meats', 'vegetables', 'cheese', 'sauce')
+    filter_horizontal = ('spices', 'meats', 'vegetables', 'cheese', 'sauce', 'tags')
 
 
 # Register the Pizza model with the custom admin class
