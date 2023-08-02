@@ -1,17 +1,15 @@
 from django.db import models
 
-from apps.dough_type.models import DoughType
 from apps.ingredient.models import Spice, Meat, Vegetable, Cheese, Sauce, Tag
 
 
-class Pizza(models.Model):
+class Pasta(models.Model):
     name = models.CharField(max_length=100)
     front_description = models.TextField()
-    front_image = models.ImageField(upload_to='pizzas/front/')
+    front_image = models.ImageField(upload_to='pastas/front/')
     details_description = models.TextField()
-    details_image = models.ImageField(upload_to='pizzas/details/')
+    details_image = models.ImageField(upload_to='pastas/details/')
     price = models.DecimalField(max_digits=10, decimal_places=2)
-    dough_type = models.ForeignKey(DoughType, on_delete=models.SET_NULL, null=True)
     spices = models.ManyToManyField(Spice, blank=True)
     meats = models.ManyToManyField(Meat, blank=True)
     vegetables = models.ManyToManyField(Vegetable, blank=True)

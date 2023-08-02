@@ -10,7 +10,7 @@ class Command(BaseCommand):
         Appetizers = [
             {
                 "product_name": "Моцарелено хлебче",
-                "product_picture": "https://www.dominos.bg/gallery/fmobile/1333ipar.png",
+                "product_picture": "appetizers/1333ipar.png",
                 "ingredient": "Прясно изпечено пухкаво хлебче с моцарела и специалната подправка на Доминос, придружено с доматен сос",
                 "price": 4.5,
                 "tag": {
@@ -19,7 +19,7 @@ class Command(BaseCommand):
             },
             {
                 "product_name": "Картофки Уеджис",
-                "product_picture": "https://www.dominos.bg/gallery/fmobile/1231ipar.png",
+                "product_picture": "appetizers/1231ipar.png",
                 "ingredient": "Запечени на фурна картофки с апетитна коричка, леко подправени, придружени със сос Барбекю",
                 "price": 4.5,
                 "tag": {
@@ -28,7 +28,7 @@ class Command(BaseCommand):
             },
             {
                 "product_name": "Моцарелени пръчици",
-                "product_picture": "https://www.dominos.bg/gallery/fmobile/1230ipar.png",
+                "product_picture": "appetizers/1230ipar.png",
                 "ingredient": "5 броя хрупкави моцарелени пръчици със сос барбекю",
                 "price": 7.5,
                 "tag": {}
