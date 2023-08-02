@@ -95,31 +95,6 @@ class Command(BaseCommand):
                 "ingredients": "",
                 "price": 2.8,
                 "tag": {}
-            },
-            {
-                "product_name": "Моцарелено хлебче",
-                "product_picture": "drinks/1333ipar.png",
-                "ingredients": "Прясно изпечено пухкаво хлебче с моцарела и специалната подправка на Доминос, придружено с доматен сос",
-                "price": 4.5,
-                "tag": {
-                    "VEGETARIAN": "https://www.dominos.bg/images/tags/vegetarian.svg"
-                }
-            },
-            {
-                "product_name": "Картофки Уеджис",
-                "product_picture": "httpsdrinks1231ipar.png",
-                "ingredients": "Запечени на фурна картофки с апетитна коричка, леко подправени, придружени със сос Барбекю",
-                "price": 4.5,
-                "tag": {
-                    "VEGETARIAN": "https://www.dominos.bg/images/tags/vegetarian.svg"
-                }
-            },
-            {
-                "product_name": "Моцарелени пръчици",
-                "product_picture": "drinks/1230ipar.png",
-                "ingredients": "5 броя хрупкави моцарелени пръчици със сос барбекю",
-                "price": 7.5,
-                "tag": {}
             }
         ]
 
