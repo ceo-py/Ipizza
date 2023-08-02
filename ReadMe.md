@@ -2,7 +2,7 @@
 
 ## Description
 
-This project, "Project Name," is a web application developed using Django, a high-level Python web framework. It aims to provide a user-friendly interface for managing a pizza restaurant's menu, allowing users to create, update, and delete pizza items with various toppings and crust types.
+This project, is a web application developed using Django, a high-level Python web framework. It aims to provide a user-friendly interface for managing a pizza restaurant's menu, allowing users to create, update, and delete pizza items with various toppings and crust types.
 
 ## Features
 
