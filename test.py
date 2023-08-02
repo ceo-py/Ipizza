@@ -1,4 +1,4 @@
-from apps.dough_types.models import DoughType
+from apps.dough_type.models import DoughType
 
 # Adding dough types
 dough_types_data = [

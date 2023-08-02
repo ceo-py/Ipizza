@@ -1,7 +1,7 @@
 from django.db import models
 
-from apps.dough_types.models import DoughType
-from apps.ingredients.models import Spice, Meat, Vegetable, Cheese, Sauce, Tag
+from apps.dough_type.models import DoughType
+from apps.ingredient.models import Spice, Meat, Vegetable, Cheese, Sauce, Tag
 
 
 class Pizza(models.Model):

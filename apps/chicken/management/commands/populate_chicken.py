@@ -10,7 +10,7 @@ class Command(BaseCommand):
         chickens = [{
             "product_name": "ПИЛЕ КИКЕРС",
             "product_picture": "chicken/807ipar.png",
-            "ingredients": "Късчета от сочни пикантни пилешки гърди, с хрупкава обвивка, изпечени на фурна придружени със сос Барбекю",
+            "ingredient": "Късчета от сочни пикантни пилешки гърди, с хрупкава обвивка, изпечени на фурна придружени със сос Барбекю",
             "price": 7.9,
             "tag": {
                 "SPICY": "https://www.dominos.bg/images/tags/spicy.svg"
@@ -19,21 +19,21 @@ class Command(BaseCommand):
             {
                 "product_name": "ПИЛЕ СТРИПЕРС",
                 "product_picture": "chicken/811ipar.png",
-                "ingredients": "Сочни филенца от пилешки гърди, не пикантни, с хрупкава обвивка, изпечени на фурна, придружени със сладко лютив сос",
+                "ingredient": "Сочни филенца от пилешки гърди, не пикантни, с хрупкава обвивка, изпечени на фурна, придружени със сладко лютив сос",
                 "price": 7.9,
                 "tag": {}
             },
             {
                 "product_name": "КРИЛЦА Buffalo",
                 "product_picture": "chicken/809ipar.png",
-                "ingredients": "8 прясно изпечени пилешки крилца със сос Барбекю",
+                "ingredient": "8 прясно изпечени пилешки крилца със сос Барбекю",
                 "price": 7.9,
                 "tag": {}
             },
             {
                 "product_name": "Крилца Buffalo люти",
                 "product_picture": "chicken/718ipar.png",
-                "ingredients": "8 прясно изпечени пилешки крилца в лют сос Franks",
+                "ingredient": "8 прясно изпечени пилешки крилца в лют сос Franks",
                 "price": 7.9,
                 "tag": {
                     "SPICY": "https://www.dominos.bg/images/tags/spicy.svg"
@@ -43,7 +43,7 @@ class Command(BaseCommand):
         for data in chickens:
             item = Chicken.objects.create(
                 name=data['product_name'],
-                description=data['ingredients'],
+                description=data['ingredient'],
                 image=data['product_picture'],
                 price=data['price'],
             )
