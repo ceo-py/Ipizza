@@ -43,7 +43,8 @@ DEV_ADDED_APPS = ["apps.common",
                   "apps.pasta",
                   "apps.salad",
                   "apps.sandwich",
-                  "apps.sauce"]
+                  "apps.sauce",
+                  "apps.users"]
 
 INSTALLED_APPS = [
     "django.contrib.admin",
