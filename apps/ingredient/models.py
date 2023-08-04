@@ -1,5 +1,7 @@
 from django.db import models
 
+from custom_validations.cv import CustomValidation as CV
+
 
 class BaseModel(models.Model):
     name = models.CharField(max_length=100, unique=True)
@@ -29,5 +31,5 @@ class Sauce(BaseModel):
 
 
 class Tag(BaseModel):
-    tag_image = models.ImageField(upload_to='tags/')
+    tag_image = models.ImageField(upload_to='tags/', validators=(CV.validate_image_size,))
 
