@@ -1,3 +1,9 @@
-from django.shortcuts import render
+from django.views.generic import ListView
 
-# Create your views here.
+from apps.drink.models import Drink
+
+
+class DrinkListView(ListView):
+    model = Drink
+    template_name = "drink/drink.html"
+    context_object_name = "items"

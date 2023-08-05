@@ -1,3 +1,10 @@
-from django.shortcuts import render
+from django.views.generic import ListView
 
-# Create your views here.
+from apps.salad.models import Salad
+
+
+class SaladListView(ListView):
+    model = Salad
+    template_name = "salad/salad.html"
+    context_object_name = "items"
+    ordering = ["name"]

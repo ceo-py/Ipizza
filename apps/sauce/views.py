@@ -1,3 +1,9 @@
-from django.shortcuts import render
+from django.views.generic import ListView
 
-# Create your views here.
+from apps.sauce.models import SauceMenu
+
+
+class SauceListView(ListView):
+    model = SauceMenu
+    template_name = "sauce/sauce.html"
+    context_object_name = "items"

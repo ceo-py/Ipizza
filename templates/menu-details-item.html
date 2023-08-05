@@ -1,0 +1,98 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <!-- Menu Section Start -->
+    <section id="food-menu">
+        <div class="container" id="pizza-container">
+            <header class="section-header">
+                <h3>{% block title_menu %}{% endblock %}</h3>
+            </header>
+            <div class="row" id="pizza-list">
+                {% for item in items %}
+                    <div class="col-sm-6 col-md-4 col-lg-3">
+                        <div class="single-menu">
+                            <h4>{{ item.name }}</h4>
+                        {% if item.front_image %}
+                            <img class="img-fluid" src="/media/{{ item.front_image }}"/>
+                        {% else %}
+                            <img class="img-fluid" src="/media/{{ item.image }}"/>
+                        {% endif %}
+                            {% if  item.front_description %}
+                                <p style="font-size: 14px">{{ item.front_description }}</p>
+                            {% else %}
+                                <p style="font-size: 14px">{{ item.description }}</p>
+                            {% endif %}
+                            <a href="order.html">Поръчай</a>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+            {#            </span>#}
+            {##}
+            {#            {% if page_obj.has_next %}#}
+            {#                <a href="?page={{ page_obj.next_page_number }}">next</a>#}
+            {#                <a href="?page={{ page_obj.paginator.num_pages }}">last &raquo;</a>#}
+            {#            {% endif %}#}
+            {#            </span>#}
+            {#            {% if page_obj.next_page_number < page_obj.paginator.num_pages %}#}
+            {#                <div id="next-page" data-page="{{ page_obj.next_page_number }}"></div>#}
+            {#            {% endif %}#}
+            {##}
+            {#            <div class="loading-msg" style="display: none;">Loading...</div>#}
+        </div>
+    </section>
+    <!-- Menu Section End-->
+{% endblock %}
+
+
+{#{% block script %}#}
+{#    <script>#}
+{#        let page = {{ page_obj.next_page_number }};#}
+{#        let loading = false;#}
+{#        const container = document.getElementById('pizza-container');#}
+{#        const loadingMsg = document.querySelector('.loading-msg');#}
+{##}
+{#        function fetchNextPage() {#}
+{#            if (page === null || loading) {#}
+{#                // No more pages to load or already loading#}
+{#                return;#}
+{#            }#}
+{#            console.log({{ page_obj.paginator.num_pages }})#}
+{#            loading = true;#}
+{#            loadingMsg.style.display = 'block';#}
+{#            const url = `?page=${page}`;#}
+{#            fetch(url)#}
+{#                .then((response) => response.text())#}
+{#                .then((html) => {#}
+{#                    const tempDiv = document.createElement('div');#}
+{#                    tempDiv.innerHTML = html;#}
+{#                    const newPizzas = tempDiv.querySelector('#pizza-list').children;#}
+{#                    console.log(newPizzas)#}
+{#                    for (const pizza of newPizzas) {#}
+{#                        container.querySelector('#pizza-list').appendChild(pizza);#}
+{#                    }#}
+{#                    loadingMsg.style.display = 'none';#}
+{#                    page = tempDiv.querySelector('#next-page').getAttribute('data-page');#}
+{#                    if (!page) {#}
+{#                        // No more pages to load#}
+{#                        page = null;#}
+{#                    }#}
+{#                    loading = false;#}
+{#                })#}
+{#                .catch((error) => console.error('Error fetching data:', error));#}
+{#        }#}
+{##}
+{#        window.addEventListener('scroll', () => {#}
+{#            const scrollHeight = document.documentElement.scrollHeight;#}
+{#            const scrollTop = document.documentElement.scrollTop;#}
+{#            const clientHeight = document.documentElement.clientHeight;#}
+{#            if (scrollTop + clientHeight >= scrollHeight - 100) {#}
+{#                fetchNextPage();#}
+{#            }#}
+{#        });#}
+{##}
+{#        // Initial loading#}
+{#        fetchNextPage();#}
+{#    </script>#}
+{#{% endblock %}#}
+

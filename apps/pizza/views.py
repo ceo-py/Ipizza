@@ -1,3 +1,10 @@
-from django.shortcuts import render
+from django.views.generic import ListView
+from apps.pizza.models import Pizza
 
-# Create your views here.
+
+class PizzaListView(ListView):
+    model = Pizza
+    template_name = "pizza/pizza.html"
+    context_object_name = "items"
+    paginate_by = 8
+    ordering = ["name"]

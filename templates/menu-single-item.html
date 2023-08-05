@@ -1,0 +1,62 @@
+{% extends 'base.html' %}
+
+
+<!-- Header Start -->
+{% block content %}
+
+    <!-- Menu Section Start -->
+    <section id="food-menu">
+        <div class="container">
+            <header class="section-header">
+                <h3>{% block title_menu %}{% endblock %}</h3>
+            </header>
+            <div class="row">
+                {% for item in items %}
+                    <div class="col-sm-6 col-md-4 col-lg-3">
+                        <div class="single-menu">
+                            <h4>{{ item.name }}</h4>
+                            <img class="img-fluid" src="/media/{{ item.image }}"/>
+                            <p>{{ item.description }}</p>
+                            <a href="#" class="order-link">Поръчай</a>
+                            <ul class="menu hidden">
+                                <li><a href="#">Menu Item 1</a></li>
+                                <li><a href="#">Menu Item 2</a></li>
+                                <li><a href="#">Menu Item 3</a></li>
+                                <!-- Add more menu items as needed -->
+                            </ul>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+
+        </div>
+        </div>
+    </section>
+    <!-- Menu Section End-->
+
+
+
+
+{% endblock %}
+{% block script %}
+    <script>
+        // Get all the "Поръчай" links and add click event listeners
+        const orderLinks = document.querySelectorAll('.order-link');
+        orderLinks.forEach((link) => {
+            link.addEventListener('click', (event) => {
+                event.preventDefault(); // Prevent the default link behavior
+
+                // Get the closest ".single-menu" element
+                const singleMenu = event.target.closest('.single-menu');
+
+                // Get the menu inside the ".single-menu"
+                const menu = singleMenu.querySelector('.menu');
+
+                // Toggle the visibility of the menu
+                menu.classList.toggle('hidden');
+                link.textContent = menu.classList.contains('hidden') ? 'Поръчай' : 'Добави';
+            });
+        });
+    </script>
+
+{% endblock %}
