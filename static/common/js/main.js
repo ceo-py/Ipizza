@@ -78,21 +78,30 @@
         loop: true,
         items: 1
     });
-    
-    // Date and time picker
-    $('#date').datetimepicker({
-        format: 'L'
-    });
-    $('#time').datetimepicker({
-        format: 'LT'
-    });
-    
-    // Cart Quantity
-    $('.quantity').prepend('<span class="dec q-btn">-</span>');
-    $('.quantity').append('<span class="inc q-btn">+</span>');
+
+    //
+    function calculateTotalCard() {
+        var body = $('body')
+        var totalCart = body.find('.product-card span');
+        var shipment = parseFloat(body.find('.shipment span').text());
+        var totalPayment = body.find('.total-card span');
+        var totalPrice = body.find('.total-price')
+        var sumAll = totalPrice.text()
+            .slice(0, -1)
+            .split(' лв.')
+            .reduce((accumulator, currentValue) => accumulator + parseFloat(currentValue), 0);
+        totalCart.text(isNaN(sumAll) ? '0 лв.' : sumAll + ' лв.');
+        totalPayment.text(isNaN(sumAll) ? '0 лв.' : sumAll + shipment + ' лв.');
+    }
+
+
+    // + - buttons logic
     $('.q-btn').on('click', function () {
         var $button = $(this);
+        var singlePrice = parseFloat($button.closest('tr').find('.single-price').text());
+        var $totalPrice = $button.closest('tr').find('.total-price');
         var oldValue = $button.parent().find('input').val();
+
         if ($button.hasClass('inc')) {
             var newVal = parseFloat(oldValue) + 1;
         } else {
@@ -103,7 +112,60 @@
             }
         }
         $button.parent().find('input').val(newVal);
+        if (singlePrice) {
+            var totalItem = (newVal * singlePrice).toFixed(2);
+            $totalPrice.text(totalItem + ' лв.');
+            calculateTotalCard()
+
+        } else {
+            var htmlPrice = $button.parent().parent().find('.price-total');
+            var price = $button.parent().find('input').attr('price')
+            htmlPrice.text((price * newVal).toFixed(2))
+        }
     });
-    
+
+    //menu color
+    const activeMenu = localStorage.getItem('activeMenu');
+    if (activeMenu) {
+        $('.nav-menu li a[data-menu="' + activeMenu + '"]').parent().addClass('menu-active');
+    }
+
+    // Handle menu clicks
+    $('.nav-menu li a').on('click', function () {
+        const menu = $(this).data('menu');
+        // Add "menu-active" class to the clicked menu item
+        $(this).parent().addClass('menu-active');
+        // Remove "menu-active" class from other menu items
+        $('.nav-menu li a').not(this).parent().removeClass('menu-active');
+        // Store the active menu item in local storage
+        localStorage.setItem('activeMenu', menu);
+    });
+
+    //handle cart remove btn
+    $('.delete-btn').on('click', function () {
+            // Go up two parent elements to reach the 'td' element
+            var $tdElement = $(this).closest('td').closest('td');
+            // Remove the 'tr' (table row) element
+            $tdElement.parent().remove();
+            calculateTotalCard()
+        }
+    )
+
+    //handle add to cart button from the menu
+    $('.order-link').on('click', function (event) {
+            event.preventDefault()
+            const singleMenu = $(this).closest('.single-menu');
+            // const description = singleMenu.find('.description-menu');
+
+            const menu = singleMenu.find('.menu');
+
+            menu.toggleClass('hidden');
+            // description.toggleClass('hidden')
+            $(this).text(menu.hasClass('hidden') ? 'Поръчай' : 'Добави');
+
+        }
+    )
+
+
 })(jQuery);
 

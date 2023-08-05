@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+        <div id="checkout">
+            <form class="form">
+                <input type="text" placeholder="Name">
+                <input type="text" placeholder="Address">
+                <input type="text" placeholder="Email">
+            </form>
+            <div class="button">
+                <button>Cancel</button>
+                <button>Proceed to Checkout</button>
+            </div>
+            <div class="cards">
+                <p>Accepted payment methods:</p>
+                <img src="{% static 'common/img/credit-cards.png' %}" alt="Cadrs">
+            </div>
+        </div>
+{% endblock %}

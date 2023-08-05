@@ -1,0 +1,93 @@
+{% extends 'base.html' %}
+{% block content %}
+    <div class="cart-page">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-8">
+                    <div class="cart-page-inner">
+                        <div class="table-responsive" id="cart">
+                            <table class="table table-bordered">
+                                <thead class="thead-dark">
+                                    <tr>
+                                        <th>Продукт</th>
+                                        <th>Цена</th>
+                                        <th>Количество</th>
+                                        <th>Общо</th>
+                                        <th>Премахни</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="align-middle">
+                                    <tr>
+                                        <td>
+                                            <div class="img">
+                                                <a href="#"><img
+                                                        src="https://cdn.discordapp.com/attachments/1136948651810365500/1136950736782114946/image.png"
+                                                        alt="Image"></a>
+                                                <p>Product Name</p>
+                                            </div>
+                                        </td>
+                                        <td class="single-price">99</td>
+                                        <td class="quantity">
+                                            <span class="dec q-btn">-</span>
+                                            <input type="number" value="1">
+                                            <span class="inc q-btn">+</span>
+                                        </td>
+                                        <td class="total-price"></td>
+                                        <td class="quantity">
+                                            <span class="q-btn delete-btn"><i class="fa fa-trash" aria-hidden="true"></i></span>
+                                        </td>
+                                    </tr>
+                                                                        <tr>
+                                        <td>
+                                            <div class="img">
+                                                <a href="#"><img
+                                                        src="https://cdn.discordapp.com/attachments/1136948651810365500/1136950736782114946/image.png"
+                                                        alt="Image"></a>
+                                                <p>Product Name</p>
+                                            </div>
+                                        </td>
+                                        <td class="single-price">99</td>
+                                        <td class="quantity">
+                                            <span class="dec q-btn">-</span>
+                                            <input type="number" value="1">
+                                            <span class="inc q-btn">+</span>
+                                        </td>
+                                        <td class="total-price"></td>
+                                        <td class="quantity">
+                                            <span class="q-btn delete-btn"><i class="fa fa-trash" aria-hidden="true"></i></span>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="cart-page-inner">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="coupon">
+                                    <input type="text" placeholder="Въведете кода от талона">
+                                    <button>Талони</button>
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <div class="cart-summary">
+                                    <div class="cart-content">
+                                        <h1>ПОТВЪРЖДАВАНЕ НА ПОРЪЧКАТА</h1>
+                                        <p class="product-card">Продукти<span>0 лв.</span></p>
+                                        <p class="shipment">Доставка<span>4</span></p>
+                                        <h2 class="total-card">Общо<span>0 лв.</span></h2>
+                                    </div>
+                                    <div class="cart-btn">
+                                        <button>Плащане</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

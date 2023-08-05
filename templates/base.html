@@ -96,23 +96,44 @@
                 <div class="container">
                     <nav id="nav-menu-container">
                         <ul class="nav-menu">
-                            <li><a href="{% url 'appetizer' %}">Предястие</a></li>
-                            <li><a href="{% url 'pizza' %}">Пица</a></li>
-                            <li><a href="{% url 'chicken' %}">Пиле</a></li>
-                            <li><a href="{% url 'pasta' %}">Паста</a></li>
-                            <li><a href="{% url 'sandwich' %}">Сандвич</a></li>
-                            <li><a href="{% url 'salad' %}">Салати</a></li>
-                            <li><a href="{% url 'sauce' %}">Сос</a></li>
-                            <li><a href="{% url 'desert' %}">Десерт</a></li>
-                            <li><a href="{% url 'drink' %}">Напитки</a></li>
-                            <li><a href="{% url 'index' %}">За нас</a></li>
+                            <li class="{% if active_menu == 'appetizer' %}menu-active{% endif %}">
+                                <a href="{% url 'appetizer' %}" data-menu="appetizer">Предястие</a>
+                            </li>
+                            <li class="{% if active_menu == 'pizza' %}menu-active{% endif %}">
+                                <a href="{% url 'pizza' %}" data-menu="pizza">Пица</a>
+                            </li>
+                            <li class="{% if active_menu == 'chicken' %}menu-active{% endif %}">
+                                <a href="{% url 'chicken' %}" data-menu="chicken">Пиле</a>
+                            </li>
+                            <li class="{% if active_menu == 'pasta' %}menu-active{% endif %}">
+                                <a href="{% url 'pasta' %}" data-menu="pasta">Паста</a>
+                            </li>
+                            <li class="{% if active_menu == 'sandwich' %}menu-active{% endif %}">
+                                <a href="{% url 'sandwich' %}" data-menu="sandwich">Сандвич</a>
+                            </li>
+                            <li class="{% if active_menu == 'salad' %}menu-active{% endif %}">
+                                <a href="{% url 'salad' %}" data-menu="salad">Салати</a>
+                            </li>
+                            <li class="{% if active_menu == 'sauce' %}menu-active{% endif %}">
+                                <a href="{% url 'sauce' %}" data-menu="sauce">Сос</a>
+                            </li>
+                            <li class="{% if active_menu == 'desert' %}menu-active{% endif %}">
+                                <a href="{% url 'desert' %}" data-menu="desert">Десерт</a>
+                            </li>
+                            <li class="{% if active_menu == 'drink' %}menu-active{% endif %}">
+                                <a href="{% url 'drink' %}" data-menu="drink">Напитки</a>
+                            </li>
+                            <li class="{% if active_menu == 'index' %}menu-active{% endif %}">
+                                <a href="{% url 'index' %}" data-menu="index">За нас</a>
+                            </li>
+
                             <li class="menu-has-children"><a href="#">Име Потребител</a>
                                 <ul>
-                                    <li><a href="login.html">Login</a></li>
-                                    <li class="menu-has-children"><a href="#">Drop Down</a>
+                                    <li><a href="#">Login</a></li>
+                                    <li class="menu-has-children"><a href="#">Опции</a>
                                         <ul>
-                                            <li><a href="#">Drop Down 1</a></li>
-                                            <li><a href="#">Drop Down 2</a></li>
+                                            <li><a href="{% url 'checkout' %}">Плати</a></li>
+                                            <li><a href="{% url 'card' %}">Количка</a></li>
                                         </ul>
                                     </li>
                                 </ul>

@@ -16,15 +16,26 @@
                         <div class="single-menu">
                             <h4>{{ item.name }}</h4>
                             <img class="img-fluid" src="/media/{{ item.image }}"/>
-                            <p>{{ item.description }}</p>
-                            <a href="#" class="order-link">Поръчай</a>
-                            <ul class="menu hidden">
-                                <li><a href="#">Menu Item 1</a></li>
-                                <li><a href="#">Menu Item 2</a></li>
-                                <li><a href="#">Menu Item 3</a></li>
-                                <!-- Add more menu items as needed -->
-                            </ul>
+
+                                <p class="description-menu">{{ item.description }}</p>
+                                <table class="hidden menu" id="cart">
+                                    <tr>
+                                        <th>Количество</th>
+                                        <th>Цена лв.</th>
+                                    </tr>
+                                    <tr>
+                                        <td class="quantity">
+                                            <span class="dec q-btn">-</span>
+                                            <input type="number" value="1" price="{{ item.price }}">
+                                            <span class="inc q-btn">+</span>
+                                        </td>
+                                        <td class="price-total">{{ item.price }}</td>
+                                    </tr>
+                                </table>
+
+                            <a href="#" class="order-link box1">Поръчай</a>
                         </div>
+
                     </div>
                 {% endfor %}
             </div>
@@ -36,27 +47,5 @@
 
 
 
-
-{% endblock %}
-{% block script %}
-    <script>
-        // Get all the "Поръчай" links and add click event listeners
-        const orderLinks = document.querySelectorAll('.order-link');
-        orderLinks.forEach((link) => {
-            link.addEventListener('click', (event) => {
-                event.preventDefault(); // Prevent the default link behavior
-
-                // Get the closest ".single-menu" element
-                const singleMenu = event.target.closest('.single-menu');
-
-                // Get the menu inside the ".single-menu"
-                const menu = singleMenu.querySelector('.menu');
-
-                // Toggle the visibility of the menu
-                menu.classList.toggle('hidden');
-                link.textContent = menu.classList.contains('hidden') ? 'Поръчай' : 'Добави';
-            });
-        });
-    </script>
 
 {% endblock %}

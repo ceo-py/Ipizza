@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu Overlay Example</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f2f2f2;
+        }
+
+        .single-menu {
+            position: relative;
+            text-align: center;
+            font-weight: 400;
+            margin: 0 0 30px 0;
+            padding: 0;
+            border-radius: 6px;
+            background: #f2f2f2;
+            width: 250px;
+            height: 390px;
+        }
+
+        .box1 {
+            /* Add your common styles for box1 here */
+        }
+
+        .menu-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            display: none;
+        }
+
+        .menu-content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="single-menu">
+        <h4 class="box1">{{ item.name }}</h4>
+        <img class="img-fluid box1" src="/media/{{ item.image }}" />
+        <p class="box1">{{ item.description }}</p>
+        <a href="#" class="order-link box1">Поръчай</a>
+    </div>
+
+    <div class="menu-overlay" id="menuOverlay">
+        <div class="menu-content">
+            <table class="tb-center" id="cart">
+                <tr>
+                    <th>Количество</th>
+                    <th>Цена</th>
+                </tr>
+                <tr>
+                    <td class="quantity">
+                        <span class="dec q-btn">-</span>
+                        <input type="number" value="1">
+                        <span class="inc q-btn">+</span>
+                    </td>
+                    <td>1</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <script>
+        const orderLink = document.querySelector('.order-link');
+        const menuOverlay = document.getElementById('menuOverlay');
+
+        orderLink.addEventListener('click', function (event) {
+            event.preventDefault();
+            menuOverlay.style.display = 'block';
+        });
+
+        document.addEventListener('click', function (event) {
+            if (event.target === menuOverlay) {
+                menuOverlay.style.display = 'none';
+            }
+        });
+    </script>
+</body>
+</html>

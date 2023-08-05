@@ -31,4 +31,5 @@ urlpatterns = [
     path("pasta/", include("apps.pasta.urls")),
     path("sandwich/", include("apps.sandwich.urls")),
     path("salad/", include("apps.salad.urls")),
+    path("checkout/", include("apps.checkout.urls")),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

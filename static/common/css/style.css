@@ -289,7 +289,7 @@ h6 {
 .banner-header {
     display: table;
     position: relative;
-    background-image: url(../img/old/banner-bg.jpg);
+    background-image: url('../img/menu-bg-pic.png');
     background-size: cover;
     padding: 100px 0;
     color: #fff;
@@ -773,74 +773,6 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 /* ================================================= */
-/* ---------------- Reservations CSS --------------- */
-/* ================================================= */
-
-#reservations {
-    background: url("../img/old/reservations-bg.jpg") center top no-repeat fixed;
-    background-size: cover;
-    padding: 50px 0 45px 0;
-    text-align: center;
-    position: relative;
-}
-
-#reservations::before {
-    content: '';
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    background: rgba(256, 256, 256, 0.8);
-}
-
-#reservations .container {
-    position: relative;
-    max-width: 700px;
-    z-index: 9;
-}
-
-#reservations .input-group-text {
-    border-radius: 0 30px 30px 0;
-}
-
-#reservations input {
-    box-shadow: none;
-    border-radius: 30px 0 0 30px;
-}
-
-#reservations select,
-#reservations .btn-book {
-    box-shadow: none;
-    border-radius: 30px;
-}
-
-#reservations input:focus,
-#reservations select:focus,
-#reservations .btn-book:focus {
-    border-color: #FFD700;
-}
-
-#reservations .btn-book {
-    color: #FFD700;
-    background: #006400;
-    border-color: #006400;
-}
-
-#reservations .btn-book:hover {
-    color: #006400;
-    background: #FFD700;
-    border-color: #FFD700;
-}
-
-@media (max-width: 575.98px) {
-    #reservations .btn-book {
-        margin-top: 15px;
-        margin-bottom: 10px;
-    }
-}
-
-/* ================================================= */
 /* -------------- Food Menu Section ---------------- */
 /* ================================================= */
 
@@ -849,6 +781,7 @@ body.mobile-nav-active #mobile-nav-toggle {
     padding: 60px 0 30px 0;
     text-align: center;
     background: #ffffff;
+    margin-bottom: 27px;
 }
 
 #food-menu .single-menu {
@@ -912,407 +845,23 @@ body.mobile-nav-active #mobile-nav-toggle {
 /* -------------- Food Menu Options ---------------- */
 /* ================================================= */
 
-/*.menu-container {*/
-/*    position: relative;*/
-/*}*/
+.single-menu {
+    position: relative;
+    overflow: hidden;
+}
+
+.price-total {
+    width: 100px;
+}
 
 .menu {
     position: absolute;
-    display: flex;
-    align-items: flex-end;
-    top: 55%;
-    /*left: 0;*/
-    background-color: red;
-    list-style: none;
-    width: 250px; /* Set your desired width for the menu */
-    z-index: 1;
 }
 
-.menu li {
-    padding: 5px 0;
-}
-
-.menu li a {
-    color: #006400;
-    text-decoration: none;
-}
 
 /* Hide the menu by default */
 .hidden {
     display: none;
-}
-
-
-
-
-/* ================================================= */
-/* ------------------ Team Section ----------------- */
-/* ================================================= */
-
-#team {
-    position: relative;
-    padding: 50px 0 30px 0;
-    text-align: center;
-    background: #f2f2f2;
-}
-
-#team .single-team {
-    border-radius: 6px;
-    background: #ffffff;
-    margin-bottom: 30px;
-}
-
-#team img {
-    width: 100%;
-    border-radius: 6px 6px 0 0;
-    margin-bottom: 15px;
-}
-
-#team h4 {
-    color: #006400;
-    font-weight: 800;
-    letter-spacing: 2px;
-    margin-bottom: 5px;
-    padding: 0 15px;
-}
-
-#team p {
-    font-size: 14px;
-    margin-bottom: 25px;
-}
-
-#team .icon {
-    margin: 0;
-    padding: 0 0 30px 0;
-}
-
-#team .icon li {
-    display: inline-block;
-    width: 35px;
-    height: 35px;
-    list-style-type: none;
-}
-
-#team .icon li a {
-
-    /*display: inline-block;*/
-    /*width: 100%;*/
-    /*height: 100%;*/
-    /*padding: 9px 10px;*/
-    /*color: #FFD700;*/
-    /*background: #006400;*/
-    /*border-radius: 20px;*/
-}
-
-#team .icon li a:hover {
-    color: #006400;
-    background: #FFD700;
-}
-
-/* ================================================= */
-/* ------------- Testimonials Section -------------- */
-/* ================================================= */
-
-#testimonials {
-    background: url("../img/old/testimonial-bg.jpg") center top no-repeat fixed;
-    background-size: cover;
-    padding: 55px 0;
-    text-align: center;
-    position: relative;
-}
-
-#testimonials::before {
-    content: '';
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    background: rgba(256, 256, 256, 0.8);
-}
-
-#testimonials .container {
-    position: relative;
-    max-width: 900px;
-    z-index: 9;
-}
-
-#testimonials i {
-    color: #006400;
-    font-style: italic;
-}
-
-#testimonials .testimonial-item {
-    padding: 0 0 15px 0;
-    text-align: left;
-}
-
-@media (max-width: 575.98px) {
-    #testimonials .testimonial-item {
-        text-align: center;
-    }
-}
-
-#testimonials .img,
-#testimonials .content {
-    position: relative;
-    top: 50%;
-    -moz-transform: translateY(-50%);
-    -webkit-transform: translateY(-50%);
-    transform: translateY(-50%);
-}
-
-#testimonials .testimonial-item .testimonial-img {
-    width: 100%;
-    border-radius: 6px;
-}
-
-@media (max-width: 575.98px) {
-    #testimonials .testimonial-item .testimonial-img {
-        margin-bottom: 30px;
-    }
-}
-
-#testimonials .testimonial-item .testimonial-content {
-    height: 100%;
-    width: 100%;
-    padding: 15px;
-    background: #f2f2f2;
-    border-radius: 6px;
-}
-
-#testimonials .testimonial-item h3 {
-    font-size: 22px;
-    font-weight: 800;
-    margin-bottom: 5px;
-    color: #006400;
-}
-
-#testimonials .testimonial-item h4 {
-    color: #757575;
-    font-size: 16px;
-    font-weight: 700;
-    margin-bottom: 20px;
-}
-
-#testimonials .testimonial-item p {
-    color: #666666;
-    font-style: italic;
-    font-weight: 400;
-    margin: 0;
-    padding-right: 15px;
-}
-
-#testimonials .owl-nav,
-#testimonials .owl-dots {
-    margin-top: 5px;
-    text-align: center;
-}
-
-#testimonials .owl-dot {
-    display: inline-block;
-    margin: 0 5px;
-    width: 12px;
-    height: 12px;
-    border-radius: 50%;
-    background: #006400;
-}
-
-#testimonials .owl-dot.active {
-    background: #FFD700;
-}
-
-/* ================================================= */
-/* ----------------- Booking Style ----------------- */
-/* ================================================= */
-
-#booking {
-    position: relative;
-    padding: 60px 0;
-}
-
-#booking .container {
-    max-width: 900px;
-}
-
-#booking label {
-    font-size: 14px;
-    font-weight: 600;
-}
-
-#booking .booking-form input,
-#booking .booking-form select {
-    font-size: 16px;
-    padding: 10px 14px;
-    border: 1px solid #ddd;
-    border-radius: 20px;
-    box-shadow: none;
-    margin-bottom: 15px;
-}
-
-#booking .booking-form input:focus,
-#booking .booking-form textarea:focus {
-    border: 1px solid #006400;
-}
-
-#booking .booking-form button[type="submit"] {
-    background: #FFFFFF;
-    border: none;
-    padding: 8px 30px 10px 30px;
-    color: #ffffff;
-    background: #006400;
-    transition: 0.4s;
-    cursor: pointer;
-    border-radius: 30px;
-}
-
-#booking .booking-form button[type="submit"]:hover {
-    background: #FFD700;
-}
-
-/* ================================================= */
-/* ---------------- Contact Section ---------------- */
-/* ================================================= */
-
-#contact {
-    position: relative;
-    padding: 50px 0 30px 0;
-    background: #ffffff;
-}
-
-@media (max-width: 575.98px) {
-    #contact {
-        text-align: center;
-    }
-}
-
-#contact .col-md-6 {
-    margin-bottom: 30px;
-}
-
-#contact .contact-col-1 {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    padding: 15px;
-    background: #006400;
-    border-radius: 6px;
-    margin-bottom: 1px;
-}
-
-#contact .contact-col-2 {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    padding: 15px;
-    background: #FFD700;
-    border-radius: 6px;
-    margin-bottom: 0;
-}
-
-#contact .contact-detail,
-#contact .contact-form {
-    position: relative;
-    top: 50%;
-    -moz-transform: translateY(-50%);
-    -webkit-transform: translateY(-50%);
-    transform: translateY(-50%);
-}
-
-#contact .contact-hours {
-    padding: 0 0 25px 0;
-    margin-bottom: 25px;
-    border-bottom: 1px dotted #FFD700;
-}
-
-#contact .contact-detail h4 {
-    color: #FFD700;
-    font-weight: 800;
-    margin-bottom: 10px;
-    letter-spacing: 2px;
-}
-
-#contact .contact-detail p {
-    margin-bottom: 5px;
-    color: #ffffff;
-    font-size: 16px;
-    font-weight: 300;
-    letter-spacing: 1px;
-}
-
-#contact .contact-detail a {
-    color: #ffffff;
-}
-
-#contact .contact-detail a:hover {
-    color: #FFD700;
-}
-
-#contact .contact-form {
-    color: #0D180B;
-    font-weight: 400;
-    margin-bottom: 26px;
-}
-
-#contact .contact-form input,
-#contact .contact-form textarea {
-    font-size: 16px;
-    padding: 10px 14px;
-    border: none;
-    border-radius: 20px;
-    box-shadow: none;
-    background: rgba(256, 256, 256, .7);
-}
-
-#contact .contact-form input:focus,
-#contact .contact-form textarea:focus {
-    border: none;
-    box-shadow: none;
-    background: rgba(256, 256, 256, .5);
-}
-
-#contact .contact-form button[type="submit"] {
-    background: #FFFFFF;
-    border: none;
-    padding: 8px 30px 10px 30px;
-    color: #FFD700;
-    background: #006400;
-    transition: 0.4s;
-    cursor: pointer;
-    border-radius: 30px;
-}
-
-#contact .contact-form button[type="submit"]:hover {
-    color: #006400;
-    background: #ffffff;
-}
-
-/* ================================================= */
-/* ----------------- Support Section --------------- */
-/* ================================================= */
-
-#support {
-    position: relative;
-    background: #FFD700;
-    text-align: center
-}
-
-#support h1 {
-    margin: 0;
-    padding: 30px 0;
-    color: #006400;
-    font-size: 30px;
-    font-weight: 800;
-    line-height: 40px;
-    letter-spacing: 2px;
-}
-
-@media (max-width: 767.98px) {
-    #support h1 {
-        font-size: 22px;
-        font-weight: 700;
-        line-height: 30px;
-    }
 }
 
 /* ================================================= */
@@ -1432,19 +981,184 @@ body.mobile-nav-active #mobile-nav-toggle {
 /* ------------------- Cart Style ------------------ */
 /* ================================================= */
 
-#cart {
-    position: relative;
-    padding: 50px 0 60px 0;
-    background: #f2f2f2;
+
+.table th:nth-child(1),
+.table td:nth-child(1) {
+    width: 300px;
 }
 
-#cart table {
-    margin-bottom: 0;
+.table th:nth-child(4),
+.table td:nth-child(4) {
+    width: 130px;
+}
+
+
+.cart-page {
+    position: relative;
+    margin-top: 30px;
+}
+
+.cart-page .cart-page-inner {
+    /*padding: 30px;*/
+    /*margin-bottom: 30px;*/
+    background: #ffffff;
+}
+
+.cart-page .table {
+    width: 100%;
     text-align: center;
+    margin-bottom: 0;
+}
+
+.cart-page .table .thead-dark th {
+    font-size: 18px;
+    font-weight: 700;
+    color: #353535;
+    text-align: center;
+    background: transparent;
+    border-color: #FFD700;
+    border-bottom: none;
+    vertical-align: middle;
+}
+
+.cart-page .table td {
+    font-size: 16px;
+    vertical-align: middle;
+    border-color: #FFD700;
+}
+
+.cart-page .table .img {
+    display: flex;
+    align-items: center;
+}
+
+.cart-page .table .img img {
+    max-width: 60px;
+    max-height: 60px;
+    margin-right: 15px;
+}
+
+.cart-page .table .img p {
+    display: inline-block;
+    text-align: left;
+    margin: 0;
+}
+
+
+.cart-page .coupon {
+    position: relative;
+    width: 100%;
+    margin-bottom: 15px;
+    font-size: 0;
+}
+
+.cart-page .coupon input {
+    width: calc(100% - 135px);
+    height: 40px;
+    padding: 0 15px;
+    font-size: 16px;
+    color: #999999;
+    background: #ffffff;
+    border: 1px solid #dddddd;
+    border-radius: 4px;
+    margin-right: 15px;
+    transition: all .3s;
+}
+
+.cart-page .coupon input:focus {
+    border-color: #FF6F61;
+}
+
+.cart-page .coupon button {
+    width: 120px;
+    height: 40px;
+    padding: 2px 0;
+    font-size: 16px;
+    text-align: center;
+    color: #FF6F61;
+    background: #ffffff;
+    border: 1px solid #FF6F61;
+    border-radius: 4px;
+}
+
+.cart-page .coupon button:hover {
+    color: #ffffff;
+    background: #FF6F61;
+}
+
+.cart-page .cart-summary {
+    position: relative;
+    width: 100%;
+}
+
+.cart-page .cart-summary .cart-content {
+    padding: 30px;
+    background: #f3f6ff;
+}
+
+.cart-page .cart-summary .cart-content h1 {
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+
+.cart-page .cart-summary .cart-content p span,
+.cart-page .cart-summary .cart-content h2 span {
+    float: right;
+}
+
+.cart-page .cart-summary .cart-content h2 {
+    font-size: 20px;
+    font-weight: 600;
+    padding-top: 12px;
+    border-top: 1px solid #dddddd;
+    margin: 0;
+}
+
+.cart-page .cart-summary .cart-btn button {
+    margin-top: 15px;
+    margin-bottom: 320px;
+    width: calc(50% - 15px);
+    height: 50px;
+    padding: 2px 10px;
+    text-align: center;
+    color: #ffffff;
+    background: #FF6F61;
+    border: none;
+    border-radius: 4px;
+}
+
+.cart-page .cart-summary .cart-btn button:hover {
+    color: #FF6F61;
+    background: #000000;
+}
+
+.cart-page .cart-summary .cart-btn button:first-child {
+    margin-right: 25px;
+    color: #FF6F61;
+    background: #ffffff;
+    border: 1px solid #FF6F61;
+}
+
+.cart-page .cart-summary .cart-btn button:first-child:hover {
+    color: #ffffff;
+    background: #FF6F61;
+}
+
+/*NORMAL ONE*/
+.menu {
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #f2f2f2;
+    padding: 10px;
+    list-style: none;
+    width: 250px;
+    z-index: 1;
 }
 
 #cart .quantity input {
-    width: 100px;
+    width: 80px;
     height: 30px;
     text-align: center;
     border: 1px solid #ddd;
@@ -1495,40 +1209,41 @@ body.mobile-nav-active #mobile-nav-toggle {
     }
 }
 
-#cart a {
-    display: inline-block;
-    width: 30px;
-    height: 30px;
-    padding: 2px 9px;
-    background: #006400;
-    color: #FFD700;
-    border-radius: 20px;
-    text-align: center;
-}
 
-#cart a:hover {
-    color: #006400;
-    background: #FFD700;
-}
+/*#cart a {*/
+/*    display: inline-block;*/
+/*    width: 30px;*/
+/*    height: 30px;*/
+/*    padding: 2px 9px;*/
+/*    background: #006400;*/
+/*    color: #FFD700;*/
+/*    border-radius: 20px;*/
+/*    text-align: center;*/
+/*}*/
 
-#cart .button {
-    text-align: right;
-}
+/*#cart a:hover {*/
+/*    color: #006400;*/
+/*    background: #FFD700;*/
+/*}*/
 
-#cart .button button {
-    margin-top: 15px;
-    padding: 9px 30px;
-    border: none;
-    border-radius: 30px;
-    color: #FFD700;
-    background: #006400;
-    cursor: pointer;
-}
+/*#cart .button {*/
+/*    text-align: right;*/
+/*}*/
 
-#cart .button button:hover {
-    color: #006400;
-    background: #FFD700;
-}
+/*#cart .button button {*/
+/*    margin-top: 15px;*/
+/*    padding: 9px 30px;*/
+/*    border: none;*/
+/*    border-radius: 30px;*/
+/*    color: #FFD700;*/
+/*    background: #006400;*/
+/*    cursor: pointer;*/
+/*}*/
+
+/*#cart .button button:hover {*/
+/*    color: #006400;*/
+/*    background: #FFD700;*/
+/*}*/
 
 /* ================================================= */
 /* ----------------- Checkout Style ---------------- */
