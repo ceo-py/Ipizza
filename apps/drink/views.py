@@ -7,3 +7,4 @@ class DrinkListView(ListView):
     model = Drink
     template_name = "drink/drink.html"
     context_object_name = "items"
+    ordering = ["name"]
