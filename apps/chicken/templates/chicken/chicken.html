@@ -1,58 +1,7 @@
-{% extends 'base.html' %}
-
+{% extends 'menu-single-item.html' %}
 {% block title %}
     Ipizza | Пиле
 {% endblock %}
-<!-- Header Start -->
-{% block content %}
-
-    <!-- Menu Section Start -->
-    <section id="food-menu">
-        <div class="container">
-            <header class="section-header">
-                <h3>Сочно  Пилешко</h3>
-            </header>
-            <div class="row">
-                {% for chicken in chickens %}
-                    <div class="col-sm-6 col-md-4 col-lg-3">
-                        <div class="single-menu">
-                            <h4>{{ chicken.name }}</h4>
-                            <img class="img-fluid" src="/media/{{ chicken.image }}"/>
-                            <p style="font-size: 14px">{{ chicken.description }}</p>
-                            <a href="order.html">Поръчай</a>
-                        </div>
-                    </div>
-                {% endfor %}
-            </div>
-
-        </div>
-        </div>
-    </section>
-    <!-- Menu Section End-->
-
-
-
-
-{% endblock %}
-{% block script %}
-    <script>
-        // Get all the "Поръчай" links and add click event listeners
-        const orderLinks = document.querySelectorAll('.order-link');
-        orderLinks.forEach((link) => {
-            link.addEventListener('click', (event) => {
-                event.preventDefault(); // Prevent the default link behavior
-
-                // Get the closest ".single-menu" element
-                const singleMenu = event.target.closest('.single-menu');
-
-                // Get the menu inside the ".single-menu"
-                const menu = singleMenu.querySelector('.menu');
-
-                // Toggle the visibility of the menu
-                menu.classList.toggle('hidden');
-                link.textContent = menu.classList.contains('hidden') ? 'Поръчай' : 'Добави';
-            });
-        });
-    </script>
-
+{% block title_menu %}
+    Сочно  Пилешко
 {% endblock %}

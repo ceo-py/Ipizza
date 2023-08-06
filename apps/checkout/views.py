@@ -7,5 +7,5 @@ def checkout(request):
     return render(request, 'checkout/checkout.html')
 
 
-def card(request):
+def cart(request):
     return render(request, 'checkout/cart.html')

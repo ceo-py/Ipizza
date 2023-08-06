@@ -102,6 +102,10 @@
         var $totalPrice = $button.closest('tr').find('.total-price');
         var oldValue = $button.parent().find('input').val();
 
+        if($button.hasClass('btn-add-cart')) {
+            addToCartIcon($button)
+        }
+
         if ($button.hasClass('inc')) {
             var newVal = parseFloat(oldValue) + 1;
         } else {
@@ -120,7 +124,7 @@
         } else {
             var htmlPrice = $button.parent().parent().find('.price-total');
             var price = $button.parent().find('input').attr('price')
-            htmlPrice.text((price * newVal).toFixed(2))
+            htmlPrice.text((price * newVal).toFixed(2) + ' лв.')
         }
     });
 
@@ -155,16 +159,46 @@
     $('.order-link').on('click', function (event) {
             event.preventDefault()
             const singleMenu = $(this).closest('.single-menu');
-            // const description = singleMenu.find('.description-menu');
 
             const menu = singleMenu.find('.menu');
 
             menu.toggleClass('hidden');
             // description.toggleClass('hidden')
-            $(this).text(menu.hasClass('hidden') ? 'Поръчай' : 'Добави');
-
+            if (menu.hasClass('hidden')) {
+                addToCartIcon($(this))
+                $(this).text('Поръчай')
+            } else {
+                $(this).text('Добави')
+            }
+        // $(this).text(menu.hasClass('hidden') ? 'Поръчай' : 'Добави');
         }
     )
+
+    function addToCartIcon(button) {
+        const addedItems = parseInt(button.parent().find('input').val());
+        const totalItemsCart = $('body').find('.icon-header-noti');
+        const currentItems = parseInt(totalItemsCart.attr('data-notify'));
+        totalItemsCart.attr('data-notify', isNaN(currentItems) ? addedItems : currentItems + addedItems);
+    }
+
+
+    // Cart header show/hide
+    $('.js-show-cart').on('click', function () {
+        $('.js-panel-cart').addClass('show-header-cart');
+    });
+
+    $('.js-hide-cart').on('click', function () {
+        $('.js-panel-cart').removeClass('show-header-cart');
+    });
+
+    // Cart sidebar show/hide
+    $('.js-show-sidebar').on('click', function () {
+        $('.js-sidebar').addClass('show-sidebar');
+    });
+
+    $('.js-hide-sidebar').on('click', function () {
+        $('.js-sidebar').removeClass('show-sidebar');
+    });
 
 
 })(jQuery);

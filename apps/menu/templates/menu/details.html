@@ -1,0 +1,114 @@
+{% extends 'base.html' %}
+{% block title %}
+    Ipizza | Опции
+{% endblock %}
+{% block content %}
+
+    <div class="container-fluid py-5">
+        <div class="row px-xl-5">
+            <div class="col-lg-5 pb-5">
+                <div id="product-carousel" class="carousel slide" data-ride="carousel">
+                    <div class="carousel-inner border">
+                        <div class="carousel-item active">
+                            {% if  item.front_image %}
+                                <img class="w-100 h-100" src="/media/{{ item.front_image }}" alt="Image">
+                            {% else %}
+                                <img class="w-100 h-100" src="/media/{{ item.image }}" alt="Image">
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-7 pb-5 section-header">
+                <h3 class="text-left" style="font-size: 35px;">{{ item.name }}</h3>
+                <table class="menu bg-white w-50" style="left:28%" id="cart">
+                    <tbody>
+                        <tr>
+                            <th>Количество</th>
+                            <th>Цена</th>
+                            <th>Добави</th>
+                        </tr>
+                        <tr>
+                            <td class="quantity">
+                                <span class="dec q-btn">-</span>
+                                <input type="number" value="1" price="{{ item.price }}">
+                                <span class="inc q-btn">+</span>
+                            </td>
+                            <td class="price-total">{{ item.price }} лв.</td>
+                            <td class="quantity">
+                                <span class="q-btn btn-add-cart"><i class="zmdi zmdi-shopping-cart"></i></span>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                {% if  item.details_description %}
+                    <p class="mb-4">{{ item.details_description }}</p>
+                {% else %}
+                    <p class="mb-4">{{ item.description }}</p>
+                {% endif %}
+            </div>
+
+
+        </div>
+        <div class="d-flex justify-content-between row px-xl-5">
+            <!-- First set of checkboxes (Sizes) -->
+            <div class="d-flex flex-column mb-3">
+                <p class="text-dark font-weight-medium mb-0 mr-3">Сосове:</p>
+                <form method="post">
+                    {% for x in sauce %}
+                        <div class="custom-control custom-checkbox mb-2">
+                            <input type="checkbox" class="custom-control-input" id="{{ x }}" name="{{ x }}"
+                                   {% if x in item.sauce.all %}checked{% endif %}>
+                            <label class="custom-control-label" for="{{ x }}">{{ x }}</label>
+                        </div>
+                    {% endfor %}
+                </form>
+            </div>
+            <div class="d-flex flex-column mb-3">
+                <p class="text-dark font-weight-medium mb-0 mr-3">Сирена:</p>
+                <form method="post">
+                    {% for x in cheese %}
+                        <div class="custom-control custom-checkbox mb-2">
+                            <input type="checkbox" class="custom-control-input" id="{{ x }}" name="{{ x }}"
+                                   {% if x in item.cheese.all %}checked{% endif %}>
+                            <label class="custom-control-label" for="{{ x }}">{{ x }}</label>
+                        </div>
+                    {% endfor %}
+                </form>
+            </div>
+            <div class="d-flex flex-column mb-3">
+                <p class="text-dark font-weight-medium mb-0 mr-3">Меса:</p>
+                <form method="post">
+                    {% for x in meats %}
+                        <div class="custom-control custom-checkbox mb-2">
+                            <input type="checkbox" class="custom-control-input" id="{{ x }}" name="{{ x }}"
+                                   {% if x in item.meats.all %}checked{% endif %}>
+                            <label class="custom-control-label" for="{{ x }}">{{ x }}</label>
+                        </div>
+                    {% endfor %}
+                </form>
+            </div>
+            <div class="d-flex flex-column mb-3">
+                <p class="text-dark font-weight-medium mb-0 mr-3">Зеленчуци:</p>
+                {% for x in vegetables %}
+                    <div class="custom-control custom-checkbox mb-2">
+                        <input type="checkbox" class="custom-control-input" id="{{ x }}" name="{{ x }}"
+                               {% if x in item.vegetables.all %}checked{% endif %}>
+                        <label class="custom-control-label" for="{{ x }}">{{ x }}</label>
+                    </div>
+                {% endfor %}
+            </div>
+            <div class="d-flex flex-column mb-3">
+                <p class="text-dark font-weight-medium mb-0 mr-3">Подправки:</p>
+                {% for x in spices %}
+                    <div class="custom-control custom-checkbox mb-2">
+                        <input type="checkbox" class="custom-control-input" id="{{ x }}" name="{{ x }}"
+                               {% if x in item.spices.all %}checked{% endif %}>
+                        <label class="custom-control-label" for="{{ x }}">{{ x }}</label>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+{% endblock %}

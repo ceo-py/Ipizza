@@ -19,17 +19,12 @@ from django.urls import path, include
 from django.conf import settings
 from django.conf.urls.static import static
 
+from apps.menu.views import ItemListView, ItemDetailView
+
 urlpatterns = [
-    path("admin/", admin.site.urls),
-    path("", include("apps.common.urls")),
-    path("pizza/", include("apps.pizza.urls")),
-    path("drink/", include("apps.drink.urls")),
-    path("appetizer/", include("apps.appetizer.urls")),
-    path("chicken/", include("apps.chicken.urls")),
-    path("sauce/", include("apps.sauce.urls")),
-    path("desert/", include("apps.desert.urls")),
-    path("pasta/", include("apps.pasta.urls")),
-    path("sandwich/", include("apps.sandwich.urls")),
-    path("salad/", include("apps.salad.urls")),
-    path("checkout/", include("apps.checkout.urls")),
-] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+                  path("admin/", admin.site.urls),
+                  path("", include("apps.common.urls")),
+                  path('<str:model>/', ItemListView.as_view(), name='item-list'),
+                  path('<str:model>/<int:pk>/', ItemDetailView.as_view(), name='details'),
+                  path("checkout/", include("apps.checkout.urls")),
+              ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

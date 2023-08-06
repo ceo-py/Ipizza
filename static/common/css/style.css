@@ -442,7 +442,7 @@ h6 {
 .sf-arrows ul .sf-with-ul:after {
     content: "\f105";
 }
-
+#a,
 .nav-menu a {
     padding: 18px 15px 21px 15px;
     text-decoration: none;
@@ -453,12 +453,18 @@ h6 {
     outline: none;
 }
 
-.nav-menu a:hover,
-.nav-menu li:hover > a,
+.nav-menu li:not(:nth-child(10)):hover > a,
 .nav-menu .menu-active > a {
     color: #006400;
     background: #FFD700;
 }
+
+/*.nav-menu a:hover,*/
+/*.nav-menu li:hover > a,*/
+/*.nav-menu .menu-active > a {*/
+/*    color: #006400;*/
+/*    background: #FFD700;*/
+/*}*/
 
 .nav-menu ul {
     margin: 0;
@@ -778,10 +784,10 @@ body.mobile-nav-active #mobile-nav-toggle {
 
 #food-menu {
     display: grid;
-    padding: 60px 0 30px 0;
+    padding: 2px 0 0 0;
     text-align: center;
     background: #ffffff;
-    margin-bottom: 27px;
+    /*margin-bottom: 27px;*/
 }
 
 #food-menu .single-menu {
@@ -815,7 +821,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 #food-menu .single-menu span {
-    padding: 0 15px;
+    /*padding: 0 15px;*/
     font-size: 14px;
     font-weight: 600;
 }
@@ -1162,7 +1168,7 @@ body.mobile-nav-active #mobile-nav-toggle {
     height: 30px;
     text-align: center;
     border: 1px solid #ddd;
-    border-radius: 30px;
+    border-radius: 0 30px 30px 0;
     color: #666;
     margin: 0 2px;
 }
@@ -1190,11 +1196,11 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 #cart .quantity .dec.q-btn {
-    margin-right: -32px;
+    margin-right: -22px;
 }
 
 #cart .quantity .inc.q-btn {
-    margin-left: -32px;
+    margin-left: -36px;
 }
 
 @media (max-width: 575.98px) {
