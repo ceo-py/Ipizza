@@ -128,7 +128,6 @@
                             <li class="{% if active_menu == 'drink' %}menu-active{% endif %}">
                                 <a href="{% url 'item-list' model='drink' %}" data-menu="drink">Напитки</a>
                             </li>
-                        {{ user.is_authenticated }}
                             {% if user.is_authenticated %}
                                 <li class="menu-has-children">
                                     <div class="wrap-icon-header flex-w flex-r-m" id="a">

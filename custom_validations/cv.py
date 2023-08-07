@@ -10,3 +10,8 @@ class CustomValidation:
         if value.size > max_size:
             raise ValidationError(f"The image size should not exceed {max_size / (1024 * 1024)} MB.")
 
+
+    @staticmethod
+    def is_not_logged_in(user):
+        return not user.is_authenticated
+

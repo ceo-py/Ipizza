@@ -1,4 +1,7 @@
+from django.contrib.auth.decorators import user_passes_test
 from django.shortcuts import get_object_or_404
+from django.urls import reverse_lazy
+from django.utils.decorators import method_decorator
 from django.views.generic import ListView, DetailView
 from apps.appetizer.models import Appetizer
 from apps.chicken.models import Chicken
@@ -10,6 +13,7 @@ from apps.pizza.models import Pizza
 from apps.salad.models import Salad
 from apps.sandwich.models import Sandwich
 from apps.sauce.models import SauceMenu
+from custom_validations.cv import CustomValidation as CV
 
 all_menu_models = {
     'appetizer': Appetizer,

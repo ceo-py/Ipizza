@@ -102,7 +102,7 @@
         var $totalPrice = $button.closest('tr').find('.total-price');
         var oldValue = $button.parent().find('input').val();
 
-        if($button.hasClass('btn-add-cart')) {
+        if ($button.hasClass('btn-add-cart')) {
             addToCartIcon($button)
         }
 
@@ -158,10 +158,14 @@
     //handle add to cart button from the menu
     $('.order-link').on('click', function (event) {
             event.preventDefault()
+            if ($('body').find('.menu-has-children').length === 0) {
+
+                window.location.href = "/login";
+                return
+            }
             const singleMenu = $(this).closest('.single-menu');
 
             const menu = singleMenu.find('.menu');
-
             menu.toggleClass('hidden');
             // description.toggleClass('hidden')
             if (menu.hasClass('hidden')) {
@@ -170,7 +174,7 @@
             } else {
                 $(this).text('Добави')
             }
-        // $(this).text(menu.hasClass('hidden') ? 'Поръчай' : 'Добави');
+            // $(this).text(menu.hasClass('hidden') ? 'Поръчай' : 'Добави');
         }
     )
 

@@ -12,17 +12,22 @@
                     <div class="col-sm-6 col-md-4 col-lg-3">
                         <div class="single-menu">
                             <h4>{{ item.name }}</h4>
-                        {% if item.front_image %}
-                            <img class="img-fluid" src="/media/{{ item.front_image }}"/>
-                        {% else %}
-                            <img class="img-fluid" src="/media/{{ item.image }}"/>
-                        {% endif %}
+                            {% if item.front_image %}
+                                <img class="img-fluid" src="/media/{{ item.front_image }}"/>
+                            {% else %}
+                                <img class="img-fluid" src="/media/{{ item.image }}"/>
+                            {% endif %}
                             {% if  item.front_description %}
                                 <p style="font-size: 14px">{{ item.front_description }}</p>
                             {% else %}
                                 <p style="font-size: 14px">{{ item.description }}</p>
                             {% endif %}
-                            <a href="{% url 'details' model=model_name pk=item.pk %}">Поръчай</a>
+                            <a href="{% if user.is_authenticated %}
+                                    {% url 'details' model=model_name pk=item.pk %}
+                                    {% else %}
+                                    {% url 'login' %}
+                                    {% endif %}
+                                    ">Поръчай</a>
                         </div>
                     </div>
                 {% endfor %}

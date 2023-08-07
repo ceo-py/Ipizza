@@ -6,13 +6,10 @@ from django.contrib.auth.views import LoginView, LogoutView
 from django.views.generic import CreateView
 
 from apps.accounts.forms import RegisterForm
+from custom_validations.cv import CustomValidation as CV
 
 
-def is_not_logged_in(user):
-    return not user.is_authenticated
-
-
-@method_decorator(user_passes_test(is_not_logged_in, login_url=reverse_lazy('index')), name='dispatch')
+@method_decorator(user_passes_test(CV.is_not_logged_in, login_url=reverse_lazy('index')), name='dispatch')
 class CustomLoginView(LoginView):
     template_name = 'accounts/login.html'
     success_url = reverse_lazy('index')
@@ -22,7 +19,7 @@ class CustomLogoutView(LogoutView):
     next_page = reverse_lazy('index')
 
 
-@method_decorator(user_passes_test(is_not_logged_in, login_url=reverse_lazy('index')), name='dispatch')
+@method_decorator(user_passes_test(CV.is_not_logged_in, login_url=reverse_lazy('index')), name='dispatch')
 class RegisterUserView(CreateView):
     template_name = 'accounts/register.html'
     form_class = RegisterForm
