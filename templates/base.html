@@ -128,27 +128,38 @@
                             <li class="{% if active_menu == 'drink' %}menu-active{% endif %}">
                                 <a href="{% url 'item-list' model='drink' %}" data-menu="drink">Напитки</a>
                             </li>
-                            <li class="menu-has-children">
-                                <div class="wrap-icon-header flex-w flex-r-m" id="a">
-                                    <div class="icon-header-item cl2 hov-cl1 trans-04 p-r-11">
-                                        <i class="zmdi zmdi-account"></i>
+                        {{ user.is_authenticated }}
+                            {% if user.is_authenticated %}
+                                <li class="menu-has-children">
+                                    <div class="wrap-icon-header flex-w flex-r-m" id="a">
+                                        <div class="icon-header-item cl2 hov-cl1 trans-04 p-r-11">
+                                            <i class="zmdi zmdi-account"></i>
+                                        </div>
                                     </div>
-                                </div>
-                                <ul>
-                                    <li><a href="#">За мен</a></li>
-                                    <li><a href="#">Адреси</a></li>
-                                    <li><a href="#">Поръчки</a></li>
-                                    <li><a href="#">Изход</a></li>
-                                </ul>
-                            </li>
-                            <li>
-                                <div class="wrap-icon-header flex-w flex-r-m" id="a">
-                                    <div class="icon-header-item cl2 hov-cl1 trans-04 p-r-11 icon-header-noti js-show-cart"
-                                         data-notify="">
-                                        <i class="zmdi zmdi-shopping-cart"></i>
+                                    <ul>
+                                        <li><a href="{% url 'register_user' %}">За мен</a></li>
+                                        <li><a href="#">Адреси</a></li>
+                                        <li><a href="#">Поръчки</a></li>
+                                        <li><a href="{% url 'logout' %}">Изход</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <div class="wrap-icon-header flex-w flex-r-m" id="a">
+                                        <div class="icon-header-item cl2 hov-cl1 trans-04 p-r-11 icon-header-noti js-show-cart"
+                                             data-notify="">
+                                            <i class="zmdi zmdi-shopping-cart"></i>
+                                        </div>
                                     </div>
-                                </div>
-                            </li>
+                                </li>
+                            {% else %}
+                                <li class="{% if active_menu == 'login' %}menu-active{% endif %}">
+                                    <a href="{% url 'login' %}" data-menu="login">Вход</a>
+                                </li>
+                                <li class="{% if active_menu == 'register_user' %}menu-active{% endif %}">
+                                    <a href="{% url 'register_user' %}" data-menu="register_user">Регистрация</a>
+                                </li>
+                            {% endif %}
+
                         </ul>
                     </nav>
                 </div>

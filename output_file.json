@@ -1,0 +1,2253 @@
+[
+  {
+    "model": "ingredient.basemodel",
+    "pk": 1,
+    "fields": {
+      "name": "Моцарела"
+    }
+  },
+  {
+    "model": "ingredient.basemodel",
+    "pk": 2,
+    "fields": {
+      "name": "Чедар сирене"
+    }
+  },
+  {
+    "model": "ingredient.basemodel",
+    "pk": 3,
+    "fields": {
+      "name": "Веган Моцарела"
+    }
+  },
+  {
+    "model": "ingredient.basemodel",
+    "pk": 4,
+    "fields": {
+      "name": "Краве сирене"
+    }
+  },
+  {
+    "model": "ingredient.basemodel",
+    "pk": 5,
+    "fields": {
+      "name": "Топено сиренее"
+    }
+  },
+  {
+    "model": "ingredient.basemodel",
+    "pk": 6,
+    "fields": {
+      "name": "Пармезан"
+    }
+  },
+  {
+    "model": "ingredient.basemodel",
+    "pk": 7,
+    "fields": {
+      "name": "Ементалл"
+    }
+  },
+  {
+    "model": "ingredient.basemodel",
+    "pk": 8,
+    "fields": {
+      "name": "Пушен бекон"
+    }
+  },
+  {
+    "model": "ingredient.basemodel",
+    "pk": 9,
+    "fields": {
+      "name": "Вентричина"
+    }
+  },
+  {
+    "model": "ingredient.basemodel",
+    "pk": 10,
+    "fields": {
+      "name": "Пикантно телешко"
+    }
+  },
+  {
+    "model": "ingredient.basemodel",
+    "pk": 11,
+    "fields": {
+      "name": "Риба тон"
+    }
+  },
+  {
+    "model": "ingredient.basemodel",
+    "pk": 12,
+    "fields": {
+      "name": "Пушена шунка"
+    }
+  },
+  {
+    "model": "ingredient.basemodel",
+    "pk": 13,
+    "fields": {
+      "name": "Чоризо"
+    }
+  },
+  {
+    "model": "ingredient.basemodel",
+    "pk": 14,
+    "fields": {
+      "name": "Пеперони"
+    }
+  },
+  {
+    "model": "ingredient.basemodel",
+    "pk": 15,
+    "fields": {
+      "name": "Пиле"
+    }
+  },
+  {
+    "model": "ingredient.basemodel",
+    "pk": 16,
+    "fields": {
+      "name": "Пиле гирос"
+    }
+  },
+  {
+    "model": "ingredient.basemodel",
+    "pk": 17,
+    "fields": {
+      "name": "Сметана"
+    }
+  },
+  {
+    "model": "ingredient.basemodel",
+    "pk": 18,
+    "fields": {
+      "name": "Барбекю сос"
+    }
+  },
+  {
+    "model": "ingredient.basemodel",
+    "pk": 19,
+    "fields": {
+      "name": "Доматен сос"
+    }
+  },
+  {
+    "model": "ingredient.basemodel",
+    "pk": 20,
+    "fields": {
+      "name": "Босилек"
+    }
+  },
+  {
+    "model": "ingredient.basemodel",
+    "pk": 21,
+    "fields": {
+      "name": "Песто сос"
+    }
+  },
+  {
+    "model": "ingredient.basemodel",
+    "pk": 22,
+    "fields": {
+      "name": "Пармезан снежинки"
+    }
+  },
+  {
+    "model": "ingredient.basemodel",
+    "pk": 23,
+    "fields": {
+      "name": "Риган"
+    }
+  },
+  {
+    "model": "ingredient.basemodel",
+    "pk": 24,
+    "fields": {
+      "name": "VEGETARIAN"
+    }
+  },
+  {
+    "model": "ingredient.basemodel",
+    "pk": 25,
+    "fields": {
+      "name": "PREMIUM"
+    }
+  },
+  {
+    "model": "ingredient.basemodel",
+    "pk": 26,
+    "fields": {
+      "name": "НОВО"
+    }
+  },
+  {
+    "model": "ingredient.basemodel",
+    "pk": 27,
+    "fields": {
+      "name": "SPICY"
+    }
+  },
+  {
+    "model": "ingredient.basemodel",
+    "pk": 28,
+    "fields": {
+      "name": "Сушени доматии"
+    }
+  },
+  {
+    "model": "ingredient.basemodel",
+    "pk": 29,
+    "fields": {
+      "name": "Лук"
+    }
+  },
+  {
+    "model": "ingredient.basemodel",
+    "pk": 30,
+    "fields": {
+      "name": "Халапеньо-люти чушки"
+    }
+  },
+  {
+    "model": "ingredient.basemodel",
+    "pk": 31,
+    "fields": {
+      "name": "Пресни гъби"
+    }
+  },
+  {
+    "model": "ingredient.basemodel",
+    "pk": 32,
+    "fields": {
+      "name": "Карамелизиран лук"
+    }
+  },
+  {
+    "model": "ingredient.basemodel",
+    "pk": 33,
+    "fields": {
+      "name": "Ананас"
+    }
+  },
+  {
+    "model": "ingredient.basemodel",
+    "pk": 34,
+    "fields": {
+      "name": "Пресни зелени чушки"
+    }
+  },
+  {
+    "model": "ingredient.basemodel",
+    "pk": 35,
+    "fields": {
+      "name": "Кисeли краставички"
+    }
+  },
+  {
+    "model": "ingredient.basemodel",
+    "pk": 36,
+    "fields": {
+      "name": "Пресни домати"
+    }
+  },
+  {
+    "model": "ingredient.basemodel",
+    "pk": 37,
+    "fields": {
+      "name": "Царевица"
+    }
+  },
+  {
+    "model": "ingredient.basemodel",
+    "pk": 38,
+    "fields": {
+      "name": "Рукола"
+    }
+  },
+  {
+    "model": "ingredient.basemodel",
+    "pk": 39,
+    "fields": {
+      "name": "Черни маслини"
+    }
+  },
+  {
+    "model": "ingredient.spice",
+    "pk": 20,
+    "fields": {}
+  },
+  {
+    "model": "ingredient.spice",
+    "pk": 21,
+    "fields": {}
+  },
+  {
+    "model": "ingredient.spice",
+    "pk": 22,
+    "fields": {}
+  },
+  {
+    "model": "ingredient.spice",
+    "pk": 23,
+    "fields": {}
+  },
+  {
+    "model": "ingredient.meat",
+    "pk": 8,
+    "fields": {}
+  },
+  {
+    "model": "ingredient.meat",
+    "pk": 9,
+    "fields": {}
+  },
+  {
+    "model": "ingredient.meat",
+    "pk": 10,
+    "fields": {}
+  },
+  {
+    "model": "ingredient.meat",
+    "pk": 11,
+    "fields": {}
+  },
+  {
+    "model": "ingredient.meat",
+    "pk": 12,
+    "fields": {}
+  },
+  {
+    "model": "ingredient.meat",
+    "pk": 13,
+    "fields": {}
+  },
+  {
+    "model": "ingredient.meat",
+    "pk": 14,
+    "fields": {}
+  },
+  {
+    "model": "ingredient.meat",
+    "pk": 15,
+    "fields": {}
+  },
+  {
+    "model": "ingredient.meat",
+    "pk": 16,
+    "fields": {}
+  },
+  {
+    "model": "ingredient.vegetable",
+    "pk": 28,
+    "fields": {}
+  },
+  {
+    "model": "ingredient.vegetable",
+    "pk": 29,
+    "fields": {}
+  },
+  {
+    "model": "ingredient.vegetable",
+    "pk": 30,
+    "fields": {}
+  },
+  {
+    "model": "ingredient.vegetable",
+    "pk": 31,
+    "fields": {}
+  },
+  {
+    "model": "ingredient.vegetable",
+    "pk": 32,
+    "fields": {}
+  },
+  {
+    "model": "ingredient.vegetable",
+    "pk": 33,
+    "fields": {}
+  },
+  {
+    "model": "ingredient.vegetable",
+    "pk": 34,
+    "fields": {}
+  },
+  {
+    "model": "ingredient.vegetable",
+    "pk": 35,
+    "fields": {}
+  },
+  {
+    "model": "ingredient.vegetable",
+    "pk": 36,
+    "fields": {}
+  },
+  {
+    "model": "ingredient.vegetable",
+    "pk": 37,
+    "fields": {}
+  },
+  {
+    "model": "ingredient.vegetable",
+    "pk": 38,
+    "fields": {}
+  },
+  {
+    "model": "ingredient.vegetable",
+    "pk": 39,
+    "fields": {}
+  },
+  {
+    "model": "ingredient.cheese",
+    "pk": 1,
+    "fields": {}
+  },
+  {
+    "model": "ingredient.cheese",
+    "pk": 2,
+    "fields": {}
+  },
+  {
+    "model": "ingredient.cheese",
+    "pk": 3,
+    "fields": {}
+  },
+  {
+    "model": "ingredient.cheese",
+    "pk": 4,
+    "fields": {}
+  },
+  {
+    "model": "ingredient.cheese",
+    "pk": 5,
+    "fields": {}
+  },
+  {
+    "model": "ingredient.cheese",
+    "pk": 6,
+    "fields": {}
+  },
+  {
+    "model": "ingredient.cheese",
+    "pk": 7,
+    "fields": {}
+  },
+  {
+    "model": "ingredient.sauce",
+    "pk": 17,
+    "fields": {}
+  },
+  {
+    "model": "ingredient.sauce",
+    "pk": 18,
+    "fields": {}
+  },
+  {
+    "model": "ingredient.sauce",
+    "pk": 19,
+    "fields": {}
+  },
+  {
+    "model": "ingredient.tag",
+    "pk": 24,
+    "fields": {
+      "tag_image": "/tags/vegetarian.svg"
+    }
+  },
+  {
+    "model": "ingredient.tag",
+    "pk": 25,
+    "fields": {
+      "tag_image": "/tags/premium.svg"
+    }
+  },
+  {
+    "model": "ingredient.tag",
+    "pk": 26,
+    "fields": {
+      "tag_image": "/tags/new_product.svg"
+    }
+  },
+  {
+    "model": "ingredient.tag",
+    "pk": 27,
+    "fields": {
+      "tag_image": "/tags/spicy.svg"
+    }
+  },
+  {
+    "model": "pizza.pizza",
+    "pk": 3,
+    "fields": {
+      "name": "ДЪРПАНО ТЕЛЕШКО",
+      "front_description": "барбекю сос, моцарела, карамелизиран лук, чедър, дърпано телешко * не участва в промоции и оферти *",
+      "front_image": "pizzas/front/1655medium.png",
+      "details_description": "Барбекю сос, Моцарела, Чедар сирене, Карамелизиран лук",
+      "details_image": "pizzas/details/1655large.png",
+      "price": "18.90",
+      "dough_type": 1,
+      "spices": [],
+      "meats": [],
+      "vegetables": [
+        32
+      ],
+      "cheese": [
+        1,
+        2
+      ],
+      "sauce": [
+        18
+      ],
+      "tags": [
+        25
+      ]
+    }
+  },
+  {
+    "model": "pizza.pizza",
+    "pk": 4,
+    "fields": {
+      "name": "ЗВЕРСКА V.3",
+      "front_description": "доматен сос, моцарела, шунка, бекон, вентричина",
+      "front_image": "pizzas/front/1651medium.png",
+      "details_description": "Доматен сос, Моцарела, Вентричина, Пушена шунка, Пушен бекон",
+      "details_image": "pizzas/details/1651large.png",
+      "price": "14.90",
+      "dough_type": 1,
+      "spices": [],
+      "meats": [
+        8,
+        9,
+        12
+      ],
+      "vegetables": [],
+      "cheese": [
+        1
+      ],
+      "sauce": [
+        19
+      ],
+      "tags": []
+    }
+  },
+  {
+    "model": "pizza.pizza",
+    "pk": 5,
+    "fields": {
+      "name": "ПИЦА ГИРОС",
+      "front_description": "доматен сос, моцарела, гирос пиле, допълнително гирос пиле, лук, пресни домати, йогурт сос",
+      "front_image": "pizzas/front/1661medium.png",
+      "details_description": "Доматен сос, Моцарела, Extra Пиле гирос, Лук, Пресни домати",
+      "details_image": "pizzas/details/1661large.png",
+      "price": "14.90",
+      "dough_type": 1,
+      "spices": [],
+      "meats": [
+        16
+      ],
+      "vegetables": [
+        36,
+        29
+      ],
+      "cheese": [
+        1
+      ],
+      "sauce": [
+        19
+      ],
+      "tags": [
+        25,
+        26
+      ]
+    }
+  },
+  {
+    "model": "pizza.pizza",
+    "pk": 6,
+    "fields": {
+      "name": "ПИЦА ПАСТРАМИ",
+      "front_description": "доматен сос, моцарела, кисели краставички, пастрами, горчица - пиците на Domino’s и шеф Роу",
+      "front_image": "pizzas/front/1662medium.png",
+      "details_description": "Доматен сос, Моцарела, Кисeли краставички",
+      "details_image": "pizzas/details/1662large.png",
+      "price": "18.90",
+      "dough_type": 1,
+      "spices": [],
+      "meats": [
+        14,
+        15
+      ],
+      "vegetables": [
+        36
+      ],
+      "cheese": [
+        1,
+        7
+      ],
+      "sauce": [
+        19
+      ],
+      "tags": []
+    }
+  },
+  {
+    "model": "pizza.pizza",
+    "pk": 7,
+    "fields": {
+      "name": "ЧИКЕНИТА",
+      "front_description": "доматен сос, моцарела, пилешко филе, пеперони, домати, ементал",
+      "front_image": "pizzas/front/1341medium.png",
+      "details_description": "Доматен сос, Ементалл, Моцарела, Пеперони, Пиле, Пресни домати",
+      "details_image": "pizzas/details/1341large.png",
+      "price": "14.90",
+      "dough_type": 1,
+      "spices": [],
+      "meats": [
+        14,
+        15
+      ],
+      "vegetables": [
+        36
+      ],
+      "cheese": [
+        1,
+        7
+      ],
+      "sauce": [
+        19
+      ],
+      "tags": []
+    }
+  },
+  {
+    "model": "pizza.pizza",
+    "pk": 8,
+    "fields": {
+      "name": "ДОМИНОС СПЕЦИАЛНА",
+      "front_description": "доматен сос, моцарела, шунка, бекон, зелени чушки, лук, гъби",
+      "front_image": "pizzas/front/1290medium.png",
+      "details_description": "Доматен сос, Моцарела, Пушена шунка, Пушен бекон, Пресни зелени чушки, Лук, Пресни гъби",
+      "details_image": "pizzas/details/1290large.png",
+      "price": "13.90",
+      "dough_type": 1,
+      "spices": [],
+      "meats": [
+        8,
+        12
+      ],
+      "vegetables": [
+        34,
+        29,
+        31
+      ],
+      "cheese": [
+        1
+      ],
+      "sauce": [
+        19
+      ],
+      "tags": []
+    }
+  },
+  {
+    "model": "pizza.pizza",
+    "pk": 9,
+    "fields": {
+      "name": "КАРБОНАРА",
+      "front_description": "сметана, моцарела, бекон, гъби",
+      "front_image": "pizzas/front/1360medium.png",
+      "details_description": "Сметана, Моцарела, Пушен бекон, Пресни гъби",
+      "details_image": "pizzas/details/1360large.png",
+      "price": "12.90",
+      "dough_type": 1,
+      "spices": [],
+      "meats": [
+        8
+      ],
+      "vegetables": [
+        31
+      ],
+      "cheese": [
+        1
+      ],
+      "sauce": [
+        17
+      ],
+      "tags": []
+    }
+  },
+  {
+    "model": "pizza.pizza",
+    "pk": 10,
+    "fields": {
+      "name": "АМЕРИКАН ХОТ",
+      "front_description": "доматен сос, моцарела, пеперони, халапеньо-люти чушки, лук",
+      "front_image": "pizzas/front/1291medium.png",
+      "details_description": "Доматен сос, Моцарела, Пеперони, Лук, Халапеньо-люти чушки",
+      "details_image": "pizzas/details/1291large.png",
+      "price": "13.90",
+      "dough_type": 1,
+      "spices": [],
+      "meats": [
+        14
+      ],
+      "vegetables": [
+        29,
+        30
+      ],
+      "cheese": [
+        1
+      ],
+      "sauce": [
+        19
+      ],
+      "tags": [
+        27
+      ]
+    }
+  },
+  {
+    "model": "pizza.pizza",
+    "pk": 11,
+    "fields": {
+      "name": "ГАРДЪН КЛАСИК",
+      "front_description": "доматен сос, моцарела, маслини, зелени чушки, лук, пресни домати, гъби",
+      "front_image": "pizzas/front/1295medium.png",
+      "details_description": "Доматен сос, Моцарела, Черни маслини, Лук, Пресни гъби, Пресни зелени чушки, Пресни домати",
+      "details_image": "pizzas/details/1295large.png",
+      "price": "11.90",
+      "dough_type": 1,
+      "spices": [],
+      "meats": [],
+      "vegetables": [
+        34,
+        36,
+        39,
+        29,
+        31
+      ],
+      "cheese": [
+        1
+      ],
+      "sauce": [
+        19
+      ],
+      "tags": [
+        24
+      ]
+    }
+  },
+  {
+    "model": "pizza.pizza",
+    "pk": 12,
+    "fields": {
+      "name": "БАРБЕКЮ ПИЛЕ",
+      "front_description": "барбекю сос, моцарела, бекон, крехко пиле",
+      "front_image": "pizzas/front/1302medium.png",
+      "details_description": "Барбекю сос, Моцарела, Пиле, Пушен бекон",
+      "details_image": "pizzas/details/1302large.png",
+      "price": "13.90",
+      "dough_type": 1,
+      "spices": [],
+      "meats": [
+        8,
+        15
+      ],
+      "vegetables": [],
+      "cheese": [
+        1
+      ],
+      "sauce": [
+        18
+      ],
+      "tags": []
+    }
+  },
+  {
+    "model": "pizza.pizza",
+    "pk": 13,
+    "fields": {
+      "name": "БАРБЕКЮ КЛАСИК",
+      "front_description": "барбекю сос, моцарела, бекон, пикантно телешко",
+      "front_image": "pizzas/front/1298medium.png",
+      "details_description": "Барбекю сос, Моцарела, Пушен бекон, Пикантно телешко",
+      "details_image": "pizzas/details/1298large.png",
+      "price": "13.90",
+      "dough_type": 1,
+      "spices": [],
+      "meats": [
+        8,
+        10
+      ],
+      "vegetables": [],
+      "cheese": [
+        1
+      ],
+      "sauce": [
+        18
+      ],
+      "tags": []
+    }
+  },
+  {
+    "model": "pizza.pizza",
+    "pk": 14,
+    "fields": {
+      "name": "НЮ ЙОРК",
+      "front_description": "доматен сос, моцарела, бекон, чедар, допълнително чедар, пресни гъби",
+      "front_image": "pizzas/front/1300medium.png",
+      "details_description": "Доматен сос, Моцарела, Extra Чедар сирене, Пушен бекон, Пресни гъби",
+      "details_image": "pizzas/details/1300large.png",
+      "price": "14.90",
+      "dough_type": 1,
+      "spices": [],
+      "meats": [
+        8
+      ],
+      "vegetables": [
+        31
+      ],
+      "cheese": [
+        1,
+        2
+      ],
+      "sauce": [
+        19
+      ],
+      "tags": []
+    }
+  },
+  {
+    "model": "pizza.pizza",
+    "pk": 15,
+    "fields": {
+      "name": "ИТАЛИАНСКА",
+      "front_description": "доматен сос, моцарела, песто, Грана Падано, пресни домати, босилек",
+      "front_image": "pizzas/front/1355medium.png",
+      "details_description": "Доматен сос, Босилек, Песто сос, Пармезан, Моцарела, Пресни домати",
+      "details_image": "pizzas/details/1355large.png",
+      "price": "12.90",
+      "dough_type": 1,
+      "spices": [
+        20,
+        21
+      ],
+      "meats": [],
+      "vegetables": [
+        36
+      ],
+      "cheese": [
+        1,
+        6
+      ],
+      "sauce": [
+        19
+      ],
+      "tags": [
+        24
+      ]
+    }
+  },
+  {
+    "model": "pizza.pizza",
+    "pk": 16,
+    "fields": {
+      "name": "ХАВАЙ",
+      "front_description": "доматен сос, моцарела, шунка, ананас",
+      "front_image": "pizzas/front/1313medium.png",
+      "details_description": "Доматен сос, Моцарела, Пушена шунка, Ананас",
+      "details_image": "pizzas/details/1313large.png",
+      "price": "11.90",
+      "dough_type": 1,
+      "spices": [],
+      "meats": [
+        12
+      ],
+      "vegetables": [
+        33
+      ],
+      "cheese": [
+        1
+      ],
+      "sauce": [
+        19
+      ],
+      "tags": []
+    }
+  },
+  {
+    "model": "pizza.pizza",
+    "pk": 17,
+    "fields": {
+      "name": "ФОРМАДЖИ",
+      "front_description": "доматен сос, моцарела, чедар, краве сирене, пармезан",
+      "front_image": "pizzas/front/1312medium.png",
+      "details_description": "Доматен сос, Пармезан, Моцарела, Чедар сирене, Краве сирене",
+      "details_image": "pizzas/details/1312large.png",
+      "price": "12.90",
+      "dough_type": 1,
+      "spices": [],
+      "meats": [],
+      "vegetables": [],
+      "cheese": [
+        1,
+        2,
+        4,
+        6
+      ],
+      "sauce": [
+        19
+      ],
+      "tags": [
+        24
+      ]
+    }
+  },
+  {
+    "model": "pizza.pizza",
+    "pk": 18,
+    "fields": {
+      "name": "ЕКСТРАВАГАНЗА",
+      "front_description": "Моцарела, доматен сос, шунка, пеперони, лук, чушки, маслини, гъби",
+      "front_image": "pizzas/front/1631medium.png",
+      "details_description": "Доматен сос, Моцарела, Пушена шунка, Пеперони, Пресни гъби, Пресни зелени чушки, Черни маслини, Лук",
+      "details_image": "pizzas/details/1631large.png",
+      "price": "14.90",
+      "dough_type": 1,
+      "spices": [],
+      "meats": [
+        12,
+        14
+      ],
+      "vegetables": [
+        34,
+        39,
+        29,
+        31
+      ],
+      "cheese": [
+        1
+      ],
+      "sauce": [
+        19
+      ],
+      "tags": []
+    }
+  },
+  {
+    "model": "pizza.pizza",
+    "pk": 19,
+    "fields": {
+      "name": "БУРГЕР ПИЦА",
+      "front_description": "бургер сос, кисели краставички, моцарела, чедар, лук, домати, пикантно телешко",
+      "front_image": "pizzas/front/1505medium.png",
+      "details_description": "Моцарела, Чедар сирене, Пикантно телешко, Лук, Кисeли краставички, Пресни домати",
+      "details_image": "pizzas/details/1505large.png",
+      "price": "13.90",
+      "dough_type": 1,
+      "spices": [],
+      "meats": [],
+      "vegetables": [
+        28,
+        39,
+        36,
+        31
+      ],
+      "cheese": [
+        3
+      ],
+      "sauce": [
+        19
+      ],
+      "tags": [
+        24
+      ]
+    }
+  },
+  {
+    "model": "pizza.pizza",
+    "pk": 21,
+    "fields": {
+      "name": "СМОУКИ БЕЙКЪН",
+      "front_description": "сметана, моцарела, бекон, пушено топено сирене, маслини",
+      "front_image": "pizzas/front/1644medium.png",
+      "details_description": "Сметана, Моцарела, Топено сиренее, Пушен бекон, Черни маслини",
+      "details_image": "pizzas/details/1644large.png",
+      "price": "12.90",
+      "dough_type": 1,
+      "spices": [],
+      "meats": [
+        8
+      ],
+      "vegetables": [
+        39
+      ],
+      "cheese": [
+        1,
+        5
+      ],
+      "sauce": [
+        17
+      ],
+      "tags": []
+    }
+  },
+  {
+    "model": "pizza.pizza",
+    "pk": 22,
+    "fields": {
+      "name": "ЧИК –ЧИ –РИК",
+      "front_description": "доматен сос, моцарела, крехко пиле, топено сирене, царевица",
+      "front_image": "pizzas/front/1342medium.png",
+      "details_description": "Доматен сос, Топено сиренее, Моцарела, Пиле, Царевица",
+      "details_image": "pizzas/details/1342large.png",
+      "price": "14.90",
+      "dough_type": 1,
+      "spices": [],
+      "meats": [
+        15
+      ],
+      "vegetables": [
+        37
+      ],
+      "cheese": [
+        1,
+        5
+      ],
+      "sauce": [
+        19
+      ],
+      "tags": []
+    }
+  },
+  {
+    "model": "pizza.pizza",
+    "pk": 23,
+    "fields": {
+      "name": "ПЕПЕРОНИ КЛАСИК",
+      "front_description": "доматен сос, моцарела, допълнително моцарела, пеперони, допълнително пеперони",
+      "front_image": "pizzas/front/1293medium.png",
+      "details_description": "Доматен сос, Extra Моцарела, Extra Пеперони",
+      "details_image": "pizzas/details/1293large.png",
+      "price": "14.90",
+      "dough_type": 1,
+      "spices": [],
+      "meats": [
+        14
+      ],
+      "vegetables": [],
+      "cheese": [
+        1
+      ],
+      "sauce": [
+        19
+      ],
+      "tags": [
+        27
+      ]
+    }
+  },
+  {
+    "model": "pizza.pizza",
+    "pk": 2,
+    "fields": {
+      "name": "БЪРБЪН ПИЦА",
+      "front_description": "доматен сос, моцарела, пилешко филе, бекон, лук, бърбън сос (не съдържа алкохол)",
+      "front_image": "pizzas/front/1652medium.png",
+      "details_description": "Доматен сос, Моцарела, Пиле, Пушен бекон, Лук",
+      "details_image": "pizzas/details/1652large.png",
+      "price": "13.90",
+      "dough_type": 1,
+      "spices": [],
+      "meats": [
+        8,
+        15
+      ],
+      "vegetables": [
+        29
+      ],
+      "cheese": [
+        1
+      ],
+      "sauce": [
+        19
+      ],
+      "tags": []
+    }
+  },
+  {
+    "model": "pizza.pizza",
+    "pk": 1,
+    "fields": {
+      "name": "МАРГАРИТА",
+      "front_description": "доматен сос, моцарела, допълнително моцарела",
+      "front_image": "pizzas/front/1265medium.png",
+      "details_description": "Доматен сос, Extra Моцарела",
+      "details_image": "pizzas/details/1265large.png",
+      "price": "10.90",
+      "dough_type": 1,
+      "spices": [],
+      "meats": [],
+      "vegetables": [],
+      "cheese": [
+        1
+      ],
+      "sauce": [
+        19
+      ],
+      "tags": [
+        24
+      ]
+    }
+  },
+  {
+    "model": "pizza.pizza",
+    "pk": 20,
+    "fields": {
+      "name": "ПОСТНА V.2",
+      "front_description": "доматен сос, веган моцарела, сушени домати, пресни домати, гъби, маслини * може да съдържа следи от лактоза*",
+      "front_image": "pizzas/front/1616medium.png",
+      "details_description": "Доматен сос, Веган Моцарела, Пресни гъби, Пресни домати, Черни маслини, Сушени доматии",
+      "details_image": "pizzas/details/1616large.png",
+      "price": "11.90",
+      "dough_type": 1,
+      "spices": [],
+      "meats": [],
+      "vegetables": [
+        28,
+        39,
+        31
+      ],
+      "cheese": [
+        3
+      ],
+      "sauce": [
+        19
+      ],
+      "tags": [
+        24
+      ]
+    }
+  },
+  {
+    "model": "pizza.pizza",
+    "pk": 24,
+    "fields": {
+      "name": "ШУНКА КЛАСИК",
+      "front_description": "доматен сос, моцарела, шунка, зелени чушки, пресни гъби",
+      "front_image": "pizzas/front/1292medium.png",
+      "details_description": "Доматен сос, Моцарела, Пушена шунка, Пресни гъби, Пресни зелени чушки",
+      "details_image": "pizzas/details/1292large.png",
+      "price": "11.90",
+      "dough_type": 1,
+      "spices": [],
+      "meats": [
+        12
+      ],
+      "vegetables": [
+        34,
+        31
+      ],
+      "cheese": [
+        1
+      ],
+      "sauce": [
+        19
+      ],
+      "tags": []
+    }
+  },
+  {
+    "model": "pizza.pizza",
+    "pk": 25,
+    "fields": {
+      "name": "ПИЦА ТОН",
+      "front_description": "доматен сос, моцарела, риба тон, пресни домати, лук",
+      "front_image": "pizzas/front/1363medium.png",
+      "details_description": "Доматен сос, Моцарела, Риба тон, Пресни домати, Лук",
+      "details_image": "pizzas/details/1363large.png",
+      "price": "13.90",
+      "dough_type": 1,
+      "spices": [],
+      "meats": [
+        11
+      ],
+      "vegetables": [
+        36,
+        29
+      ],
+      "cheese": [
+        1
+      ],
+      "sauce": [
+        19
+      ],
+      "tags": []
+    }
+  },
+  {
+    "model": "pizza.pizza",
+    "pk": 26,
+    "fields": {
+      "name": "МАСТЪР БУРГЕР ПИЦА",
+      "front_description": "барбекю сос , моцарела, карамелизиран лук, пилешко филе, домати, бургер сос",
+      "front_image": "pizzas/front/1535medium.png",
+      "details_description": "Барбекю сос, Моцарела, Пиле, Карамелизиран лук, Пресни домати",
+      "details_image": "pizzas/details/1535large.png",
+      "price": "14.90",
+      "dough_type": 1,
+      "spices": [],
+      "meats": [
+        15
+      ],
+      "vegetables": [
+        32,
+        36
+      ],
+      "cheese": [
+        1
+      ],
+      "sauce": [
+        18
+      ],
+      "tags": []
+    }
+  },
+  {
+    "model": "dough_type.doughtype",
+    "pk": 1,
+    "fields": {
+      "type": "Средна",
+      "picture": "/dough/bgiparTraditional_panbg.png",
+      "description": "Нашето традиционно тесто",
+      "price": "10.90"
+    }
+  },
+  {
+    "model": "dough_type.doughtype",
+    "pk": 2,
+    "fields": {
+      "type": "Средна",
+      "picture": "/dough/bgiparItalian_style_panbg.png",
+      "description": "Тесто италиански стил",
+      "price": "10.90"
+    }
+  },
+  {
+    "model": "dough_type.doughtype",
+    "pk": 3,
+    "fields": {
+      "type": "Средна",
+      "picture": "/dough/bgiparGluten_Freebg.png",
+      "description": "Gluten Free Dough  (+ 3,10лв)",
+      "price": "14.00"
+    }
+  },
+  {
+    "model": "dough_type.doughtype",
+    "pk": 4,
+    "fields": {
+      "type": "Голяма",
+      "picture": "/dough/bgiparTraditional_panbg.png",
+      "description": "Нашето традиционно тесто",
+      "price": "14.00"
+    }
+  },
+  {
+    "model": "dough_type.doughtype",
+    "pk": 5,
+    "fields": {
+      "type": "Голяма",
+      "picture": "/dough/bgiparItalian_style_panbg.png",
+      "description": "Тесто италиански стил",
+      "price": "14.00"
+    }
+  },
+  {
+    "model": "dough_type.doughtype",
+    "pk": 6,
+    "fields": {
+      "type": "Голяма",
+      "picture": "/dough/bgiparThin_and_crispy_panbg.png",
+      "description": "Тънко и хрупкаво тесто",
+      "price": "14.00"
+    }
+  },
+  {
+    "model": "dough_type.doughtype",
+    "pk": 7,
+    "fields": {
+      "type": "Голяма",
+      "picture": "/dough/bgiparPhiladelphia_panbg.png",
+      "description": "Прясно омесено тесто с коричка пълнена със сирене Philadelphia (+2,50лв)",
+      "price": "16.50"
+    }
+  },
+  {
+    "model": "dough_type.doughtype",
+    "pk": 8,
+    "fields": {
+      "type": "Голяма",
+      "picture": "/dough/bgiparLarge_mozzarella_crustbg.png",
+      "description": "Прясно омесено тесто с коричка, пълнена с моцарела (+2,50лв.)",
+      "price": "16.50"
+    }
+  },
+  {
+    "model": "dough_type.doughtype",
+    "pk": 9,
+    "fields": {
+      "type": "Голяма",
+      "picture": "/dough/bgiparLarge_pepperoni_crustbg.png",
+      "description": "Прясно омесено тесто с коричка, пълнена с пеперони (+2,50лв.)",
+      "price": "16.50"
+    }
+  },
+  {
+    "model": "dough_type.doughtype",
+    "pk": 10,
+    "fields": {
+      "type": "Джъмбо",
+      "picture": "/dough/bgiparTraditional_panbg.png",
+      "description": "Нашето традиционно тесто",
+      "price": "15.40"
+    }
+  },
+  {
+    "model": "dough_type.doughtype",
+    "pk": 11,
+    "fields": {
+      "type": "Джъмбо",
+      "picture": "/dough/bgiparItalian_style_panbg.png",
+      "description": "Тесто италиански стил",
+      "price": "15.40"
+    }
+  },
+  {
+    "model": "chicken.chicken",
+    "pk": 5,
+    "fields": {
+      "image": "chicken/811ipar.png"
+    }
+  },
+  {
+    "model": "chicken.chicken",
+    "pk": 6,
+    "fields": {
+      "image": "chicken/809ipar.png"
+    }
+  },
+  {
+    "model": "chicken.chicken",
+    "pk": 4,
+    "fields": {
+      "image": "chicken/807ipar.png"
+    }
+  },
+  {
+    "model": "chicken.chicken",
+    "pk": 7,
+    "fields": {
+      "image": "chicken/718ipar.png"
+    }
+  },
+  {
+    "model": "appetizer.appetizer",
+    "pk": 3,
+    "fields": {
+      "image": "appetizers/1230ipar.png"
+    }
+  },
+  {
+    "model": "appetizer.appetizer",
+    "pk": 1,
+    "fields": {
+      "image": "appetizers/1333ipar.png"
+    }
+  },
+  {
+    "model": "appetizer.appetizer",
+    "pk": 2,
+    "fields": {
+      "image": "appetizers/1231ipar.png"
+    }
+  },
+  {
+    "model": "desert.desert",
+    "pk": 8,
+    "fields": {
+      "image": "deserts/1204ipar.png"
+    }
+  },
+  {
+    "model": "desert.desert",
+    "pk": 9,
+    "fields": {
+      "image": "deserts/1228ipar.png"
+    }
+  },
+  {
+    "model": "desert.desert",
+    "pk": 10,
+    "fields": {
+      "image": "deserts/1516ipar.png"
+    }
+  },
+  {
+    "model": "desert.desert",
+    "pk": 11,
+    "fields": {
+      "image": "deserts/1336ipar.png"
+    }
+  },
+  {
+    "model": "desert.desert",
+    "pk": 12,
+    "fields": {
+      "image": "deserts/1335ipar.png"
+    }
+  },
+  {
+    "model": "desert.desert",
+    "pk": 13,
+    "fields": {
+      "image": "deserts/1549ipar.png"
+    }
+  },
+  {
+    "model": "menu.menu",
+    "pk": 3,
+    "fields": {
+      "name": "Моцарелени пръчици",
+      "description": "5 броя хрупкави моцарелени пръчици със сос барбекю",
+      "price": "7.50",
+      "tags": []
+    }
+  },
+  {
+    "model": "menu.menu",
+    "pk": 5,
+    "fields": {
+      "name": "ПИЛЕ СТРИПЕРС",
+      "description": "Сочни филенца от пилешки гърди, не пикантни, с хрупкава обвивка, изпечени на фурна, придружени със сладко лютив сос",
+      "price": "7.90",
+      "tags": []
+    }
+  },
+  {
+    "model": "menu.menu",
+    "pk": 6,
+    "fields": {
+      "name": "КРИЛЦА Buffalo",
+      "description": "8 прясно изпечени пилешки крилца със сос Барбекю",
+      "price": "7.90",
+      "tags": []
+    }
+  },
+  {
+    "model": "menu.menu",
+    "pk": 8,
+    "fields": {
+      "name": "Чоко пай",
+      "description": "Пухкав десерт с пълнеж NUTELLA, прясно изпечен на фурна и поръсен с пудра захар",
+      "price": "6.90",
+      "tags": []
+    }
+  },
+  {
+    "model": "menu.menu",
+    "pk": 9,
+    "fields": {
+      "name": "Шоколадово суфле",
+      "description": "Топло шоколадово кексче с пълнеж от разтопен шоколад",
+      "price": "5.90",
+      "tags": []
+    }
+  },
+  {
+    "model": "menu.menu",
+    "pk": 10,
+    "fields": {
+      "name": "Брaуни хапки",
+      "description": "Шоколадово брауни с парченца бял шоколад",
+      "price": "3.90",
+      "tags": []
+    }
+  },
+  {
+    "model": "menu.menu",
+    "pk": 11,
+    "fields": {
+      "name": "Nirvana Pralines and Cream 150 ml",
+      "description": "Сладолед с карамелов сироп и карамелизирани ядки",
+      "price": "3.90",
+      "tags": []
+    }
+  },
+  {
+    "model": "menu.menu",
+    "pk": 12,
+    "fields": {
+      "name": "Nirvana Cookies and Cream 150 ml",
+      "description": "Сладолед с аромат на ванилия и парченца какаови бисквитки",
+      "price": "3.90",
+      "tags": []
+    }
+  },
+  {
+    "model": "menu.menu",
+    "pk": 13,
+    "fields": {
+      "name": "Nirvana Chocolate and Choco Chips 150 ml",
+      "description": "Шоколадов сладолед с шоколадови парченца",
+      "price": "3.90",
+      "tags": []
+    }
+  },
+  {
+    "model": "menu.menu",
+    "pk": 14,
+    "fields": {
+      "name": "Айрян 0.5L",
+      "description": "",
+      "price": "2.60",
+      "tags": []
+    }
+  },
+  {
+    "model": "menu.menu",
+    "pk": 15,
+    "fields": {
+      "name": "Red Bull 250ml",
+      "description": "",
+      "price": "3.70",
+      "tags": []
+    }
+  },
+  {
+    "model": "menu.menu",
+    "pk": 16,
+    "fields": {
+      "name": "Red Bull Sugarfree 250ml",
+      "description": "",
+      "price": "3.70",
+      "tags": []
+    }
+  },
+  {
+    "model": "menu.menu",
+    "pk": 17,
+    "fields": {
+      "name": "Coca-Cola Zero",
+      "description": "",
+      "price": "2.60",
+      "tags": []
+    }
+  },
+  {
+    "model": "menu.menu",
+    "pk": 18,
+    "fields": {
+      "name": "Coca-Cola",
+      "description": "",
+      "price": "2.60",
+      "tags": []
+    }
+  },
+  {
+    "model": "menu.menu",
+    "pk": 19,
+    "fields": {
+      "name": "Минерална вода",
+      "description": "",
+      "price": "2.00",
+      "tags": []
+    }
+  },
+  {
+    "model": "menu.menu",
+    "pk": 20,
+    "fields": {
+      "name": "FANTA",
+      "description": "",
+      "price": "2.60",
+      "tags": []
+    }
+  },
+  {
+    "model": "menu.menu",
+    "pk": 21,
+    "fields": {
+      "name": "Cappy Pulpy",
+      "description": "",
+      "price": "2.40",
+      "tags": []
+    }
+  },
+  {
+    "model": "menu.menu",
+    "pk": 22,
+    "fields": {
+      "name": "Fuzztea",
+      "description": "",
+      "price": "2.50",
+      "tags": []
+    }
+  },
+  {
+    "model": "menu.menu",
+    "pk": 23,
+    "fields": {
+      "name": "Carlsberg 0.5L",
+      "description": "",
+      "price": "3.20",
+      "tags": []
+    }
+  },
+  {
+    "model": "menu.menu",
+    "pk": 24,
+    "fields": {
+      "name": "Шуменско 0.5L",
+      "description": "",
+      "price": "2.40",
+      "tags": []
+    }
+  },
+  {
+    "model": "menu.menu",
+    "pk": 25,
+    "fields": {
+      "name": "Шуменско 1л",
+      "description": "",
+      "price": "2.80",
+      "tags": []
+    }
+  },
+  {
+    "model": "menu.menu",
+    "pk": 38,
+    "fields": {
+      "name": "Медена Горчица",
+      "description": "",
+      "price": "1.00",
+      "tags": []
+    }
+  },
+  {
+    "model": "menu.menu",
+    "pk": 39,
+    "fields": {
+      "name": "Чеснов coc",
+      "description": "",
+      "price": "1.00",
+      "tags": []
+    }
+  },
+  {
+    "model": "menu.menu",
+    "pk": 40,
+    "fields": {
+      "name": "Барбекю сос",
+      "description": "",
+      "price": "1.00",
+      "tags": []
+    }
+  },
+  {
+    "model": "menu.menu",
+    "pk": 41,
+    "fields": {
+      "name": "Чили сос",
+      "description": "",
+      "price": "1.00",
+      "tags": []
+    }
+  },
+  {
+    "model": "menu.menu",
+    "pk": 42,
+    "fields": {
+      "name": "Доматен сос",
+      "description": "",
+      "price": "1.00",
+      "tags": []
+    }
+  },
+  {
+    "model": "menu.menu",
+    "pk": 43,
+    "fields": {
+      "name": "Млечен сос",
+      "description": "",
+      "price": "1.00",
+      "tags": []
+    }
+  },
+  {
+    "model": "menu.menu",
+    "pk": 44,
+    "fields": {
+      "name": "Ранч сос",
+      "description": "",
+      "price": "1.00",
+      "tags": []
+    }
+  },
+  {
+    "model": "menu.menu",
+    "pk": 45,
+    "fields": {
+      "name": "Цезар сос",
+      "description": "Цезар сос",
+      "price": "1.00",
+      "tags": []
+    }
+  },
+  {
+    "model": "menu.menu",
+    "pk": 46,
+    "fields": {
+      "name": "Балсамов дресинг",
+      "description": "Балсамов дресинг",
+      "price": "1.00",
+      "tags": []
+    }
+  },
+  {
+    "model": "menu.menu",
+    "pk": 1,
+    "fields": {
+      "name": "Моцарелено хлебче",
+      "description": "Прясно изпечено пухкаво хлебче с моцарела и специалната подправка на Доминос, придружено с доматен сос",
+      "price": "4.50",
+      "tags": [
+        24
+      ]
+    }
+  },
+  {
+    "model": "menu.menu",
+    "pk": 2,
+    "fields": {
+      "name": "Картофки Уеджис",
+      "description": "Запечени на фурна картофки с апетитна коричка, леко подправени, придружени със сос Барбекю",
+      "price": "4.50",
+      "tags": [
+        24
+      ]
+    }
+  },
+  {
+    "model": "menu.menu",
+    "pk": 4,
+    "fields": {
+      "name": "ПИЛЕ КИКЕРС",
+      "description": "Късчета от сочни пикантни пилешки гърди, с хрупкава обвивка, изпечени на фурна придружени със сос Барбекю",
+      "price": "7.90",
+      "tags": [
+        27
+      ]
+    }
+  },
+  {
+    "model": "menu.menu",
+    "pk": 7,
+    "fields": {
+      "name": "Крилца Buffalo люти",
+      "description": "8 прясно изпечени пилешки крилца в лют сос Franks",
+      "price": "7.90",
+      "tags": [
+        27
+      ]
+    }
+  },
+  {
+    "model": "menu.menu",
+    "pk": 29,
+    "fields": {
+      "name": "САЛАТА РОКА + СОС + ПРИБОРИ",
+      "description": "Пармезан, Пресни домати, Рукола",
+      "price": "7.30",
+      "tags": []
+    }
+  },
+  {
+    "model": "menu.menu",
+    "pk": 30,
+    "fields": {
+      "name": "САЛАТА ТРИКОЛОРЕ + ПРИБОРИ",
+      "description": "Песто сос, Краве сирене, Пресни домати",
+      "price": "7.30",
+      "tags": []
+    }
+  },
+  {
+    "model": "menu.menu",
+    "pk": 31,
+    "fields": {
+      "name": "САЛАТА ЦЕЗАР БЕКОН + СОС + ПРИБОРИ",
+      "description": "Крутон, Пармезан, Пушен бекон, Царевица",
+      "price": "8.90",
+      "tags": []
+    }
+  },
+  {
+    "model": "menu.menu",
+    "pk": 32,
+    "fields": {
+      "name": "САЛАТА ЦЕЗАР С ПИЛЕ +СОС + ПРИБОРИ",
+      "description": "Крутон, Пармезан, Пиле, Царевица",
+      "price": "8.90",
+      "tags": []
+    }
+  },
+  {
+    "model": "menu.menu",
+    "pk": 33,
+    "fields": {
+      "name": "САЛАТА РИБА ТОН + ПРИБОРИ",
+      "description": "Риба тон, Царевица, Черни маслини",
+      "price": "8.90",
+      "tags": []
+    }
+  },
+  {
+    "model": "menu.menu",
+    "pk": 34,
+    "fields": {
+      "name": "САНДВИЧ ПЕПЕРОНИ",
+      "description": "Доматен сос, Пеперони",
+      "price": "7.90",
+      "tags": []
+    }
+  },
+  {
+    "model": "menu.menu",
+    "pk": 35,
+    "fields": {
+      "name": "САНДВИЧ БАРБЕКЮ ПИЛЕ",
+      "description": "Барбекю сос, Пушен бекон, Пиле",
+      "price": "7.90",
+      "tags": []
+    }
+  },
+  {
+    "model": "menu.menu",
+    "pk": 36,
+    "fields": {
+      "name": "САНДВИЧ МЕДИТЕРАНЕО",
+      "description": "Краве сирене, Пресни зелени чушки, Пресни домати, Черни маслини",
+      "price": "7.90",
+      "tags": []
+    }
+  },
+  {
+    "model": "menu.menu",
+    "pk": 37,
+    "fields": {
+      "name": "САНДВИЧ ПАСТАРМИ",
+      "description": "Майонеза, Пастрами, Проволоне, Кисели краставички, Горчица",
+      "price": "11.90",
+      "tags": []
+    }
+  },
+  {
+    "model": "drink.drink",
+    "pk": 14,
+    "fields": {
+      "image": "drinks/1503ipar.png"
+    }
+  },
+  {
+    "model": "drink.drink",
+    "pk": 15,
+    "fields": {
+      "image": "drinks/1659ipar.png"
+    }
+  },
+  {
+    "model": "drink.drink",
+    "pk": 16,
+    "fields": {
+      "image": "drinks/1660ipar.png"
+    }
+  },
+  {
+    "model": "drink.drink",
+    "pk": 17,
+    "fields": {
+      "image": "drinks/1638ipar.png"
+    }
+  },
+  {
+    "model": "drink.drink",
+    "pk": 18,
+    "fields": {
+      "image": "drinks/1603ipar.png"
+    }
+  },
+  {
+    "model": "drink.drink",
+    "pk": 19,
+    "fields": {
+      "image": "drinks/1637ipar.png"
+    }
+  },
+  {
+    "model": "drink.drink",
+    "pk": 20,
+    "fields": {
+      "image": "drinks/1639ipar.png"
+    }
+  },
+  {
+    "model": "drink.drink",
+    "pk": 21,
+    "fields": {
+      "image": "drinks/1636ipar.png"
+    }
+  },
+  {
+    "model": "drink.drink",
+    "pk": 22,
+    "fields": {
+      "image": "drinks/1641ipar.png"
+    }
+  },
+  {
+    "model": "drink.drink",
+    "pk": 23,
+    "fields": {
+      "image": "drinks/1632ipar.png"
+    }
+  },
+  {
+    "model": "drink.drink",
+    "pk": 24,
+    "fields": {
+      "image": "drinks/1628ipar.png"
+    }
+  },
+  {
+    "model": "drink.drink",
+    "pk": 25,
+    "fields": {
+      "image": "drinks/1627ipar.png"
+    }
+  },
+  {
+    "model": "pasta.pasta",
+    "pk": 1,
+    "fields": {
+      "name": "ПАСТА КАРБОНАРА + ПРИБОРИ",
+      "front_description": "Паста, сметана, гъби, бекон, пармезан",
+      "front_image": "/pastas/details/1242ipar.png",
+      "details_description": "Сметана, Пармезан, Пушен бекон, Пресни гъби",
+      "details_image": "pastas/front/1242large.png",
+      "price": "0.00",
+      "spices": [],
+      "meats": [
+        8
+      ],
+      "vegetables": [
+        31
+      ],
+      "cheese": [
+        6
+      ],
+      "sauce": [
+        17
+      ],
+      "tags": []
+    }
+  },
+  {
+    "model": "pasta.pasta",
+    "pk": 2,
+    "fields": {
+      "name": "НАПОЛИТАНА +ПРИБОРИ",
+      "front_description": "Паста, доматен сос, песто, пармезан",
+      "front_image": "/pastas/details/1243ipar.png",
+      "details_description": "Доматен сос, Песто сос, Пармезан",
+      "details_image": "pastas/front/1243large.png",
+      "price": "0.00",
+      "spices": [
+        21
+      ],
+      "meats": [],
+      "vegetables": [],
+      "cheese": [
+        6
+      ],
+      "sauce": [
+        19
+      ],
+      "tags": []
+    }
+  },
+  {
+    "model": "pasta.pasta",
+    "pk": 3,
+    "fields": {
+      "name": "ПАСТА ПЕПЕРОНИ +ПРИБОРИ",
+      "front_description": "Паста, доматен сос, сметана, пеперони, пармезан",
+      "front_image": "/pastas/details/843ipar.png",
+      "details_description": "Доматен сос, Сметана, Пармезан, Пеперони",
+      "details_image": "pastas/front/843large.png",
+      "price": "0.00",
+      "spices": [],
+      "meats": [
+        14
+      ],
+      "vegetables": [],
+      "cheese": [
+        6
+      ],
+      "sauce": [
+        17,
+        19
+      ],
+      "tags": []
+    }
+  },
+  {
+    "model": "pasta.pasta",
+    "pk": 4,
+    "fields": {
+      "name": "МАК ЕНД ЧИЙЗ +ПРИБОРИ",
+      "front_description": "Паста, ементал, пармезан и чедър, сметана",
+      "front_image": "/pastas/details/1591ipar.png",
+      "details_description": "Сметана, Ементалл, Пармезан, Чедар сирене",
+      "details_image": "pastas/front/1591large.png",
+      "price": "0.00",
+      "spices": [],
+      "meats": [],
+      "vegetables": [],
+      "cheese": [
+        2,
+        6,
+        7
+      ],
+      "sauce": [
+        17
+      ],
+      "tags": []
+    }
+  },
+  {
+    "model": "salad.salad",
+    "pk": 29,
+    "fields": {
+      "image": "salads/1325large.png",
+      "spices": [],
+      "meats": [],
+      "vegetables": [
+        36,
+        38
+      ],
+      "cheese": [
+        6
+      ],
+      "sauce": []
+    }
+  },
+  {
+    "model": "salad.salad",
+    "pk": 30,
+    "fields": {
+      "image": "salads/1368large.png",
+      "spices": [
+        21
+      ],
+      "meats": [],
+      "vegetables": [
+        36
+      ],
+      "cheese": [
+        4
+      ],
+      "sauce": []
+    }
+  },
+  {
+    "model": "salad.salad",
+    "pk": 31,
+    "fields": {
+      "image": "salads/1307large.png",
+      "spices": [],
+      "meats": [
+        8
+      ],
+      "vegetables": [
+        37
+      ],
+      "cheese": [
+        6
+      ],
+      "sauce": []
+    }
+  },
+  {
+    "model": "salad.salad",
+    "pk": 32,
+    "fields": {
+      "image": "salads/1308large.png",
+      "spices": [],
+      "meats": [
+        15
+      ],
+      "vegetables": [
+        37
+      ],
+      "cheese": [
+        6
+      ],
+      "sauce": []
+    }
+  },
+  {
+    "model": "salad.salad",
+    "pk": 33,
+    "fields": {
+      "image": "salads/1328large.png",
+      "spices": [],
+      "meats": [
+        15
+      ],
+      "vegetables": [
+        37
+      ],
+      "cheese": [
+        6
+      ],
+      "sauce": []
+    }
+  },
+  {
+    "model": "sandwich.sandwich",
+    "pk": 34,
+    "fields": {
+      "image": "sandwich/1472large.png",
+      "spices": [],
+      "meats": [
+        14
+      ],
+      "vegetables": [],
+      "cheese": [],
+      "sauce": [
+        19
+      ]
+    }
+  },
+  {
+    "model": "sandwich.sandwich",
+    "pk": 35,
+    "fields": {
+      "image": "sandwich/1471large.png",
+      "spices": [],
+      "meats": [
+        8,
+        15
+      ],
+      "vegetables": [],
+      "cheese": [],
+      "sauce": [
+        18
+      ]
+    }
+  },
+  {
+    "model": "sandwich.sandwich",
+    "pk": 36,
+    "fields": {
+      "image": "sandwich/1470large.png",
+      "spices": [],
+      "meats": [],
+      "vegetables": [
+        34,
+        36,
+        39
+      ],
+      "cheese": [
+        4
+      ],
+      "sauce": []
+    }
+  },
+  {
+    "model": "sandwich.sandwich",
+    "pk": 37,
+    "fields": {
+      "image": "sandwich/1663ipar.png",
+      "spices": [],
+      "meats": [],
+      "vegetables": [],
+      "cheese": [],
+      "sauce": []
+    }
+  },
+  {
+    "model": "sauce.saucemenu",
+    "pk": 38,
+    "fields": {
+      "image": "sauce/1366ipar.png"
+    }
+  },
+  {
+    "model": "sauce.saucemenu",
+    "pk": 39,
+    "fields": {
+      "image": "sauce/1201ipar.png"
+    }
+  },
+  {
+    "model": "sauce.saucemenu",
+    "pk": 40,
+    "fields": {
+      "image": "sauce/1200ipar.png"
+    }
+  },
+  {
+    "model": "sauce.saucemenu",
+    "pk": 41,
+    "fields": {
+      "image": "sauce/1202ipar.png"
+    }
+  },
+  {
+    "model": "sauce.saucemenu",
+    "pk": 42,
+    "fields": {
+      "image": "sauce/1206ipar.png"
+    }
+  },
+  {
+    "model": "sauce.saucemenu",
+    "pk": 43,
+    "fields": {
+      "image": "sauce/1207ipar.png"
+    }
+  },
+  {
+    "model": "sauce.saucemenu",
+    "pk": 44,
+    "fields": {
+      "image": "sauce/1205ipar.png"
+    }
+  },
+  {
+    "model": "sauce.saucemenu",
+    "pk": 45,
+    "fields": {
+      "image": "sauce/1512ipar.png"
+    }
+  },
+  {
+    "model": "sauce.saucemenu",
+    "pk": 46,
+    "fields": {
+      "image": "sauce/1646ipar.png"
+    }
+  }
+]

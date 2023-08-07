@@ -32,6 +32,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 DEV_ADDED_APPS = ["apps.common",
+                  "apps.accounts",
                   "apps.ingredient",
                   "apps.pizza",
                   "apps.dough_type",
@@ -44,7 +45,6 @@ DEV_ADDED_APPS = ["apps.common",
                   "apps.salad",
                   "apps.sandwich",
                   "apps.sauce",
-                  "apps.accounts",
                   "apps.checkout"]
 
 INSTALLED_APPS = [
@@ -122,9 +122,8 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-AUTH_USER_MODEL = 'accounts.CustomUser'
-
-
+AUTH_USER_MODEL = 'accounts.User'
+LOGIN_REDIRECT_URL = 'index'
 # Internationalization
 # https://docs.djangoproject.com/en/4.2/topics/i18n/
 

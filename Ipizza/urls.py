@@ -23,8 +23,9 @@ from apps.menu.views import ItemListView, ItemDetailView
 
 urlpatterns = [
                   path("admin/", admin.site.urls),
+                  path("", include("apps.accounts.urls")),
                   path("", include("apps.common.urls")),
-                  path('<str:model>/', ItemListView.as_view(), name='item-list'),
-                  path('<str:model>/<int:pk>/', ItemDetailView.as_view(), name='details'),
                   path("checkout/", include("apps.checkout.urls")),
+                  path('<str:model>/<int:pk>/', ItemDetailView.as_view(), name='details'),
+                  path('<str:model>/', ItemListView.as_view(), name='item-list'),
               ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
