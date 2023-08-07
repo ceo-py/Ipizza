@@ -1,8 +1,8 @@
-from django.db import models
 from django.contrib.auth.models import (
     BaseUserManager, AbstractBaseUser
 )
-
+from django.db import models
+from django.contrib.auth.models import User
 
 
 class UserManager(BaseUserManager):
@@ -11,7 +11,10 @@ class UserManager(BaseUserManager):
         Creates and saves a User with the given email and password.
         """
         if not email:
-            raise ValueError('Users must have an email address')
+            raise ValueError('Моля да въведете коректен Email адрес.')
+
+        if not password:
+            raise ValueError('Моля въведете парола')
 
         user = self.model(
             email=self.normalize_email(email),
@@ -54,13 +57,13 @@ class User(AbstractBaseUser):
         unique=True,
     )
     is_active = models.BooleanField(default=True)
-    staff = models.BooleanField(default=False) # a admin user; non super-user
-    admin = models.BooleanField(default=False) # a superuser
+    staff = models.BooleanField(default=False)  # a admin user; non super-user
+    admin = models.BooleanField(default=False)  # a superuser
 
     # notice the absence of a "Password field", that is built in.
 
     USERNAME_FIELD = 'email'
-    REQUIRED_FIELDS = [] # Email & Password are required by default.
+    REQUIRED_FIELDS = []  # Email & Password are required by default.
 
     objects = UserManager()
 
