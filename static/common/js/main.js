@@ -79,19 +79,19 @@
         items: 1
     });
 
-    //
+    // + - button on cart and total logic here
     function calculateTotalCard() {
         var body = $('body')
         var totalCart = body.find('.product-card span');
-        var shipment = parseFloat(body.find('.shipment span').text());
+        var shipment = parseFloat(body.find('.shipment span').text().split(' лв.')[0]);
         var totalPayment = body.find('.total-card span');
         var totalPrice = body.find('.total-price')
         var sumAll = totalPrice.text()
             .slice(0, -1)
             .split(' лв.')
             .reduce((accumulator, currentValue) => accumulator + parseFloat(currentValue), 0);
-        totalCart.text(isNaN(sumAll) ? '0 лв.' : sumAll + ' лв.');
-        totalPayment.text(isNaN(sumAll) ? '0 лв.' : sumAll + shipment + ' лв.');
+        totalCart.text(isNaN(sumAll) ? '0 лв.' : sumAll.toFixed(2) + ' лв.');
+        totalPayment.text(isNaN(sumAll) ? '0 лв.' : (sumAll + shipment).toFixed(2) + ' лв.');
     }
 
 
@@ -101,7 +101,6 @@
         var singlePrice = parseFloat($button.closest('tr').find('.single-price').text());
         var $totalPrice = $button.closest('tr').find('.total-price');
         var oldValue = $button.parent().find('input').val();
-
         if ($button.hasClass('btn-add-cart')) {
             addToCartIcon($button)
         }
@@ -149,9 +148,12 @@
     $('.delete-btn').on('click', function () {
             // Go up two parent elements to reach the 'td' element
             var $tdElement = $(this).closest('td').closest('td');
+            var itemName = $(this).data();
             // Remove the 'tr' (table row) element
             $tdElement.parent().remove();
-            calculateTotalCard()
+            calculateTotalCard();
+            apiDeleteCart(itemName);
+
         }
     )
 
@@ -165,12 +167,21 @@
             }
             const singleMenu = $(this).closest('.single-menu');
 
+            const typeN = singleMenu.find('input');
+            const dataJson = {
+                'item_name': singleMenu.find('h4').text(),
+                'quantity': typeN.val(),
+                'picture': singleMenu.find('.img-fluid').attr('src').substring(7),
+                'price': typeN.attr('price'),
+            }
             const menu = singleMenu.find('.menu');
             menu.toggleClass('hidden');
             // description.toggleClass('hidden')
             if (menu.hasClass('hidden')) {
                 addToCartIcon($(this))
                 $(this).text('Поръчай')
+                apiRequest('/api/add/', 'POST', dataJson)
+                // apiRequest('/api/delete/', 'DELETE', dataJson)
             } else {
                 $(this).text('Добави')
             }
@@ -178,12 +189,82 @@
         }
     )
 
+    // add to card icon from buttons
     function addToCartIcon(button) {
         const addedItems = parseInt(button.parent().find('input').val());
         const totalItemsCart = $('body').find('.icon-header-noti');
         const currentItems = parseInt(totalItemsCart.attr('data-notify'));
         totalItemsCart.attr('data-notify', isNaN(currentItems) ? addedItems : currentItems + addedItems);
     }
+
+    // getting csrf from co
+    function getCookie(name) {
+        let cookieValue = null;
+        if (document.cookie && document.cookie !== '') {
+            const cookies = document.cookie.split(';');
+            for (let i = 0; i < cookies.length; i++) {
+                const cookie = cookies[i].trim();
+                // Does this cookie string begin with the name we want?
+                if (cookie.substring(0, name.length + 1) === name + '=') {
+                    cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+                    break;
+                }
+            }
+        }
+        return cookieValue;
+    }
+
+    // cart remove btn remove from db item also
+    function apiDeleteCart(item_name) {
+        const dataJson = {
+            'item_name': item_name,
+        }
+        apiRequest('/api/delete/', 'DELETE', dataJson)
+    }
+
+    // api request
+    function apiRequest(url, methodType, data) {
+        const csrfToken = getCookie('csrftoken');
+        $.ajaxSetup({
+            beforeSend: function (xhr, settings) {
+                if (!/^(GET|HEAD|OPTIONS|TRACE)$/i.test(settings.type) && !this.crossDomain) {
+                    xhr.setRequestHeader('X-CSRFToken', csrfToken);
+                }
+            }
+        });
+        $.ajax({
+            url: url,
+            type: methodType,
+            data: data,
+            dataType: 'json',
+            headers: {
+                'Authorization': `Token ${csrfToken}`,
+            }
+        });
+    }
+
+
+    // add data to cart on add to click
+    $('.btn-add-cart').on('click', function () {
+        const button = $(this);
+        const item_name = button.data('name');
+        const price = button.data('price');
+        const picture = button.data('image');
+        const quantity = button.closest('tr').find('input[type="number"]').val();
+        const csrfToken = getCookie('csrftoken');
+        // console.log(csrfToken)
+        // console.log(item_name)
+        // console.log(price)
+        // console.log(quantity)
+        // console.log(picture)
+        const dataJson = {
+            'item_name': item_name,
+            'quantity': quantity,
+            'picture': picture,
+            'price': price,
+        }
+        apiRequest('/api/add/', 'POST', dataJson)
+    })
 
 
     // Cart header show/hide

@@ -25,6 +25,7 @@ urlpatterns = [
                   path("admin/", admin.site.urls),
                   path("", include("apps.accounts.urls")),
                   path("", include("apps.common.urls")),
+                  path("api/", include("api.urls")),
                   path("checkout/", include("apps.checkout.urls")),
                   path('<str:model>/<int:pk>/', ItemDetailView.as_view(), name='details'),
                   path('<str:model>/', ItemListView.as_view(), name='item-list'),

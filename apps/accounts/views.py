@@ -19,7 +19,7 @@ class CustomLogoutView(LogoutView):
     next_page = reverse_lazy('index')
 
 
-@method_decorator(user_passes_test(CV.is_not_logged_in, login_url=reverse_lazy('index')), name='dispatch')
+# @method_decorator(user_passes_test(CV.is_not_logged_in, login_url=reverse_lazy('index')), name='dispatch')
 class RegisterUserView(CreateView):
     template_name = 'accounts/register.html'
     form_class = RegisterForm

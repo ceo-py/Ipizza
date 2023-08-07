@@ -1,9 +1,7 @@
-from django.contrib.auth.decorators import user_passes_test
 from django.shortcuts import get_object_or_404
-from django.urls import reverse_lazy
-from django.utils.decorators import method_decorator
 from django.views.generic import ListView, DetailView
 from apps.appetizer.models import Appetizer
+from apps.checkout.models import CartItem
 from apps.chicken.models import Chicken
 from apps.desert.models import Desert
 from apps.drink.models import Drink
@@ -13,7 +11,6 @@ from apps.pizza.models import Pizza
 from apps.salad.models import Salad
 from apps.sandwich.models import Sandwich
 from apps.sauce.models import SauceMenu
-from custom_validations.cv import CustomValidation as CV
 
 all_menu_models = {
     'appetizer': Appetizer,
@@ -44,6 +41,8 @@ class ItemListView(ListView):
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         context['model_name'] = self.kwargs['model']
+        context['cart_items'] = sum(x.quantity for x in CartItem.objects.filter(user=self.request.user))
+
         return context
 
 
@@ -60,7 +59,7 @@ class ItemDetailView(DetailView):
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-
+        context['cart_items'] = sum(x.quantity for x in CartItem.objects.filter(user=self.request.user))
         # Get all available ingredients
         context['spices'] = Spice.objects.all()
         context['meats'] = Meat.objects.all()

@@ -1,20 +1,13 @@
-import json
-from django.core.management import BaseCommand
-from django.core import serializers
+a = {
+    'numbers': [1,2,3,4]
+}
 
-from apps.pizza.models import Pizza
+a['numbers'].append(5)
+a['numbers'] += [6]
 
+print(a)
 
-class Command(BaseCommand):
-    help = 'Dump data to a JSON file with UTF-8 encoding'
+print(len(a['numbers']))
 
-    def add_arguments(self, parser):
-        parser.add_argument('output_file', type=str)
-
-    def handle(self, *args, **options):
-        output_file = 'pizza.json'
-        queryset = Pizza.objects.all()  # Replace YourModel with the model you want to dump
-        data = serializers.serialize('json', queryset, ensure_ascii=False)
-
-        with open(output_file, 'w', encoding='utf-8') as file:
-            file.write(data)
+for x in a['numbers']:
+    print(x)

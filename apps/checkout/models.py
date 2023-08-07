@@ -4,12 +4,20 @@ from apps.accounts.models import User
 
 class BasePurchaseInformation(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
-    item_name = models.CharField(max_length=100)
-    quantity = models.PositiveIntegerField(default=1)
+    item_name = models.CharField(max_length=100,)
+    quantity = models.PositiveIntegerField(default=1,)
+    picture = models.CharField(max_length=255,)
     price = models.DecimalField(max_digits=10, decimal_places=2)
 
     def __str__(self):
         return f"{self.item_name} ({self.quantity}) - {self.price}"
+
+    @property
+    def product_name(self):
+        return self.item_name
+
+    def total_price(self):
+        return self.quantity * self.price
 
 
 class CartItem(BasePurchaseInformation):

@@ -17,46 +17,29 @@
                                     </tr>
                                 </thead>
                                 <tbody class="align-middle">
+                                    {% for item in items %}
                                     <tr>
                                         <td>
                                             <div class="img">
                                                 <a href="#"><img
-                                                        src="https://cdn.discordapp.com/attachments/1136948651810365500/1136950736782114946/image.png"
+                                                        src="/media/{{ item.picture }}"
                                                         alt="Image"></a>
-                                                <p>Product Name</p>
+                                                <p>{{ item.product_name }}</p>
                                             </div>
                                         </td>
-                                        <td class="single-price">99</td>
+                                        <td class="single-price">{{ item.price }}</td>
                                         <td class="quantity">
                                             <span class="dec q-btn">-</span>
-                                            <input type="number" value="1">
+                                            <input type="number" value="{{ item.quantity }}">
                                             <span class="inc q-btn">+</span>
                                         </td>
-                                        <td class="total-price"></td>
+                                        <td class="total-price">{{ item.total_price }} лв.</td>
                                         <td class="quantity">
-                                            <span class="q-btn delete-btn"><i class="fa fa-trash" aria-hidden="true"></i></span>
+                                            <span class="q-btn delete-btn" data-produce="{{ item.product_name }}"><i class="fa fa-trash"
+                                                                              aria-hidden="true"></i></span>
                                         </td>
                                     </tr>
-                                                                        <tr>
-                                        <td>
-                                            <div class="img">
-                                                <a href="#"><img
-                                                        src="https://cdn.discordapp.com/attachments/1136948651810365500/1136950736782114946/image.png"
-                                                        alt="Image"></a>
-                                                <p>Product Name</p>
-                                            </div>
-                                        </td>
-                                        <td class="single-price">99</td>
-                                        <td class="quantity">
-                                            <span class="dec q-btn">-</span>
-                                            <input type="number" value="1">
-                                            <span class="inc q-btn">+</span>
-                                        </td>
-                                        <td class="total-price"></td>
-                                        <td class="quantity">
-                                            <span class="q-btn delete-btn"><i class="fa fa-trash" aria-hidden="true"></i></span>
-                                        </td>
-                                    </tr>
+                                    {% endfor %}
                                 </tbody>
                             </table>
                         </div>
@@ -76,7 +59,7 @@
                                     <div class="cart-content">
                                         <h1>ПОТВЪРЖДАВАНЕ НА ПОРЪЧКАТА</h1>
                                         <p class="product-card">Продукти<span>0 лв.</span></p>
-                                        <p class="shipment">Доставка<span>4</span></p>
+                                        <p class="shipment">Доставка<span data-shipment="4">4.00 лв.</span></p>
                                         <h2 class="total-card">Общо<span>0 лв.</span></h2>
                                     </div>
                                     <div class="cart-btn">
