@@ -5,7 +5,7 @@ from django.utils.decorators import method_decorator
 from django.contrib.auth.views import LoginView, LogoutView
 from django.views.generic import CreateView
 
-from apps.accounts.forms import RegisterForm
+from apps.accounts.forms import RegisterForm, CustomLoginForm
 from custom_validations.cv import CustomValidation as CV
 
 
@@ -13,13 +13,13 @@ from custom_validations.cv import CustomValidation as CV
 class CustomLoginView(LoginView):
     template_name = 'accounts/login.html'
     success_url = reverse_lazy('index')
+    form_class = CustomLoginForm
 
 
 class CustomLogoutView(LogoutView):
     next_page = reverse_lazy('index')
 
 
-# @method_decorator(user_passes_test(CV.is_not_logged_in, login_url=reverse_lazy('index')), name='dispatch')
 class RegisterUserView(CreateView):
     template_name = 'accounts/register.html'
     form_class = RegisterForm
@@ -29,3 +29,4 @@ class RegisterUserView(CreateView):
         response = super().form_valid(form)
         login(self.request, self.object)
         return response
+

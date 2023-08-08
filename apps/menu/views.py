@@ -41,7 +41,9 @@ class ItemListView(ListView):
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         context['model_name'] = self.kwargs['model']
-        context['cart_items'] = sum(x.quantity for x in CartItem.objects.filter(user=self.request.user))
+
+        if self.request.user.is_authenticated:
+            context['cart_items'] = sum(x.quantity for x in CartItem.objects.filter(user=self.request.user))
 
         return context
 
@@ -59,12 +61,13 @@ class ItemDetailView(DetailView):
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        context['cart_items'] = sum(x.quantity for x in CartItem.objects.filter(user=self.request.user))
-        # Get all available ingredients
-        context['spices'] = Spice.objects.all()
-        context['meats'] = Meat.objects.all()
-        context['vegetables'] = Vegetable.objects.all()
-        context['cheese'] = Cheese.objects.all()
-        context['sauce'] = Sauce.objects.all()
+
+        if self.request.user.is_authenticated:
+            context['cart_items'] = sum(x.quantity for x in CartItem.objects.filter(user=self.request.user))
+            context['spices'] = Spice.objects.all()
+            context['meats'] = Meat.objects.all()
+            context['vegetables'] = Vegetable.objects.all()
+            context['cheese'] = Cheese.objects.all()
+            context['sauce'] = Sauce.objects.all()
 
         return context

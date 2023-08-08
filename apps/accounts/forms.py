@@ -1,50 +1,88 @@
 from django import forms
 from django.contrib.auth import get_user_model
-from django.contrib.auth.forms import ReadOnlyPasswordHashField
+from django.contrib.auth.forms import ReadOnlyPasswordHashField, AuthenticationForm
+
+from apps.checkout.models import UserProfile
 
 User = get_user_model()
 
 
+class CustomLoginForm(AuthenticationForm):
+
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        self.__set_attributes()
+
+    def __set_attributes(self):
+        self.fields["username"].widget.attrs["placeholder"] = "Email"
+        self.fields["username"].widget.attrs["class"] = "form-control m-b-25"
+        self.fields["password"].widget.attrs["placeholder"] = "Парола"
+        self.fields["password"].widget.attrs["class"] = "form-control m-b-25"
+
+
 class RegisterForm(forms.ModelForm):
-    """
-    The default
-
-    """
-
     password = forms.CharField(widget=forms.PasswordInput)
     password_2 = forms.CharField(label='Confirm Password', widget=forms.PasswordInput)
 
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        self.__set_attributes()
+
+    def __set_attributes(self):
+
+        self.fields["email"].widget.attrs["placeholder"] = "Email"
+        self.fields["email"].widget.attrs["class"] = "form-control m-b-25"
+        self.fields["password"].widget.attrs["placeholder"] = "Парола"
+        self.fields["password"].widget.attrs["class"] = "form-control m-b-25"
+        self.fields["password_2"].widget.attrs["placeholder"] = "Потвърди паролата"
+        self.fields["password_2"].widget.attrs["class"] = "form-control m-b-25"
+
     class Meta:
         model = User
-        fields = ['email']
+        fields = ['email', 'password', 'password_2']
 
     def clean_email(self):
-        '''
-        Verify email is available.
-        '''
         email = self.cleaned_data.get('email')
         qs = User.objects.filter(email=email)
         if qs.exists():
-            raise forms.ValidationError("email is taken")
+            raise forms.ValidationError("This email is taken")
         return email
 
     def clean(self):
-        '''
-        Verify both passwords match.
-        '''
         cleaned_data = super().clean()
         password = cleaned_data.get("password")
         password_2 = cleaned_data.get("password_2")
-        if password is not None and password != password_2:
-            self.add_error("password_2", "Your passwords must match")
+
+        if len(password) < 8:
+            raise forms.ValidationError("Password must be at least 8 characters long")
+
+        if not any(char.isupper() for char in password):
+            raise forms.ValidationError("Password must contain at least one uppercase letter")
+
+        if not any(char.islower() for char in password):
+            raise forms.ValidationError("Password must contain at least one lowercase letter")
+
+        if not any(char.isdigit() for char in password):
+            raise forms.ValidationError("Password must contain at least one digit")
+
+        if password != password_2:
+            raise forms.ValidationError("Passwords do not match")
+
         return cleaned_data
+
+    def save(self, commit=True):
+        form = super().save(commit=False)
+        form.set_password(self.cleaned_data["password"])
+
+        if commit:
+            form.save()
+            UserProfile.objects.create(user=form)
+
+        return form
 
 
 class UserAdminCreationForm(forms.ModelForm):
-    """
-    A form for creating new users. Includes all the required
-    fields, plus a repeated password.
-    """
+
     password = forms.CharField(widget=forms.PasswordInput)
     password_2 = forms.CharField(label='Confirm Password', widget=forms.PasswordInput)
 
@@ -53,9 +91,7 @@ class UserAdminCreationForm(forms.ModelForm):
         fields = ['email']
 
     def clean(self):
-        '''
-        Verify both passwords match.
-        '''
+
         cleaned_data = super().clean()
         password = cleaned_data.get("password")
         password_2 = cleaned_data.get("password_2")
@@ -64,7 +100,6 @@ class UserAdminCreationForm(forms.ModelForm):
         return cleaned_data
 
     def save(self, commit=True):
-        # Save the provided password in hashed format
         user = super().save(commit=False)
         user.set_password(self.cleaned_data["password"])
         if commit:
@@ -73,10 +108,7 @@ class UserAdminCreationForm(forms.ModelForm):
 
 
 class UserAdminChangeForm(forms.ModelForm):
-    """A form for updating users. Includes all the fields on
-    the user, but replaces the password field with admin's
-    password hash display field.
-    """
+
     password = ReadOnlyPasswordHashField()
 
     class Meta:
@@ -84,7 +116,4 @@ class UserAdminChangeForm(forms.ModelForm):
         fields = ['email', 'password', 'is_active', 'admin']
 
     def clean_password(self):
-        # Regardless of what the user provides, return the initial value.
-        # This is done here, rather than on the field, because the
-        # field does not have access to the initial value
         return self.initial["password"]

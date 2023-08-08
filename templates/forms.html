@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+{% block content %}
+    <form method="post" action="{% block action %}{% endblock %}">
+        <div class="container" id="login">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="login-col-1">
+                        <div class="login-form text-center">
+                            {% block form_contetn %}
+                            {% endblock %}
+                        </div>
+                        {% csrf_token %}
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="login-col-2">
+
+                        {% if form.errors %}
+                            <div class="alert alert-danger">
+                                <strong>Error:</strong>
+                                <ul>
+                                    {% for errors in form.errors.values %}
+                                        {% for error in errors %}
+                                            <li>{{ error }}</li>
+                                        {% endfor %}
+                                    {% endfor %}
+                                </ul>
+                            </div>
+                        {% endif %}
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+{% endblock %}

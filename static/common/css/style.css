@@ -1398,4 +1398,13 @@ body.mobile-nav-active #mobile-nav-toggle {
     background: #ffffff;
 }
 
+.login-text-col {
+    color: #FFD700;
+}
 
+#login {
+        background-image: url(https://cdn.discordapp.com/attachments/1136948651810365500/1138491592169242765/image.png);
+        background-size: 100% auto;
+        background-position: center;
+        height: 606px;
+    }
