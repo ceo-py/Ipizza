@@ -8,10 +8,16 @@ from custom_validations.cv import CustomValidation as CV
 class Pasta(models.Model):
     name = models.CharField(max_length=100)
     front_description = models.TextField(max_length=500)
-    front_image = models.ImageField(upload_to='pastas/front/', validators=(CV.validate_image_size,))
+    front_image = models.ImageField(
+        upload_to="pastas/front/", validators=(CV.validate_image_size,)
+    )
     details_description = models.TextField(max_length=500)
-    details_image = models.ImageField(upload_to='pastas/details/', validators=(CV.validate_image_size,))
-    price = models.DecimalField(max_digits=10, decimal_places=2, validators=(validators.MinValueValidator(0),))
+    details_image = models.ImageField(
+        upload_to="pastas/details/", validators=(CV.validate_image_size,)
+    )
+    price = models.DecimalField(
+        max_digits=10, decimal_places=2, validators=(validators.MinValueValidator(0),)
+    )
     spices = models.ManyToManyField(Spice, blank=True)
     meats = models.ManyToManyField(Meat, blank=True)
     vegetables = models.ManyToManyField(Vegetable, blank=True)

@@ -4,7 +4,7 @@ from apps.sandwich.models import Sandwich
 
 
 class Command(BaseCommand):
-    help = 'Populate the Sandwich model with initial data.'
+    help = "Populate the Sandwich model with initial data."
 
     def handle(self, *args, **kwargs):
         sandwichs = [
@@ -13,10 +13,7 @@ class Command(BaseCommand):
                 "product_picture": "sandwich/1472large.png",
                 "price": 7.9,
                 "dough_types": [],
-                "ingredients": [
-                    "Доматен сос",
-                    "Пеперони"
-                ],
+                "ingredients": ["Доматен сос", "Пеперони"],
                 "ingredient_groups": {
                     "spices": [],
                     "meats": [
@@ -25,7 +22,7 @@ class Command(BaseCommand):
                         "Вентричина",
                         "Пиле",
                         "Пушена шунка",
-                        "Пеперони"
+                        "Пеперони",
                     ],
                     "vegetables": [
                         "Сушени доматии",
@@ -35,30 +32,18 @@ class Command(BaseCommand):
                         "Пресни зелени чушки",
                         "Царевица",
                         "Пресни домати",
-                        "Черни маслини"
+                        "Черни маслини",
                     ],
-                    "cheese": [
-                        "Чедар сирене",
-                        "Ементалл",
-                        "Моцарела",
-                        "Краве сирене"
-                    ],
-                    "sauce": [
-                        "Доматен сос",
-                        "Барбекю сос"
-                    ]
-                }
+                    "cheese": ["Чедар сирене", "Ементалл", "Моцарела", "Краве сирене"],
+                    "sauce": ["Доматен сос", "Барбекю сос"],
+                },
             },
             {
                 "product_name": "САНДВИЧ БАРБЕКЮ ПИЛЕ",
                 "product_picture": "sandwich/1471large.png",
                 "price": 7.9,
                 "dough_types": [],
-                "ingredients": [
-                    "Барбекю сос",
-                    "Пушен бекон",
-                    "Пиле"
-                ],
+                "ingredients": ["Барбекю сос", "Пушен бекон", "Пиле"],
                 "ingredient_groups": {
                     "spices": [],
                     "meats": [
@@ -67,7 +52,7 @@ class Command(BaseCommand):
                         "Вентричина",
                         "Пиле",
                         "Пушена шунка",
-                        "Пеперони"
+                        "Пеперони",
                     ],
                     "vegetables": [
                         "Сушени доматии",
@@ -77,19 +62,11 @@ class Command(BaseCommand):
                         "Пресни зелени чушки",
                         "Царевица",
                         "Пресни домати",
-                        "Черни маслини"
+                        "Черни маслини",
                     ],
-                    "cheese": [
-                        "Чедар сирене",
-                        "Ементалл",
-                        "Моцарела",
-                        "Краве сирене"
-                    ],
-                    "sauce": [
-                        "Доматен сос",
-                        "Барбекю сос"
-                    ]
-                }
+                    "cheese": ["Чедар сирене", "Ементалл", "Моцарела", "Краве сирене"],
+                    "sauce": ["Доматен сос", "Барбекю сос"],
+                },
             },
             {
                 "product_name": "САНДВИЧ МЕДИТЕРАНЕО",
@@ -100,7 +77,7 @@ class Command(BaseCommand):
                     "Краве сирене",
                     "Пресни зелени чушки",
                     "Пресни домати",
-                    "Черни маслини"
+                    "Черни маслини",
                 ],
                 "ingredient_groups": {
                     "spices": [],
@@ -110,7 +87,7 @@ class Command(BaseCommand):
                         "Вентричина",
                         "Пиле",
                         "Пушена шунка",
-                        "Пеперони"
+                        "Пеперони",
                     ],
                     "vegetables": [
                         "Сушени доматии",
@@ -120,33 +97,27 @@ class Command(BaseCommand):
                         "Пресни зелени чушки",
                         "Царевица",
                         "Пресни домати",
-                        "Черни маслини"
+                        "Черни маслини",
                     ],
-                    "cheese": [
-                        "Чедар сирене",
-                        "Ементалл",
-                        "Моцарела",
-                        "Краве сирене"
-                    ],
-                    "sauce": [
-                        "Доматен сос",
-                        "Барбекю сос"
-                    ]
-                }
+                    "cheese": ["Чедар сирене", "Ементалл", "Моцарела", "Краве сирене"],
+                    "sauce": ["Доматен сос", "Барбекю сос"],
+                },
             },
             {
                 "product_name": "Сандвич Пастрами",
                 "product_picture": "https://sandwich/1663ipar.png",
                 "price": 11.9,
-                "ingredients":[]
-            }
+                "ingredients": [],
+            },
         ]
 
         for data in sandwichs:
             item = Sandwich.objects.create(
-                name=data['product_name'],
-                description=', '.join(data['ingredients']),
-                image=data['product_picture'],
-                price=data['price'],
+                name=data["product_name"],
+                description=", ".join(data["ingredients"]),
+                image=data["product_picture"],
+                price=data["price"],
             )
-            self.stdout.write(self.style.SUCCESS(f'Successfully created Sandwich: {item}'))
+            self.stdout.write(
+                self.style.SUCCESS(f"Successfully created Sandwich: {item}")
+            )

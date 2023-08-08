@@ -7,6 +7,5 @@ from custom_validations.cv import CustomValidation as CV
 # Create your models here.
 class Appetizer(Menu):
     image = models.ImageField(
-        upload_to='appetizers/',
-        validators=(CV.validate_image_size,)
+        upload_to="appetizers/", validators=(CV.validate_image_size,)
     )

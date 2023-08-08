@@ -4,9 +4,9 @@ from apps.ingredient.models import Spice, Meat, Vegetable, Cheese, Sauce, Tag
 
 
 class TagAdmin(admin.ModelAdmin):
-    filter_horizontal = ('tags',)
-    search_fields = ('description', 'name')
-    list_display = ('name', 'description', 'price')
+    filter_horizontal = ("tags",)
+    search_fields = ("description", "name")
+    list_display = ("name", "description", "price")
 
 
 # Register your models here.

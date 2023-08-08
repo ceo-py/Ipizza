@@ -4,7 +4,7 @@ from apps.ingredient.models import Meat
 
 
 class Command(BaseCommand):
-    help = 'Populate the Meat model with initial data.'
+    help = "Populate the Meat model with initial data."
 
     def handle(self, *args, **kwargs):
         Meats = [
@@ -16,11 +16,13 @@ class Command(BaseCommand):
             "Чоризо",
             "Пеперони",
             "Пиле",
-            "Пиле гирос"
+            "Пиле гирос",
         ]
 
         for item in Meats:
             create_object = Meat.objects.create(
                 name=item,
             )
-            self.stdout.write(self.style.SUCCESS(f'Successfully created Meat: {create_object}'))
+            self.stdout.write(
+                self.style.SUCCESS(f"Successfully created Meat: {create_object}")
+            )

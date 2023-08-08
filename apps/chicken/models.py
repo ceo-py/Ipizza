@@ -5,5 +5,5 @@ from custom_validations.cv import CustomValidation as CV
 
 class Chicken(Menu):
     image = models.ImageField(
-        upload_to='chicken/',
-        validators=(CV.validate_image_size,))
+        upload_to="chicken/", validators=(CV.validate_image_size,)
+    )

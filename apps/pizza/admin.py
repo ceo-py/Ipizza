@@ -4,10 +4,10 @@ from apps.pizza.models import Pizza
 
 # Register the PizzaAdmin class
 class MainMenuAdmin(admin.ModelAdmin):
-    ordering = ('name', 'price')
-    list_filter = ('tags',)
-    list_display = ('name', 'description', 'price')
-    filter_horizontal = ('spices', 'meats', 'vegetables', 'cheese', 'sauce', 'tags')
+    ordering = ("name", "price")
+    list_filter = ("tags",)
+    list_display = ("name", "description", "price")
+    filter_horizontal = ("spices", "meats", "vegetables", "cheese", "sauce", "tags")
     list_per_page = 15
 
     def description(self, obj):

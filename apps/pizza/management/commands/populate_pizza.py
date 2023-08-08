@@ -4,7 +4,7 @@ from apps.pizza.models import Pizza
 
 
 class Command(BaseCommand):
-    help = 'Populate the Pizza model with initial data.'
+    help = "Populate the Pizza model with initial data."
 
     def handle(self, *args, **kwargs):
         pizzas = [
@@ -17,7 +17,7 @@ class Command(BaseCommand):
                             "type": "Средна",
                             "picture": "https://www.dominos.bg/gallery/pansizes/bgiparTraditional_panbg.png",
                             "description": "Нашето традиционно тесто",
-                            "price": 10.9
+                            "price": 10.9,
                         }
                     ],
                     [
@@ -25,7 +25,7 @@ class Command(BaseCommand):
                             "type": "Средна",
                             "picture": "https://www.dominos.bg/gallery/pansizes/bgiparItalian_style_panbg.png",
                             "description": "Тесто италиански стил",
-                            "price": 10.9
+                            "price": 10.9,
                         }
                     ],
                     [
@@ -33,7 +33,7 @@ class Command(BaseCommand):
                             "type": "Средна",
                             "picture": "https://www.dominos.bg/gallery/pansizes/bgiparGluten_Freebg.png",
                             "description": "Gluten Free Dough  (+ 3,10лв)",
-                            "price": 14.0
+                            "price": 14.0,
                         }
                     ],
                     [
@@ -41,7 +41,7 @@ class Command(BaseCommand):
                             "type": "Голяма",
                             "picture": "https://www.dominos.bg/gallery/pansizes/bgiparTraditional_panbg.png",
                             "description": "Нашето традиционно тесто",
-                            "price": 14.0
+                            "price": 14.0,
                         }
                     ],
                     [
@@ -49,7 +49,7 @@ class Command(BaseCommand):
                             "type": "Голяма",
                             "picture": "https://www.dominos.bg/gallery/pansizes/bgiparItalian_style_panbg.png",
                             "description": "Тесто италиански стил",
-                            "price": 14.0
+                            "price": 14.0,
                         }
                     ],
                     [
@@ -57,7 +57,7 @@ class Command(BaseCommand):
                             "type": "Голяма",
                             "picture": "https://www.dominos.bg/gallery/pansizes/bgiparThin_and_crispy_panbg.png",
                             "description": "Тънко и хрупкаво тесто",
-                            "price": 14.0
+                            "price": 14.0,
                         }
                     ],
                     [
@@ -65,7 +65,7 @@ class Command(BaseCommand):
                             "type": "Голяма",
                             "picture": "https://www.dominos.bg/gallery/pansizes/bgiparPhiladelphia_panbg.png",
                             "description": "Прясно омесено тесто с коричка пълнена със сирене Philadelphia (+2,50лв)",
-                            "price": 16.5
+                            "price": 16.5,
                         }
                     ],
                     [
@@ -73,7 +73,7 @@ class Command(BaseCommand):
                             "type": "Голяма",
                             "picture": "https://www.dominos.bg/gallery/pansizes/bgiparLarge_mozzarella_crustbg.png",
                             "description": "Прясно омесено тесто с коричка, пълнена с моцарела (+2,50лв.)",
-                            "price": 16.5
+                            "price": 16.5,
                         }
                     ],
                     [
@@ -81,7 +81,7 @@ class Command(BaseCommand):
                             "type": "Голяма",
                             "picture": "https://www.dominos.bg/gallery/pansizes/bgiparLarge_pepperoni_crustbg.png",
                             "description": "Прясно омесено тесто с коричка, пълнена с пеперони (+2,50лв.)",
-                            "price": 16.5
+                            "price": 16.5,
                         }
                     ],
                     [
@@ -89,7 +89,7 @@ class Command(BaseCommand):
                             "type": "Джъмбо",
                             "picture": "https://www.dominos.bg/gallery/pansizes/bgiparTraditional_panbg.png",
                             "description": "Нашето традиционно тесто",
-                            "price": 15.4
+                            "price": 15.4,
                         }
                     ],
                     [
@@ -97,21 +97,13 @@ class Command(BaseCommand):
                             "type": "Джъмбо",
                             "picture": "https://www.dominos.bg/gallery/pansizes/bgiparItalian_style_panbg.png",
                             "description": "Тесто италиански стил",
-                            "price": 15.4
+                            "price": 15.4,
                         }
-                    ]
-                ],
-                "ingredients": [
-                    "Доматен сос",
-                    "Extra Моцарела"
-                ],
-                "ingredient_groups": {
-                    "spices": [
-                        "Босилек",
-                        "Песто сос",
-                        "Пармезан снежинки",
-                        "Риган"
                     ],
+                ],
+                "ingredients": ["Доматен сос", "Extra Моцарела"],
+                "ingredient_groups": {
+                    "spices": ["Босилек", "Песто сос", "Пармезан снежинки", "Риган"],
                     "meats": [
                         "Пушен бекон",
                         "Вентричина",
@@ -121,7 +113,7 @@ class Command(BaseCommand):
                         "Чоризо",
                         "Пеперони",
                         "Пиле",
-                        "Пиле гирос"
+                        "Пиле гирос",
                     ],
                     "vegetables": [
                         "Халапеньо-люти чушки",
@@ -135,7 +127,7 @@ class Command(BaseCommand):
                         "Рукола",
                         "Черни маслини",
                         "Сушени доматии",
-                        "Лук"
+                        "Лук",
                     ],
                     "cheese": [
                         "Моцарела",
@@ -144,19 +136,15 @@ class Command(BaseCommand):
                         "Краве сирене",
                         "Топено сиренее",
                         "Пармезан",
-                        "Ементалл"
+                        "Ементалл",
                     ],
-                    "sauce": [
-                        "Сметана",
-                        "Барбекю сос",
-                        "Доматен сос"
-                    ]
+                    "sauce": ["Сметана", "Барбекю сос", "Доматен сос"],
                 },
                 "product_main_picture": "https://www.dominos.bg/gallery/fmobile/1265medium.png",
                 "product_main_description": "доматен сос, моцарела, допълнително моцарела",
                 "tag": {
                     "VEGETARIAN": "https://www.dominos.bg/images/tags/vegetarian.svg"
-                }
+                },
             },
             {
                 "product_name": "БЪРБЪН ПИЦА",
@@ -167,7 +155,7 @@ class Command(BaseCommand):
                             "type": "Средна",
                             "picture": "https://www.dominos.bg/gallery/pansizes/bgiparTraditional_panbg.png",
                             "description": "Нашето традиционно тесто",
-                            "price": 13.9
+                            "price": 13.9,
                         }
                     ],
                     [
@@ -175,7 +163,7 @@ class Command(BaseCommand):
                             "type": "Средна",
                             "picture": "https://www.dominos.bg/gallery/pansizes/bgiparItalian_style_panbg.png",
                             "description": "Тесто италиански стил",
-                            "price": 13.9
+                            "price": 13.9,
                         }
                     ],
                     [
@@ -183,7 +171,7 @@ class Command(BaseCommand):
                             "type": "Средна",
                             "picture": "https://www.dominos.bg/gallery/pansizes/bgiparGluten_Freebg.png",
                             "description": "Gluten Free Dough  (+ 3,10лв)",
-                            "price": 17.0
+                            "price": 17.0,
                         }
                     ],
                     [
@@ -191,7 +179,7 @@ class Command(BaseCommand):
                             "type": "Голяма",
                             "picture": "https://www.dominos.bg/gallery/pansizes/bgiparTraditional_panbg.png",
                             "description": "Нашето традиционно тесто",
-                            "price": 16.9
+                            "price": 16.9,
                         }
                     ],
                     [
@@ -199,7 +187,7 @@ class Command(BaseCommand):
                             "type": "Голяма",
                             "picture": "https://www.dominos.bg/gallery/pansizes/bgiparItalian_style_panbg.png",
                             "description": "Тесто италиански стил",
-                            "price": 16.9
+                            "price": 16.9,
                         }
                     ],
                     [
@@ -207,7 +195,7 @@ class Command(BaseCommand):
                             "type": "Голяма",
                             "picture": "https://www.dominos.bg/gallery/pansizes/bgiparThin_and_crispy_panbg.png",
                             "description": "Тънко и хрупкаво тесто",
-                            "price": 16.9
+                            "price": 16.9,
                         }
                     ],
                     [
@@ -215,7 +203,7 @@ class Command(BaseCommand):
                             "type": "Голяма",
                             "picture": "https://www.dominos.bg/gallery/pansizes/bgiparPhiladelphia_panbg.png",
                             "description": "Прясно омесено тесто с коричка пълнена със сирене Philadelphia (+2,50лв)",
-                            "price": 19.4
+                            "price": 19.4,
                         }
                     ],
                     [
@@ -223,7 +211,7 @@ class Command(BaseCommand):
                             "type": "Голяма",
                             "picture": "https://www.dominos.bg/gallery/pansizes/bgiparLarge_mozzarella_crustbg.png",
                             "description": "Прясно омесено тесто с коричка, пълнена с моцарела (+2,50лв.)",
-                            "price": 19.4
+                            "price": 19.4,
                         }
                     ],
                     [
@@ -231,7 +219,7 @@ class Command(BaseCommand):
                             "type": "Голяма",
                             "picture": "https://www.dominos.bg/gallery/pansizes/bgiparLarge_pepperoni_crustbg.png",
                             "description": "Прясно омесено тесто с коричка, пълнена с пеперони (+2,50лв.)",
-                            "price": 19.4
+                            "price": 19.4,
                         }
                     ],
                     [
@@ -239,7 +227,7 @@ class Command(BaseCommand):
                             "type": "Джъмбо",
                             "picture": "https://www.dominos.bg/gallery/pansizes/bgiparTraditional_panbg.png",
                             "description": "Нашето традиционно тесто",
-                            "price": 18.9
+                            "price": 18.9,
                         }
                     ],
                     [
@@ -247,24 +235,19 @@ class Command(BaseCommand):
                             "type": "Джъмбо",
                             "picture": "https://www.dominos.bg/gallery/pansizes/bgiparItalian_style_panbg.png",
                             "description": "Тесто италиански стил",
-                            "price": 18.9
+                            "price": 18.9,
                         }
-                    ]
+                    ],
                 ],
                 "ingredients": [
                     "Доматен сос",
                     "Моцарела",
                     "Пиле",
                     "Пушен бекон",
-                    "Лук"
+                    "Лук",
                 ],
                 "ingredient_groups": {
-                    "spices": [
-                        "Риган",
-                        "Босилек",
-                        "Песто сос",
-                        "Пармезан снежинки"
-                    ],
+                    "spices": ["Риган", "Босилек", "Песто сос", "Пармезан снежинки"],
                     "meats": [
                         "Пиле",
                         "Пиле гирос",
@@ -274,7 +257,7 @@ class Command(BaseCommand):
                         "Риба тон",
                         "Пушена шунка",
                         "Чоризо",
-                        "Пеперони"
+                        "Пеперони",
                     ],
                     "vegetables": [
                         "Сушени доматии",
@@ -288,7 +271,7 @@ class Command(BaseCommand):
                         "Пресни домати",
                         "Царевица",
                         "Рукола",
-                        "Черни маслини"
+                        "Черни маслини",
                     ],
                     "cheese": [
                         "Пармезан",
@@ -297,17 +280,13 @@ class Command(BaseCommand):
                         "Чедар сирене",
                         "Веган Моцарела",
                         "Краве сирене",
-                        "Топено сиренее"
+                        "Топено сиренее",
                     ],
-                    "sauce": [
-                        "Сметана",
-                        "Барбекю сос",
-                        "Доматен сос"
-                    ]
+                    "sauce": ["Сметана", "Барбекю сос", "Доматен сос"],
                 },
                 "product_main_picture": "https://www.dominos.bg/gallery/fmobile/1652medium.png",
                 "product_main_description": "доматен сос, моцарела, пилешко филе, бекон, лук, бърбън сос (не съдържа алкохол)",
-                "tag": {}
+                "tag": {},
             },
             {
                 "product_name": "ДЪРПАНО ТЕЛЕШКО",
@@ -318,7 +297,7 @@ class Command(BaseCommand):
                             "type": "Голяма",
                             "picture": "https://www.dominos.bg/gallery/pansizes/bgiparRectangular_panbg.png",
                             "description": "Правоъгълна, приготвена в тавичка",
-                            "price": 18.9
+                            "price": 18.9,
                         }
                     ]
                 ],
@@ -326,15 +305,10 @@ class Command(BaseCommand):
                     "Барбекю сос",
                     "Моцарела",
                     "Чедар сирене",
-                    "Карамелизиран лук"
+                    "Карамелизиран лук",
                 ],
                 "ingredient_groups": {
-                    "spices": [
-                        "Риган",
-                        "Босилек",
-                        "Пармезан снежинки",
-                        "Песто сос"
-                    ],
+                    "spices": ["Риган", "Босилек", "Пармезан снежинки", "Песто сос"],
                     "meats": [
                         "Пиле",
                         "Пиле гирос",
@@ -344,7 +318,7 @@ class Command(BaseCommand):
                         "Риба тон",
                         "Пушена шунка",
                         "Чоризо",
-                        "Пеперони"
+                        "Пеперони",
                     ],
                     "vegetables": [
                         "Сушени доматии",
@@ -358,7 +332,7 @@ class Command(BaseCommand):
                         "Пресни домати",
                         "Царевица",
                         "Рукола",
-                        "Черни маслини"
+                        "Черни маслини",
                     ],
                     "cheese": [
                         "Пармезан",
@@ -367,19 +341,13 @@ class Command(BaseCommand):
                         "Чедар сирене",
                         "Веган Моцарела",
                         "Краве сирене",
-                        "Топено сиренее"
+                        "Топено сиренее",
                     ],
-                    "sauce": [
-                        "Сметана",
-                        "Барбекю сос",
-                        "Доматен сос"
-                    ]
+                    "sauce": ["Сметана", "Барбекю сос", "Доматен сос"],
                 },
                 "product_main_picture": "https://www.dominos.bg/gallery/fmobile/1655medium.png",
                 "product_main_description": "барбекю сос, моцарела, карамелизиран лук, чедър, дърпано телешко * не участва в промоции и оферти *",
-                "tag": {
-                    "PREMIUM": "https://www.dominos.bg/images/tags/premium.svg"
-                }
+                "tag": {"PREMIUM": "https://www.dominos.bg/images/tags/premium.svg"},
             },
             {
                 "product_name": "ЗВЕРСКА V.3",
@@ -390,7 +358,7 @@ class Command(BaseCommand):
                             "type": "Средна",
                             "picture": "https://www.dominos.bg/gallery/pansizes/bgiparTraditional_panbg.png",
                             "description": "Нашето традиционно тесто",
-                            "price": 14.9
+                            "price": 14.9,
                         }
                     ],
                     [
@@ -398,7 +366,7 @@ class Command(BaseCommand):
                             "type": "Средна",
                             "picture": "https://www.dominos.bg/gallery/pansizes/bgiparItalian_style_panbg.png",
                             "description": "Тесто италиански стил",
-                            "price": 14.9
+                            "price": 14.9,
                         }
                     ],
                     [
@@ -406,7 +374,7 @@ class Command(BaseCommand):
                             "type": "Средна",
                             "picture": "https://www.dominos.bg/gallery/pansizes/bgiparGluten_Freebg.png",
                             "description": "Gluten Free Dough  (+ 3,10лв)",
-                            "price": 18.0
+                            "price": 18.0,
                         }
                     ],
                     [
@@ -414,7 +382,7 @@ class Command(BaseCommand):
                             "type": "Голяма",
                             "picture": "https://www.dominos.bg/gallery/pansizes/bgiparTraditional_panbg.png",
                             "description": "Нашето традиционно тесто",
-                            "price": 17.9
+                            "price": 17.9,
                         }
                     ],
                     [
@@ -422,7 +390,7 @@ class Command(BaseCommand):
                             "type": "Голяма",
                             "picture": "https://www.dominos.bg/gallery/pansizes/bgiparItalian_style_panbg.png",
                             "description": "Тесто италиански стил",
-                            "price": 17.9
+                            "price": 17.9,
                         }
                     ],
                     [
@@ -430,7 +398,7 @@ class Command(BaseCommand):
                             "type": "Голяма",
                             "picture": "https://www.dominos.bg/gallery/pansizes/bgiparThin_and_crispy_panbg.png",
                             "description": "Тънко и хрупкаво тесто",
-                            "price": 17.9
+                            "price": 17.9,
                         }
                     ],
                     [
@@ -438,7 +406,7 @@ class Command(BaseCommand):
                             "type": "Голяма",
                             "picture": "https://www.dominos.bg/gallery/pansizes/bgiparPhiladelphia_panbg.png",
                             "description": "Прясно омесено тесто с коричка пълнена със сирене Philadelphia (+2,50лв)",
-                            "price": 20.4
+                            "price": 20.4,
                         }
                     ],
                     [
@@ -446,7 +414,7 @@ class Command(BaseCommand):
                             "type": "Голяма",
                             "picture": "https://www.dominos.bg/gallery/pansizes/bgiparLarge_mozzarella_crustbg.png",
                             "description": "Прясно омесено тесто с коричка, пълнена с моцарела (+2,50лв.)",
-                            "price": 20.4
+                            "price": 20.4,
                         }
                     ],
                     [
@@ -454,7 +422,7 @@ class Command(BaseCommand):
                             "type": "Голяма",
                             "picture": "https://www.dominos.bg/gallery/pansizes/bgiparLarge_pepperoni_crustbg.png",
                             "description": "Прясно омесено тесто с коричка, пълнена с пеперони (+2,50лв.)",
-                            "price": 20.4
+                            "price": 20.4,
                         }
                     ],
                     [
@@ -462,7 +430,7 @@ class Command(BaseCommand):
                             "type": "Джъмбо",
                             "picture": "https://www.dominos.bg/gallery/pansizes/bgiparTraditional_panbg.png",
                             "description": "Нашето традиционно тесто",
-                            "price": 19.9
+                            "price": 19.9,
                         }
                     ],
                     [
@@ -470,24 +438,19 @@ class Command(BaseCommand):
                             "type": "Джъмбо",
                             "picture": "https://www.dominos.bg/gallery/pansizes/bgiparItalian_style_panbg.png",
                             "description": "Тесто италиански стил",
-                            "price": 19.9
+                            "price": 19.9,
                         }
-                    ]
+                    ],
                 ],
                 "ingredients": [
                     "Доматен сос",
                     "Моцарела",
                     "Вентричина",
                     "Пушена шунка",
-                    "Пушен бекон"
+                    "Пушен бекон",
                 ],
                 "ingredient_groups": {
-                    "spices": [
-                        "Босилек",
-                        "Пармезан снежинки",
-                        "Песто сос",
-                        "Риган"
-                    ],
+                    "spices": ["Босилек", "Пармезан снежинки", "Песто сос", "Риган"],
                     "meats": [
                         "Вентричина",
                         "Пикантно телешко",
@@ -497,7 +460,7 @@ class Command(BaseCommand):
                         "Пеперони",
                         "Пиле",
                         "Пиле гирос",
-                        "Пушен бекон"
+                        "Пушен бекон",
                     ],
                     "vegetables": [
                         "Пресни зелени чушки",
@@ -511,7 +474,7 @@ class Command(BaseCommand):
                         "Халапеньо-люти чушки",
                         "Пресни гъби",
                         "Карамелизиран лук",
-                        "Ананас"
+                        "Ананас",
                     ],
                     "cheese": [
                         "Веган Моцарела",
@@ -520,17 +483,13 @@ class Command(BaseCommand):
                         "Пармезан",
                         "Ементалл",
                         "Моцарела",
-                        "Чедар сирене"
+                        "Чедар сирене",
                     ],
-                    "sauce": [
-                        "Сметана",
-                        "Барбекю сос",
-                        "Доматен сос"
-                    ]
+                    "sauce": ["Сметана", "Барбекю сос", "Доматен сос"],
                 },
                 "product_main_picture": "https://www.dominos.bg/gallery/fmobile/1651medium.png",
                 "product_main_description": "доматен сос, моцарела, шунка, бекон, вентричина",
-                "tag": {}
+                "tag": {},
             },
             {
                 "product_name": "ПИЦА ГИРОС",
@@ -541,7 +500,7 @@ class Command(BaseCommand):
                             "type": "Средна",
                             "picture": "https://www.dominos.bg/gallery/pansizes/bgiparTraditional_panbg.png",
                             "description": "Нашето традиционно тесто",
-                            "price": 14.9
+                            "price": 14.9,
                         }
                     ],
                     [
@@ -549,7 +508,7 @@ class Command(BaseCommand):
                             "type": "Средна",
                             "picture": "https://www.dominos.bg/gallery/pansizes/bgiparItalian_style_panbg.png",
                             "description": "Тесто италиански стил",
-                            "price": 14.9
+                            "price": 14.9,
                         }
                     ],
                     [
@@ -557,7 +516,7 @@ class Command(BaseCommand):
                             "type": "Средна",
                             "picture": "https://www.dominos.bg/gallery/pansizes/bgiparGluten_Freebg.png",
                             "description": "Gluten Free Dough  (+ 3,10лв)",
-                            "price": 18.0
+                            "price": 18.0,
                         }
                     ],
                     [
@@ -565,7 +524,7 @@ class Command(BaseCommand):
                             "type": "Голяма",
                             "picture": "https://www.dominos.bg/gallery/pansizes/bgiparTraditional_panbg.png",
                             "description": "Нашето традиционно тесто",
-                            "price": 17.9
+                            "price": 17.9,
                         }
                     ],
                     [
@@ -573,7 +532,7 @@ class Command(BaseCommand):
                             "type": "Голяма",
                             "picture": "https://www.dominos.bg/gallery/pansizes/bgiparItalian_style_panbg.png",
                             "description": "Тесто италиански стил",
-                            "price": 17.9
+                            "price": 17.9,
                         }
                     ],
                     [
@@ -581,7 +540,7 @@ class Command(BaseCommand):
                             "type": "Голяма",
                             "picture": "https://www.dominos.bg/gallery/pansizes/bgiparThin_and_crispy_panbg.png",
                             "description": "Тънко и хрупкаво тесто",
-                            "price": 17.9
+                            "price": 17.9,
                         }
                     ],
                     [
@@ -589,7 +548,7 @@ class Command(BaseCommand):
                             "type": "Голяма",
                             "picture": "https://www.dominos.bg/gallery/pansizes/bgiparPhiladelphia_panbg.png",
                             "description": "Прясно омесено тесто с коричка пълнена със сирене Philadelphia (+2,50лв)",
-                            "price": 20.4
+                            "price": 20.4,
                         }
                     ],
                     [
@@ -597,7 +556,7 @@ class Command(BaseCommand):
                             "type": "Голяма",
                             "picture": "https://www.dominos.bg/gallery/pansizes/bgiparLarge_mozzarella_crustbg.png",
                             "description": "Прясно омесено тесто с коричка, пълнена с моцарела (+2,50лв.)",
-                            "price": 17.4
+                            "price": 17.4,
                         }
                     ],
                     [
@@ -605,7 +564,7 @@ class Command(BaseCommand):
                             "type": "Голяма",
                             "picture": "https://www.dominos.bg/gallery/pansizes/bgiparLarge_pepperoni_crustbg.png",
                             "description": "Прясно омесено тесто с коричка, пълнена с пеперони (+2,50лв.)",
-                            "price": 20.4
+                            "price": 20.4,
                         }
                     ],
                     [
@@ -613,7 +572,7 @@ class Command(BaseCommand):
                             "type": "Джъмбо",
                             "picture": "https://www.dominos.bg/gallery/pansizes/bgiparTraditional_panbg.png",
                             "description": "Нашето традиционно тесто",
-                            "price": 19.9
+                            "price": 19.9,
                         }
                     ],
                     [
@@ -621,24 +580,19 @@ class Command(BaseCommand):
                             "type": "Джъмбо",
                             "picture": "https://www.dominos.bg/gallery/pansizes/bgiparItalian_style_panbg.png",
                             "description": "Тесто италиански стил",
-                            "price": 19.9
+                            "price": 19.9,
                         }
-                    ]
+                    ],
                 ],
                 "ingredients": [
                     "Доматен сос",
                     "Моцарела",
                     "Extra Пиле гирос",
                     "Лук",
-                    "Пресни домати"
+                    "Пресни домати",
                 ],
                 "ingredient_groups": {
-                    "spices": [
-                        "Риган",
-                        "Босилек",
-                        "Песто сос",
-                        "Пармезан снежинки"
-                    ],
+                    "spices": ["Риган", "Босилек", "Песто сос", "Пармезан снежинки"],
                     "meats": [
                         "Пиле",
                         "Пиле гирос",
@@ -648,7 +602,7 @@ class Command(BaseCommand):
                         "Риба тон",
                         "Пушена шунка",
                         "Чоризо",
-                        "Пеперони"
+                        "Пеперони",
                     ],
                     "vegetables": [
                         "Черни маслини",
@@ -662,7 +616,7 @@ class Command(BaseCommand):
                         "Кисeли краставички",
                         "Пресни домати",
                         "Царевица",
-                        "Рукола"
+                        "Рукола",
                     ],
                     "cheese": [
                         "Пармезан",
@@ -671,20 +625,16 @@ class Command(BaseCommand):
                         "Чедар сирене",
                         "Веган Моцарела",
                         "Краве сирене",
-                        "Топено сиренее"
+                        "Топено сиренее",
                     ],
-                    "sauce": [
-                        "Сметана",
-                        "Барбекю сос",
-                        "Доматен сос"
-                    ]
+                    "sauce": ["Сметана", "Барбекю сос", "Доматен сос"],
                 },
                 "product_main_picture": "https://www.dominos.bg/gallery/fmobile/1661medium.png",
                 "product_main_description": "доматен сос, моцарела, гирос пиле, допълнително гирос пиле, лук, пресни домати, йогурт сос",
                 "tag": {
                     "НОВО": "https://www.dominos.bg/images/tags/new_product.svg",
-                    "PREMIUM": "https://www.dominos.bg/images/tags/premium.svg"
-                }
+                    "PREMIUM": "https://www.dominos.bg/images/tags/premium.svg",
+                },
             },
             {
                 "product_name": "ПИЦА ПАСТРАМИ",
@@ -695,22 +645,13 @@ class Command(BaseCommand):
                             "type": "Голяма",
                             "picture": "https://www.dominos.bg/gallery/pansizes/bgiparItalian_style_panbg.png",
                             "description": "Тесто италиански стил",
-                            "price": 18.9
+                            "price": 18.9,
                         }
                     ]
                 ],
-                "ingredients": [
-                    "Доматен сос",
-                    "Моцарела",
-                    "Кисeли краставички"
-                ],
+                "ingredients": ["Доматен сос", "Моцарела", "Кисeли краставички"],
                 "ingredient_groups": {
-                    "spices": [
-                        "Босилек",
-                        "Пармезан снежинки",
-                        "Песто сос",
-                        "Риган"
-                    ],
+                    "spices": ["Босилек", "Пармезан снежинки", "Песто сос", "Риган"],
                     "meats": [
                         "Пушен бекон",
                         "Вентричина",
@@ -720,7 +661,7 @@ class Command(BaseCommand):
                         "Чоризо",
                         "Пеперони",
                         "Пиле",
-                        "Пиле гирос"
+                        "Пиле гирос",
                     ],
                     "vegetables": [
                         "Пресни гъби",
@@ -734,7 +675,7 @@ class Command(BaseCommand):
                         "Черни маслини",
                         "Сушени доматии",
                         "Лук",
-                        "Халапеньо-люти чушки"
+                        "Халапеньо-люти чушки",
                     ],
                     "cheese": [
                         "Моцарела",
@@ -743,20 +684,16 @@ class Command(BaseCommand):
                         "Краве сирене",
                         "Топено сиренее",
                         "Пармезан",
-                        "Ементалл"
+                        "Ементалл",
                     ],
-                    "sauce": [
-                        "Сметана",
-                        "Барбекю сос",
-                        "Доматен сос"
-                    ]
+                    "sauce": ["Сметана", "Барбекю сос", "Доматен сос"],
                 },
                 "product_main_picture": "https://www.dominos.bg/gallery/fmobile/1662medium.png",
                 "product_main_description": "доматен сос, моцарела, кисели краставички, пастрами, горчица - пиците на Domino’s и шеф Роу",
                 "tag": {
                     "НОВО": "https://www.dominos.bg/images/tags/new_product.svg",
-                    "PREMIUM": "https://www.dominos.bg/images/tags/premium.svg"
-                }
+                    "PREMIUM": "https://www.dominos.bg/images/tags/premium.svg",
+                },
             },
             {
                 "product_name": "ЧИКЕНИТА",
@@ -767,7 +704,7 @@ class Command(BaseCommand):
                             "type": "Средна",
                             "picture": "https://www.dominos.bg/gallery/pansizes/bgiparTraditional_panbg.png",
                             "description": "Нашето традиционно тесто",
-                            "price": 14.9
+                            "price": 14.9,
                         }
                     ],
                     [
@@ -775,7 +712,7 @@ class Command(BaseCommand):
                             "type": "Средна",
                             "picture": "https://www.dominos.bg/gallery/pansizes/bgiparItalian_style_panbg.png",
                             "description": "Тесто италиански стил",
-                            "price": 14.9
+                            "price": 14.9,
                         }
                     ],
                     [
@@ -783,7 +720,7 @@ class Command(BaseCommand):
                             "type": "Средна",
                             "picture": "https://www.dominos.bg/gallery/pansizes/bgiparGluten_Freebg.png",
                             "description": "Gluten Free Dough  (+ 3,10лв)",
-                            "price": 18.0
+                            "price": 18.0,
                         }
                     ],
                     [
@@ -791,7 +728,7 @@ class Command(BaseCommand):
                             "type": "Голяма",
                             "picture": "https://www.dominos.bg/gallery/pansizes/bgiparTraditional_panbg.png",
                             "description": "Нашето традиционно тесто",
-                            "price": 17.9
+                            "price": 17.9,
                         }
                     ],
                     [
@@ -799,7 +736,7 @@ class Command(BaseCommand):
                             "type": "Голяма",
                             "picture": "https://www.dominos.bg/gallery/pansizes/bgiparItalian_style_panbg.png",
                             "description": "Тесто италиански стил",
-                            "price": 17.9
+                            "price": 17.9,
                         }
                     ],
                     [
@@ -807,7 +744,7 @@ class Command(BaseCommand):
                             "type": "Голяма",
                             "picture": "https://www.dominos.bg/gallery/pansizes/bgiparThin_and_crispy_panbg.png",
                             "description": "Тънко и хрупкаво тесто",
-                            "price": 17.9
+                            "price": 17.9,
                         }
                     ],
                     [
@@ -815,7 +752,7 @@ class Command(BaseCommand):
                             "type": "Голяма",
                             "picture": "https://www.dominos.bg/gallery/pansizes/bgiparPhiladelphia_panbg.png",
                             "description": "Прясно омесено тесто с коричка пълнена със сирене Philadelphia (+2,50лв)",
-                            "price": 20.4
+                            "price": 20.4,
                         }
                     ],
                     [
@@ -823,7 +760,7 @@ class Command(BaseCommand):
                             "type": "Голяма",
                             "picture": "https://www.dominos.bg/gallery/pansizes/bgiparLarge_mozzarella_crustbg.png",
                             "description": "Прясно омесено тесто с коричка, пълнена с моцарела (+2,50лв.)",
-                            "price": 20.4
+                            "price": 20.4,
                         }
                     ],
                     [
@@ -831,7 +768,7 @@ class Command(BaseCommand):
                             "type": "Голяма",
                             "picture": "https://www.dominos.bg/gallery/pansizes/bgiparLarge_pepperoni_crustbg.png",
                             "description": "Прясно омесено тесто с коричка, пълнена с пеперони (+2,50лв.)",
-                            "price": 20.4
+                            "price": 20.4,
                         }
                     ],
                     [
@@ -839,7 +776,7 @@ class Command(BaseCommand):
                             "type": "Джъмбо",
                             "picture": "https://www.dominos.bg/gallery/pansizes/bgiparTraditional_panbg.png",
                             "description": "Нашето традиционно тесто",
-                            "price": 19.9
+                            "price": 19.9,
                         }
                     ],
                     [
@@ -847,9 +784,9 @@ class Command(BaseCommand):
                             "type": "Джъмбо",
                             "picture": "https://www.dominos.bg/gallery/pansizes/bgiparItalian_style_panbg.png",
                             "description": "Тесто италиански стил",
-                            "price": 19.9
+                            "price": 19.9,
                         }
-                    ]
+                    ],
                 ],
                 "ingredients": [
                     "Доматен сос",
@@ -857,15 +794,10 @@ class Command(BaseCommand):
                     "Моцарела",
                     "Пеперони",
                     "Пиле",
-                    "Пресни домати"
+                    "Пресни домати",
                 ],
                 "ingredient_groups": {
-                    "spices": [
-                        "Риган",
-                        "Босилек",
-                        "Песто сос",
-                        "Пармезан снежинки"
-                    ],
+                    "spices": ["Риган", "Босилек", "Песто сос", "Пармезан снежинки"],
                     "meats": [
                         "Пушена шунка",
                         "Чоризо",
@@ -875,7 +807,7 @@ class Command(BaseCommand):
                         "Пушен бекон",
                         "Вентричина",
                         "Пикантно телешко",
-                        "Риба тон"
+                        "Риба тон",
                     ],
                     "vegetables": [
                         "Царевица",
@@ -889,7 +821,7 @@ class Command(BaseCommand):
                         "Ананас",
                         "Пресни зелени чушки",
                         "Кисeли краставички",
-                        "Пресни домати"
+                        "Пресни домати",
                     ],
                     "cheese": [
                         "Топено сиренее",
@@ -898,17 +830,13 @@ class Command(BaseCommand):
                         "Моцарела",
                         "Чедар сирене",
                         "Веган Моцарела",
-                        "Краве сирене"
+                        "Краве сирене",
                     ],
-                    "sauce": [
-                        "Сметана",
-                        "Барбекю сос",
-                        "Доматен сос"
-                    ]
+                    "sauce": ["Сметана", "Барбекю сос", "Доматен сос"],
                 },
                 "product_main_picture": "https://www.dominos.bg/gallery/fmobile/1341medium.png",
                 "product_main_description": "доматен сос, моцарела, пилешко филе, пеперони, домати, ементал",
-                "tag": {}
+                "tag": {},
             },
             {
                 "product_name": "ДОМИНОС СПЕЦИАЛНА",
@@ -919,7 +847,7 @@ class Command(BaseCommand):
                             "type": "Средна",
                             "picture": "https://www.dominos.bg/gallery/pansizes/bgiparTraditional_panbg.png",
                             "description": "Нашето традиционно тесто",
-                            "price": 13.9
+                            "price": 13.9,
                         }
                     ],
                     [
@@ -927,7 +855,7 @@ class Command(BaseCommand):
                             "type": "Средна",
                             "picture": "https://www.dominos.bg/gallery/pansizes/bgiparItalian_style_panbg.png",
                             "description": "Тесто италиански стил",
-                            "price": 13.9
+                            "price": 13.9,
                         }
                     ],
                     [
@@ -935,7 +863,7 @@ class Command(BaseCommand):
                             "type": "Средна",
                             "picture": "https://www.dominos.bg/gallery/pansizes/bgiparGluten_Freebg.png",
                             "description": "Gluten Free Dough  (+ 3,10лв)",
-                            "price": 17.0
+                            "price": 17.0,
                         }
                     ],
                     [
@@ -943,7 +871,7 @@ class Command(BaseCommand):
                             "type": "Голяма",
                             "picture": "https://www.dominos.bg/gallery/pansizes/bgiparTraditional_panbg.png",
                             "description": "Нашето традиционно тесто",
-                            "price": 16.9
+                            "price": 16.9,
                         }
                     ],
                     [
@@ -951,7 +879,7 @@ class Command(BaseCommand):
                             "type": "Голяма",
                             "picture": "https://www.dominos.bg/gallery/pansizes/bgiparItalian_style_panbg.png",
                             "description": "Тесто италиански стил",
-                            "price": 16.9
+                            "price": 16.9,
                         }
                     ],
                     [
@@ -959,7 +887,7 @@ class Command(BaseCommand):
                             "type": "Голяма",
                             "picture": "https://www.dominos.bg/gallery/pansizes/bgiparThin_and_crispy_panbg.png",
                             "description": "Тънко и хрупкаво тесто",
-                            "price": 16.9
+                            "price": 16.9,
                         }
                     ],
                     [
@@ -967,7 +895,7 @@ class Command(BaseCommand):
                             "type": "Голяма",
                             "picture": "https://www.dominos.bg/gallery/pansizes/bgiparPhiladelphia_panbg.png",
                             "description": "Прясно омесено тесто с коричка пълнена със сирене Philadelphia (+2,50лв)",
-                            "price": 19.4
+                            "price": 19.4,
                         }
                     ],
                     [
@@ -975,7 +903,7 @@ class Command(BaseCommand):
                             "type": "Голяма",
                             "picture": "https://www.dominos.bg/gallery/pansizes/bgiparLarge_mozzarella_crustbg.png",
                             "description": "Прясно омесено тесто с коричка, пълнена с моцарела (+2,50лв.)",
-                            "price": 19.4
+                            "price": 19.4,
                         }
                     ],
                     [
@@ -983,7 +911,7 @@ class Command(BaseCommand):
                             "type": "Голяма",
                             "picture": "https://www.dominos.bg/gallery/pansizes/bgiparLarge_pepperoni_crustbg.png",
                             "description": "Прясно омесено тесто с коричка, пълнена с пеперони (+2,50лв.)",
-                            "price": 19.4
+                            "price": 19.4,
                         }
                     ],
                     [
@@ -991,7 +919,7 @@ class Command(BaseCommand):
                             "type": "Джъмбо",
                             "picture": "https://www.dominos.bg/gallery/pansizes/bgiparTraditional_panbg.png",
                             "description": "Нашето традиционно тесто",
-                            "price": 18.9
+                            "price": 18.9,
                         }
                     ],
                     [
@@ -999,9 +927,9 @@ class Command(BaseCommand):
                             "type": "Джъмбо",
                             "picture": "https://www.dominos.bg/gallery/pansizes/bgiparItalian_style_panbg.png",
                             "description": "Тесто италиански стил",
-                            "price": 18.9
+                            "price": 18.9,
                         }
-                    ]
+                    ],
                 ],
                 "ingredients": [
                     "Доматен сос",
@@ -1010,15 +938,10 @@ class Command(BaseCommand):
                     "Пушен бекон",
                     "Пресни зелени чушки",
                     "Лук",
-                    "Пресни гъби"
+                    "Пресни гъби",
                 ],
                 "ingredient_groups": {
-                    "spices": [
-                        "Босилек",
-                        "Пармезан снежинки",
-                        "Песто сос",
-                        "Риган"
-                    ],
+                    "spices": ["Босилек", "Пармезан снежинки", "Песто сос", "Риган"],
                     "meats": [
                         "Вентричина",
                         "Пикантно телешко",
@@ -1028,7 +951,7 @@ class Command(BaseCommand):
                         "Пеперони",
                         "Пиле",
                         "Пиле гирос",
-                        "Пушен бекон"
+                        "Пушен бекон",
                     ],
                     "vegetables": [
                         "Пресни зелени чушки",
@@ -1042,7 +965,7 @@ class Command(BaseCommand):
                         "Халапеньо-люти чушки",
                         "Пресни гъби",
                         "Карамелизиран лук",
-                        "Ананас"
+                        "Ананас",
                     ],
                     "cheese": [
                         "Веган Моцарела",
@@ -1051,17 +974,13 @@ class Command(BaseCommand):
                         "Пармезан",
                         "Ементалл",
                         "Моцарела",
-                        "Чедар сирене"
+                        "Чедар сирене",
                     ],
-                    "sauce": [
-                        "Сметана",
-                        "Барбекю сос",
-                        "Доматен сос"
-                    ]
+                    "sauce": ["Сметана", "Барбекю сос", "Доматен сос"],
                 },
                 "product_main_picture": "https://www.dominos.bg/gallery/fmobile/1290medium.png",
                 "product_main_description": "доматен сос, моцарела, шунка, бекон, зелени чушки, лук, гъби",
-                "tag": {}
+                "tag": {},
             },
             {
                 "product_name": "КАРБОНАРА",
@@ -1072,7 +991,7 @@ class Command(BaseCommand):
                             "type": "Средна",
                             "picture": "https://www.dominos.bg/gallery/pansizes/bgiparTraditional_panbg.png",
                             "description": "Нашето традиционно тесто",
-                            "price": 12.9
+                            "price": 12.9,
                         }
                     ],
                     [
@@ -1080,7 +999,7 @@ class Command(BaseCommand):
                             "type": "Средна",
                             "picture": "https://www.dominos.bg/gallery/pansizes/bgiparItalian_style_panbg.png",
                             "description": "Тесто италиански стил",
-                            "price": 12.9
+                            "price": 12.9,
                         }
                     ],
                     [
@@ -1088,7 +1007,7 @@ class Command(BaseCommand):
                             "type": "Средна",
                             "picture": "https://www.dominos.bg/gallery/pansizes/bgiparGluten_Freebg.png",
                             "description": "Gluten Free Dough  (+ 3,10лв)",
-                            "price": 16.0
+                            "price": 16.0,
                         }
                     ],
                     [
@@ -1096,7 +1015,7 @@ class Command(BaseCommand):
                             "type": "Голяма",
                             "picture": "https://www.dominos.bg/gallery/pansizes/bgiparTraditional_panbg.png",
                             "description": "Нашето традиционно тесто",
-                            "price": 15.9
+                            "price": 15.9,
                         }
                     ],
                     [
@@ -1104,7 +1023,7 @@ class Command(BaseCommand):
                             "type": "Голяма",
                             "picture": "https://www.dominos.bg/gallery/pansizes/bgiparItalian_style_panbg.png",
                             "description": "Тесто италиански стил",
-                            "price": 15.9
+                            "price": 15.9,
                         }
                     ],
                     [
@@ -1112,7 +1031,7 @@ class Command(BaseCommand):
                             "type": "Голяма",
                             "picture": "https://www.dominos.bg/gallery/pansizes/bgiparThin_and_crispy_panbg.png",
                             "description": "Тънко и хрупкаво тесто",
-                            "price": 15.9
+                            "price": 15.9,
                         }
                     ],
                     [
@@ -1120,7 +1039,7 @@ class Command(BaseCommand):
                             "type": "Голяма",
                             "picture": "https://www.dominos.bg/gallery/pansizes/bgiparPhiladelphia_panbg.png",
                             "description": "Прясно омесено тесто с коричка пълнена със сирене Philadelphia (+2,50лв)",
-                            "price": 18.4
+                            "price": 18.4,
                         }
                     ],
                     [
@@ -1128,7 +1047,7 @@ class Command(BaseCommand):
                             "type": "Голяма",
                             "picture": "https://www.dominos.bg/gallery/pansizes/bgiparLarge_mozzarella_crustbg.png",
                             "description": "Прясно омесено тесто с коричка, пълнена с моцарела (+2,50лв.)",
-                            "price": 18.4
+                            "price": 18.4,
                         }
                     ],
                     [
@@ -1136,7 +1055,7 @@ class Command(BaseCommand):
                             "type": "Голяма",
                             "picture": "https://www.dominos.bg/gallery/pansizes/bgiparLarge_pepperoni_crustbg.png",
                             "description": "Прясно омесено тесто с коричка, пълнена с пеперони (+2,50лв.)",
-                            "price": 18.4
+                            "price": 18.4,
                         }
                     ],
                     [
@@ -1144,7 +1063,7 @@ class Command(BaseCommand):
                             "type": "Джъмбо",
                             "picture": "https://www.dominos.bg/gallery/pansizes/bgiparTraditional_panbg.png",
                             "description": "Нашето традиционно тесто",
-                            "price": 17.9
+                            "price": 17.9,
                         }
                     ],
                     [
@@ -1152,23 +1071,13 @@ class Command(BaseCommand):
                             "type": "Джъмбо",
                             "picture": "https://www.dominos.bg/gallery/pansizes/bgiparItalian_style_panbg.png",
                             "description": "Тесто италиански стил",
-                            "price": 17.9
+                            "price": 17.9,
                         }
-                    ]
-                ],
-                "ingredients": [
-                    "Сметана",
-                    "Моцарела",
-                    "Пушен бекон",
-                    "Пресни гъби"
-                ],
-                "ingredient_groups": {
-                    "spices": [
-                        "Песто сос",
-                        "Пармезан снежинки",
-                        "Риган",
-                        "Босилек"
                     ],
+                ],
+                "ingredients": ["Сметана", "Моцарела", "Пушен бекон", "Пресни гъби"],
+                "ingredient_groups": {
+                    "spices": ["Песто сос", "Пармезан снежинки", "Риган", "Босилек"],
                     "meats": [
                         "Риба тон",
                         "Пушена шунка",
@@ -1178,7 +1087,7 @@ class Command(BaseCommand):
                         "Пиле гирос",
                         "Пушен бекон",
                         "Вентричина",
-                        "Пикантно телешко"
+                        "Пикантно телешко",
                     ],
                     "vegetables": [
                         "Пресни домати",
@@ -1192,7 +1101,7 @@ class Command(BaseCommand):
                         "Карамелизиран лук",
                         "Ананас",
                         "Пресни зелени чушки",
-                        "Кисeли краставички"
+                        "Кисeли краставички",
                     ],
                     "cheese": [
                         "Топено сиренее",
@@ -1201,17 +1110,13 @@ class Command(BaseCommand):
                         "Моцарела",
                         "Чедар сирене",
                         "Веган Моцарела",
-                        "Краве сирене"
+                        "Краве сирене",
                     ],
-                    "sauce": [
-                        "Сметана",
-                        "Барбекю сос",
-                        "Доматен сос"
-                    ]
+                    "sauce": ["Сметана", "Барбекю сос", "Доматен сос"],
                 },
                 "product_main_picture": "https://www.dominos.bg/gallery/fmobile/1360medium.png",
                 "product_main_description": "сметана, моцарела, бекон, гъби",
-                "tag": {}
+                "tag": {},
             },
             {
                 "product_name": "АМЕРИКАН ХОТ",
@@ -1222,7 +1127,7 @@ class Command(BaseCommand):
                             "type": "Средна",
                             "picture": "https://www.dominos.bg/gallery/pansizes/bgiparTraditional_panbg.png",
                             "description": "Нашето традиционно тесто",
-                            "price": 13.9
+                            "price": 13.9,
                         }
                     ],
                     [
@@ -1230,7 +1135,7 @@ class Command(BaseCommand):
                             "type": "Средна",
                             "picture": "https://www.dominos.bg/gallery/pansizes/bgiparItalian_style_panbg.png",
                             "description": "Тесто италиански стил",
-                            "price": 13.9
+                            "price": 13.9,
                         }
                     ],
                     [
@@ -1238,7 +1143,7 @@ class Command(BaseCommand):
                             "type": "Средна",
                             "picture": "https://www.dominos.bg/gallery/pansizes/bgiparGluten_Freebg.png",
                             "description": "Gluten Free Dough  (+ 3,10лв)",
-                            "price": 17.0
+                            "price": 17.0,
                         }
                     ],
                     [
@@ -1246,7 +1151,7 @@ class Command(BaseCommand):
                             "type": "Голяма",
                             "picture": "https://www.dominos.bg/gallery/pansizes/bgiparTraditional_panbg.png",
                             "description": "Нашето традиционно тесто",
-                            "price": 16.9
+                            "price": 16.9,
                         }
                     ],
                     [
@@ -1254,7 +1159,7 @@ class Command(BaseCommand):
                             "type": "Голяма",
                             "picture": "https://www.dominos.bg/gallery/pansizes/bgiparItalian_style_panbg.png",
                             "description": "Тесто италиански стил",
-                            "price": 16.9
+                            "price": 16.9,
                         }
                     ],
                     [
@@ -1262,7 +1167,7 @@ class Command(BaseCommand):
                             "type": "Голяма",
                             "picture": "https://www.dominos.bg/gallery/pansizes/bgiparThin_and_crispy_panbg.png",
                             "description": "Тънко и хрупкаво тесто",
-                            "price": 16.9
+                            "price": 16.9,
                         }
                     ],
                     [
@@ -1270,7 +1175,7 @@ class Command(BaseCommand):
                             "type": "Голяма",
                             "picture": "https://www.dominos.bg/gallery/pansizes/bgiparPhiladelphia_panbg.png",
                             "description": "Прясно омесено тесто с коричка пълнена със сирене Philadelphia (+2,50лв)",
-                            "price": 19.4
+                            "price": 19.4,
                         }
                     ],
                     [
@@ -1278,7 +1183,7 @@ class Command(BaseCommand):
                             "type": "Голяма",
                             "picture": "https://www.dominos.bg/gallery/pansizes/bgiparLarge_mozzarella_crustbg.png",
                             "description": "Прясно омесено тесто с коричка, пълнена с моцарела (+2,50лв.)",
-                            "price": 19.4
+                            "price": 19.4,
                         }
                     ],
                     [
@@ -1286,7 +1191,7 @@ class Command(BaseCommand):
                             "type": "Голяма",
                             "picture": "https://www.dominos.bg/gallery/pansizes/bgiparLarge_pepperoni_crustbg.png",
                             "description": "Прясно омесено тесто с коричка, пълнена с пеперони (+2,50лв.)",
-                            "price": 19.4
+                            "price": 19.4,
                         }
                     ],
                     [
@@ -1294,7 +1199,7 @@ class Command(BaseCommand):
                             "type": "Джъмбо",
                             "picture": "https://www.dominos.bg/gallery/pansizes/bgiparTraditional_panbg.png",
                             "description": "Нашето традиционно тесто",
-                            "price": 18.9
+                            "price": 18.9,
                         }
                     ],
                     [
@@ -1302,24 +1207,19 @@ class Command(BaseCommand):
                             "type": "Джъмбо",
                             "picture": "https://www.dominos.bg/gallery/pansizes/bgiparItalian_style_panbg.png",
                             "description": "Тесто италиански стил",
-                            "price": 18.9
+                            "price": 18.9,
                         }
-                    ]
+                    ],
                 ],
                 "ingredients": [
                     "Доматен сос",
                     "Моцарела",
                     "Пеперони",
                     "Лук",
-                    "Халапеньо-люти чушки"
+                    "Халапеньо-люти чушки",
                 ],
                 "ingredient_groups": {
-                    "spices": [
-                        "Босилек",
-                        "Пармезан снежинки",
-                        "Песто сос",
-                        "Риган"
-                    ],
+                    "spices": ["Босилек", "Пармезан снежинки", "Песто сос", "Риган"],
                     "meats": [
                         "Вентричина",
                         "Пикантно телешко",
@@ -1329,7 +1229,7 @@ class Command(BaseCommand):
                         "Пеперони",
                         "Пиле",
                         "Пиле гирос",
-                        "Пушен бекон"
+                        "Пушен бекон",
                     ],
                     "vegetables": [
                         "Пресни зелени чушки",
@@ -1343,7 +1243,7 @@ class Command(BaseCommand):
                         "Халапеньо-люти чушки",
                         "Пресни гъби",
                         "Карамелизиран лук",
-                        "Ананас"
+                        "Ананас",
                     ],
                     "cheese": [
                         "Веган Моцарела",
@@ -1352,19 +1252,13 @@ class Command(BaseCommand):
                         "Пармезан",
                         "Ементалл",
                         "Моцарела",
-                        "Чедар сирене"
+                        "Чедар сирене",
                     ],
-                    "sauce": [
-                        "Сметана",
-                        "Барбекю сос",
-                        "Доматен сос"
-                    ]
+                    "sauce": ["Сметана", "Барбекю сос", "Доматен сос"],
                 },
                 "product_main_picture": "https://www.dominos.bg/gallery/fmobile/1291medium.png",
                 "product_main_description": "доматен сос, моцарела, пеперони, халапеньо-люти чушки, лук",
-                "tag": {
-                    "SPICY": "https://www.dominos.bg/images/tags/spicy.svg"
-                }
+                "tag": {"SPICY": "https://www.dominos.bg/images/tags/spicy.svg"},
             },
             {
                 "product_name": "ГАРДЪН КЛАСИК",
@@ -1375,7 +1269,7 @@ class Command(BaseCommand):
                             "type": "Средна",
                             "picture": "https://www.dominos.bg/gallery/pansizes/bgiparTraditional_panbg.png",
                             "description": "Нашето традиционно тесто",
-                            "price": 11.9
+                            "price": 11.9,
                         }
                     ],
                     [
@@ -1383,7 +1277,7 @@ class Command(BaseCommand):
                             "type": "Средна",
                             "picture": "https://www.dominos.bg/gallery/pansizes/bgiparItalian_style_panbg.png",
                             "description": "Тесто италиански стил",
-                            "price": 11.9
+                            "price": 11.9,
                         }
                     ],
                     [
@@ -1391,7 +1285,7 @@ class Command(BaseCommand):
                             "type": "Средна",
                             "picture": "https://www.dominos.bg/gallery/pansizes/bgiparGluten_Freebg.png",
                             "description": "Gluten Free Dough  (+ 3,10лв)",
-                            "price": 15.0
+                            "price": 15.0,
                         }
                     ],
                     [
@@ -1399,7 +1293,7 @@ class Command(BaseCommand):
                             "type": "Голяма",
                             "picture": "https://www.dominos.bg/gallery/pansizes/bgiparTraditional_panbg.png",
                             "description": "Нашето традиционно тесто",
-                            "price": 14.9
+                            "price": 14.9,
                         }
                     ],
                     [
@@ -1407,7 +1301,7 @@ class Command(BaseCommand):
                             "type": "Голяма",
                             "picture": "https://www.dominos.bg/gallery/pansizes/bgiparItalian_style_panbg.png",
                             "description": "Тесто италиански стил",
-                            "price": 14.9
+                            "price": 14.9,
                         }
                     ],
                     [
@@ -1415,7 +1309,7 @@ class Command(BaseCommand):
                             "type": "Голяма",
                             "picture": "https://www.dominos.bg/gallery/pansizes/bgiparThin_and_crispy_panbg.png",
                             "description": "Тънко и хрупкаво тесто",
-                            "price": 14.9
+                            "price": 14.9,
                         }
                     ],
                     [
@@ -1423,7 +1317,7 @@ class Command(BaseCommand):
                             "type": "Голяма",
                             "picture": "https://www.dominos.bg/gallery/pansizes/bgiparPhiladelphia_panbg.png",
                             "description": "Прясно омесено тесто с коричка пълнена със сирене Philadelphia (+2,50лв)",
-                            "price": 17.4
+                            "price": 17.4,
                         }
                     ],
                     [
@@ -1431,7 +1325,7 @@ class Command(BaseCommand):
                             "type": "Голяма",
                             "picture": "https://www.dominos.bg/gallery/pansizes/bgiparLarge_mozzarella_crustbg.png",
                             "description": "Прясно омесено тесто с коричка, пълнена с моцарела (+2,50лв.)",
-                            "price": 17.4
+                            "price": 17.4,
                         }
                     ],
                     [
@@ -1439,7 +1333,7 @@ class Command(BaseCommand):
                             "type": "Голяма",
                             "picture": "https://www.dominos.bg/gallery/pansizes/bgiparLarge_pepperoni_crustbg.png",
                             "description": "Прясно омесено тесто с коричка, пълнена с пеперони (+2,50лв.)",
-                            "price": 17.4
+                            "price": 17.4,
                         }
                     ],
                     [
@@ -1447,7 +1341,7 @@ class Command(BaseCommand):
                             "type": "Джъмбо",
                             "picture": "https://www.dominos.bg/gallery/pansizes/bgiparTraditional_panbg.png",
                             "description": "Нашето традиционно тесто",
-                            "price": 16.9
+                            "price": 16.9,
                         }
                     ],
                     [
@@ -1455,9 +1349,9 @@ class Command(BaseCommand):
                             "type": "Джъмбо",
                             "picture": "https://www.dominos.bg/gallery/pansizes/bgiparItalian_style_panbg.png",
                             "description": "Тесто италиански стил",
-                            "price": 16.9
+                            "price": 16.9,
                         }
-                    ]
+                    ],
                 ],
                 "ingredients": [
                     "Доматен сос",
@@ -1466,15 +1360,10 @@ class Command(BaseCommand):
                     "Лук",
                     "Пресни гъби",
                     "Пресни зелени чушки",
-                    "Пресни домати"
+                    "Пресни домати",
                 ],
                 "ingredient_groups": {
-                    "spices": [
-                        "Риган",
-                        "Босилек",
-                        "Песто сос",
-                        "Пармезан снежинки"
-                    ],
+                    "spices": ["Риган", "Босилек", "Песто сос", "Пармезан снежинки"],
                     "meats": [
                         "Пиле",
                         "Пиле гирос",
@@ -1484,7 +1373,7 @@ class Command(BaseCommand):
                         "Риба тон",
                         "Пушена шунка",
                         "Чоризо",
-                        "Пеперони"
+                        "Пеперони",
                     ],
                     "vegetables": [
                         "Черни маслини",
@@ -1498,7 +1387,7 @@ class Command(BaseCommand):
                         "Кисeли краставички",
                         "Пресни домати",
                         "Царевица",
-                        "Рукола"
+                        "Рукола",
                     ],
                     "cheese": [
                         "Пармезан",
@@ -1507,19 +1396,15 @@ class Command(BaseCommand):
                         "Чедар сирене",
                         "Веган Моцарела",
                         "Краве сирене",
-                        "Топено сиренее"
+                        "Топено сиренее",
                     ],
-                    "sauce": [
-                        "Сметана",
-                        "Барбекю сос",
-                        "Доматен сос"
-                    ]
+                    "sauce": ["Сметана", "Барбекю сос", "Доматен сос"],
                 },
                 "product_main_picture": "https://www.dominos.bg/gallery/fmobile/1295medium.png",
                 "product_main_description": "доматен сос, моцарела, маслини, зелени чушки, лук, пресни домати, гъби",
                 "tag": {
                     "VEGETARIAN": "https://www.dominos.bg/images/tags/vegetarian.svg"
-                }
+                },
             },
             {
                 "product_name": "БАРБЕКЮ ПИЛЕ",
@@ -1530,7 +1415,7 @@ class Command(BaseCommand):
                             "type": "Средна",
                             "picture": "https://www.dominos.bg/gallery/pansizes/bgiparTraditional_panbg.png",
                             "description": "Нашето традиционно тесто",
-                            "price": 13.9
+                            "price": 13.9,
                         }
                     ],
                     [
@@ -1538,7 +1423,7 @@ class Command(BaseCommand):
                             "type": "Средна",
                             "picture": "https://www.dominos.bg/gallery/pansizes/bgiparItalian_style_panbg.png",
                             "description": "Тесто италиански стил",
-                            "price": 13.9
+                            "price": 13.9,
                         }
                     ],
                     [
@@ -1546,7 +1431,7 @@ class Command(BaseCommand):
                             "type": "Средна",
                             "picture": "https://www.dominos.bg/gallery/pansizes/bgiparGluten_Freebg.png",
                             "description": "Gluten Free Dough  (+ 3,10лв)",
-                            "price": 17.0
+                            "price": 17.0,
                         }
                     ],
                     [
@@ -1554,7 +1439,7 @@ class Command(BaseCommand):
                             "type": "Голяма",
                             "picture": "https://www.dominos.bg/gallery/pansizes/bgiparTraditional_panbg.png",
                             "description": "Нашето традиционно тесто",
-                            "price": 16.9
+                            "price": 16.9,
                         }
                     ],
                     [
@@ -1562,7 +1447,7 @@ class Command(BaseCommand):
                             "type": "Голяма",
                             "picture": "https://www.dominos.bg/gallery/pansizes/bgiparItalian_style_panbg.png",
                             "description": "Тесто италиански стил",
-                            "price": 16.9
+                            "price": 16.9,
                         }
                     ],
                     [
@@ -1570,7 +1455,7 @@ class Command(BaseCommand):
                             "type": "Голяма",
                             "picture": "https://www.dominos.bg/gallery/pansizes/bgiparThin_and_crispy_panbg.png",
                             "description": "Тънко и хрупкаво тесто",
-                            "price": 16.9
+                            "price": 16.9,
                         }
                     ],
                     [
@@ -1578,7 +1463,7 @@ class Command(BaseCommand):
                             "type": "Голяма",
                             "picture": "https://www.dominos.bg/gallery/pansizes/bgiparPhiladelphia_panbg.png",
                             "description": "Прясно омесено тесто с коричка пълнена със сирене Philadelphia (+2,50лв)",
-                            "price": 19.4
+                            "price": 19.4,
                         }
                     ],
                     [
@@ -1586,7 +1471,7 @@ class Command(BaseCommand):
                             "type": "Голяма",
                             "picture": "https://www.dominos.bg/gallery/pansizes/bgiparLarge_mozzarella_crustbg.png",
                             "description": "Прясно омесено тесто с коричка, пълнена с моцарела (+2,50лв.)",
-                            "price": 19.4
+                            "price": 19.4,
                         }
                     ],
                     [
@@ -1594,7 +1479,7 @@ class Command(BaseCommand):
                             "type": "Голяма",
                             "picture": "https://www.dominos.bg/gallery/pansizes/bgiparLarge_pepperoni_crustbg.png",
                             "description": "Прясно омесено тесто с коричка, пълнена с пеперони (+2,50лв.)",
-                            "price": 19.4
+                            "price": 19.4,
                         }
                     ],
                     [
@@ -1602,7 +1487,7 @@ class Command(BaseCommand):
                             "type": "Джъмбо",
                             "picture": "https://www.dominos.bg/gallery/pansizes/bgiparTraditional_panbg.png",
                             "description": "Нашето традиционно тесто",
-                            "price": 18.9
+                            "price": 18.9,
                         }
                     ],
                     [
@@ -1610,23 +1495,13 @@ class Command(BaseCommand):
                             "type": "Джъмбо",
                             "picture": "https://www.dominos.bg/gallery/pansizes/bgiparItalian_style_panbg.png",
                             "description": "Тесто италиански стил",
-                            "price": 18.9
+                            "price": 18.9,
                         }
-                    ]
-                ],
-                "ingredients": [
-                    "Барбекю сос",
-                    "Моцарела",
-                    "Пиле",
-                    "Пушен бекон"
-                ],
-                "ingredient_groups": {
-                    "spices": [
-                        "Песто сос",
-                        "Пармезан снежинки",
-                        "Риган",
-                        "Босилек"
                     ],
+                ],
+                "ingredients": ["Барбекю сос", "Моцарела", "Пиле", "Пушен бекон"],
+                "ingredient_groups": {
+                    "spices": ["Песто сос", "Пармезан снежинки", "Риган", "Босилек"],
                     "meats": [
                         "Риба тон",
                         "Пушена шунка",
@@ -1636,7 +1511,7 @@ class Command(BaseCommand):
                         "Пиле гирос",
                         "Пушен бекон",
                         "Вентричина",
-                        "Пикантно телешко"
+                        "Пикантно телешко",
                     ],
                     "vegetables": [
                         "Пресни домати",
@@ -1650,7 +1525,7 @@ class Command(BaseCommand):
                         "Карамелизиран лук",
                         "Ананас",
                         "Пресни зелени чушки",
-                        "Кисeли краставички"
+                        "Кисeли краставички",
                     ],
                     "cheese": [
                         "Топено сиренее",
@@ -1659,17 +1534,13 @@ class Command(BaseCommand):
                         "Моцарела",
                         "Чедар сирене",
                         "Веган Моцарела",
-                        "Краве сирене"
+                        "Краве сирене",
                     ],
-                    "sauce": [
-                        "Сметана",
-                        "Барбекю сос",
-                        "Доматен сос"
-                    ]
+                    "sauce": ["Сметана", "Барбекю сос", "Доматен сос"],
                 },
                 "product_main_picture": "https://www.dominos.bg/gallery/fmobile/1302medium.png",
                 "product_main_description": "барбекю сос, моцарела, бекон, крехко пиле",
-                "tag": {}
+                "tag": {},
             },
             {
                 "product_name": "БАРБЕКЮ КЛАСИК",
@@ -1680,7 +1551,7 @@ class Command(BaseCommand):
                             "type": "Средна",
                             "picture": "https://www.dominos.bg/gallery/pansizes/bgiparTraditional_panbg.png",
                             "description": "Нашето традиционно тесто",
-                            "price": 13.9
+                            "price": 13.9,
                         }
                     ],
                     [
@@ -1688,7 +1559,7 @@ class Command(BaseCommand):
                             "type": "Средна",
                             "picture": "https://www.dominos.bg/gallery/pansizes/bgiparItalian_style_panbg.png",
                             "description": "Тесто италиански стил",
-                            "price": 13.9
+                            "price": 13.9,
                         }
                     ],
                     [
@@ -1696,7 +1567,7 @@ class Command(BaseCommand):
                             "type": "Средна",
                             "picture": "https://www.dominos.bg/gallery/pansizes/bgiparGluten_Freebg.png",
                             "description": "Gluten Free Dough  (+ 3,10лв)",
-                            "price": 17.0
+                            "price": 17.0,
                         }
                     ],
                     [
@@ -1704,7 +1575,7 @@ class Command(BaseCommand):
                             "type": "Голяма",
                             "picture": "https://www.dominos.bg/gallery/pansizes/bgiparTraditional_panbg.png",
                             "description": "Нашето традиционно тесто",
-                            "price": 16.9
+                            "price": 16.9,
                         }
                     ],
                     [
@@ -1712,7 +1583,7 @@ class Command(BaseCommand):
                             "type": "Голяма",
                             "picture": "https://www.dominos.bg/gallery/pansizes/bgiparItalian_style_panbg.png",
                             "description": "Тесто италиански стил",
-                            "price": 16.9
+                            "price": 16.9,
                         }
                     ],
                     [
@@ -1720,7 +1591,7 @@ class Command(BaseCommand):
                             "type": "Голяма",
                             "picture": "https://www.dominos.bg/gallery/pansizes/bgiparThin_and_crispy_panbg.png",
                             "description": "Тънко и хрупкаво тесто",
-                            "price": 16.9
+                            "price": 16.9,
                         }
                     ],
                     [
@@ -1728,7 +1599,7 @@ class Command(BaseCommand):
                             "type": "Голяма",
                             "picture": "https://www.dominos.bg/gallery/pansizes/bgiparPhiladelphia_panbg.png",
                             "description": "Прясно омесено тесто с коричка пълнена със сирене Philadelphia (+2,50лв)",
-                            "price": 19.4
+                            "price": 19.4,
                         }
                     ],
                     [
@@ -1736,7 +1607,7 @@ class Command(BaseCommand):
                             "type": "Голяма",
                             "picture": "https://www.dominos.bg/gallery/pansizes/bgiparLarge_mozzarella_crustbg.png",
                             "description": "Прясно омесено тесто с коричка, пълнена с моцарела (+2,50лв.)",
-                            "price": 19.4
+                            "price": 19.4,
                         }
                     ],
                     [
@@ -1744,7 +1615,7 @@ class Command(BaseCommand):
                             "type": "Голяма",
                             "picture": "https://www.dominos.bg/gallery/pansizes/bgiparLarge_pepperoni_crustbg.png",
                             "description": "Прясно омесено тесто с коричка, пълнена с пеперони (+2,50лв.)",
-                            "price": 19.4
+                            "price": 19.4,
                         }
                     ],
                     [
@@ -1752,7 +1623,7 @@ class Command(BaseCommand):
                             "type": "Джъмбо",
                             "picture": "https://www.dominos.bg/gallery/pansizes/bgiparTraditional_panbg.png",
                             "description": "Нашето традиционно тесто",
-                            "price": 18.9
+                            "price": 18.9,
                         }
                     ],
                     [
@@ -1760,23 +1631,18 @@ class Command(BaseCommand):
                             "type": "Джъмбо",
                             "picture": "https://www.dominos.bg/gallery/pansizes/bgiparItalian_style_panbg.png",
                             "description": "Тесто италиански стил",
-                            "price": 18.9
+                            "price": 18.9,
                         }
-                    ]
+                    ],
                 ],
                 "ingredients": [
                     "Барбекю сос",
                     "Моцарела",
                     "Пушен бекон",
-                    "Пикантно телешко"
+                    "Пикантно телешко",
                 ],
                 "ingredient_groups": {
-                    "spices": [
-                        "Босилек",
-                        "Песто сос",
-                        "Пармезан снежинки",
-                        "Риган"
-                    ],
+                    "spices": ["Босилек", "Песто сос", "Пармезан снежинки", "Риган"],
                     "meats": [
                         "Пушен бекон",
                         "Вентричина",
@@ -1786,7 +1652,7 @@ class Command(BaseCommand):
                         "Чоризо",
                         "Пеперони",
                         "Пиле",
-                        "Пиле гирос"
+                        "Пиле гирос",
                     ],
                     "vegetables": [
                         "Халапеньо-люти чушки",
@@ -1800,7 +1666,7 @@ class Command(BaseCommand):
                         "Рукола",
                         "Черни маслини",
                         "Сушени доматии",
-                        "Лук"
+                        "Лук",
                     ],
                     "cheese": [
                         "Моцарела",
@@ -1809,17 +1675,13 @@ class Command(BaseCommand):
                         "Краве сирене",
                         "Топено сиренее",
                         "Пармезан",
-                        "Ементалл"
+                        "Ементалл",
                     ],
-                    "sauce": [
-                        "Сметана",
-                        "Барбекю сос",
-                        "Доматен сос"
-                    ]
+                    "sauce": ["Сметана", "Барбекю сос", "Доматен сос"],
                 },
                 "product_main_picture": "https://www.dominos.bg/gallery/fmobile/1298medium.png",
                 "product_main_description": "барбекю сос, моцарела, бекон, пикантно телешко",
-                "tag": {}
+                "tag": {},
             },
             {
                 "product_name": "НЮ ЙОРК",
@@ -1830,7 +1692,7 @@ class Command(BaseCommand):
                             "type": "Средна",
                             "picture": "https://www.dominos.bg/gallery/pansizes/bgiparTraditional_panbg.png",
                             "description": "Нашето традиционно тесто",
-                            "price": 14.9
+                            "price": 14.9,
                         }
                     ],
                     [
@@ -1838,7 +1700,7 @@ class Command(BaseCommand):
                             "type": "Средна",
                             "picture": "https://www.dominos.bg/gallery/pansizes/bgiparItalian_style_panbg.png",
                             "description": "Тесто италиански стил",
-                            "price": 14.9
+                            "price": 14.9,
                         }
                     ],
                     [
@@ -1846,7 +1708,7 @@ class Command(BaseCommand):
                             "type": "Средна",
                             "picture": "https://www.dominos.bg/gallery/pansizes/bgiparGluten_Freebg.png",
                             "description": "Gluten Free Dough  (+ 3,10лв)",
-                            "price": 18.0
+                            "price": 18.0,
                         }
                     ],
                     [
@@ -1854,7 +1716,7 @@ class Command(BaseCommand):
                             "type": "Голяма",
                             "picture": "https://www.dominos.bg/gallery/pansizes/bgiparTraditional_panbg.png",
                             "description": "Нашето традиционно тесто",
-                            "price": 17.9
+                            "price": 17.9,
                         }
                     ],
                     [
@@ -1862,7 +1724,7 @@ class Command(BaseCommand):
                             "type": "Голяма",
                             "picture": "https://www.dominos.bg/gallery/pansizes/bgiparItalian_style_panbg.png",
                             "description": "Тесто италиански стил",
-                            "price": 17.9
+                            "price": 17.9,
                         }
                     ],
                     [
@@ -1870,7 +1732,7 @@ class Command(BaseCommand):
                             "type": "Голяма",
                             "picture": "https://www.dominos.bg/gallery/pansizes/bgiparThin_and_crispy_panbg.png",
                             "description": "Тънко и хрупкаво тесто",
-                            "price": 17.9
+                            "price": 17.9,
                         }
                     ],
                     [
@@ -1878,7 +1740,7 @@ class Command(BaseCommand):
                             "type": "Голяма",
                             "picture": "https://www.dominos.bg/gallery/pansizes/bgiparPhiladelphia_panbg.png",
                             "description": "Прясно омесено тесто с коричка пълнена със сирене Philadelphia (+2,50лв)",
-                            "price": 20.4
+                            "price": 20.4,
                         }
                     ],
                     [
@@ -1886,7 +1748,7 @@ class Command(BaseCommand):
                             "type": "Голяма",
                             "picture": "https://www.dominos.bg/gallery/pansizes/bgiparLarge_mozzarella_crustbg.png",
                             "description": "Прясно омесено тесто с коричка, пълнена с моцарела (+2,50лв.)",
-                            "price": 20.4
+                            "price": 20.4,
                         }
                     ],
                     [
@@ -1894,7 +1756,7 @@ class Command(BaseCommand):
                             "type": "Голяма",
                             "picture": "https://www.dominos.bg/gallery/pansizes/bgiparLarge_pepperoni_crustbg.png",
                             "description": "Прясно омесено тесто с коричка, пълнена с пеперони (+2,50лв.)",
-                            "price": 20.4
+                            "price": 20.4,
                         }
                     ],
                     [
@@ -1902,7 +1764,7 @@ class Command(BaseCommand):
                             "type": "Джъмбо",
                             "picture": "https://www.dominos.bg/gallery/pansizes/bgiparTraditional_panbg.png",
                             "description": "Нашето традиционно тесто",
-                            "price": 19.9
+                            "price": 19.9,
                         }
                     ],
                     [
@@ -1910,24 +1772,19 @@ class Command(BaseCommand):
                             "type": "Джъмбо",
                             "picture": "https://www.dominos.bg/gallery/pansizes/bgiparItalian_style_panbg.png",
                             "description": "Тесто италиански стил",
-                            "price": 19.9
+                            "price": 19.9,
                         }
-                    ]
+                    ],
                 ],
                 "ingredients": [
                     "Доматен сос",
                     "Моцарела",
                     "Extra Чедар сирене",
                     "Пушен бекон",
-                    "Пресни гъби"
+                    "Пресни гъби",
                 ],
                 "ingredient_groups": {
-                    "spices": [
-                        "Босилек",
-                        "Пармезан снежинки",
-                        "Песто сос",
-                        "Риган"
-                    ],
+                    "spices": ["Босилек", "Пармезан снежинки", "Песто сос", "Риган"],
                     "meats": [
                         "Риба тон",
                         "Пушена шунка",
@@ -1937,7 +1794,7 @@ class Command(BaseCommand):
                         "Пиле гирос",
                         "Пушен бекон",
                         "Вентричина",
-                        "Пикантно телешко"
+                        "Пикантно телешко",
                     ],
                     "vegetables": [
                         "Пресни домати",
@@ -1951,7 +1808,7 @@ class Command(BaseCommand):
                         "Карамелизиран лук",
                         "Ананас",
                         "Пресни зелени чушки",
-                        "Кисeли краставички"
+                        "Кисeли краставички",
                     ],
                     "cheese": [
                         "Краве сирене",
@@ -1960,17 +1817,13 @@ class Command(BaseCommand):
                         "Ементалл",
                         "Моцарела",
                         "Чедар сирене",
-                        "Веган Моцарела"
+                        "Веган Моцарела",
                     ],
-                    "sauce": [
-                        "Сметана",
-                        "Барбекю сос",
-                        "Доматен сос"
-                    ]
+                    "sauce": ["Сметана", "Барбекю сос", "Доматен сос"],
                 },
                 "product_main_picture": "https://www.dominos.bg/gallery/fmobile/1300medium.png",
                 "product_main_description": "доматен сос, моцарела, бекон, чедар, допълнително чедар, пресни гъби",
-                "tag": {}
+                "tag": {},
             },
             {
                 "product_name": "ИТАЛИАНСКА",
@@ -1981,7 +1834,7 @@ class Command(BaseCommand):
                             "type": "Средна",
                             "picture": "https://www.dominos.bg/gallery/pansizes/bgiparTraditional_panbg.png",
                             "description": "Нашето традиционно тесто",
-                            "price": 12.9
+                            "price": 12.9,
                         }
                     ],
                     [
@@ -1989,7 +1842,7 @@ class Command(BaseCommand):
                             "type": "Средна",
                             "picture": "https://www.dominos.bg/gallery/pansizes/bgiparItalian_style_panbg.png",
                             "description": "Тесто италиански стил",
-                            "price": 12.9
+                            "price": 12.9,
                         }
                     ],
                     [
@@ -1997,7 +1850,7 @@ class Command(BaseCommand):
                             "type": "Средна",
                             "picture": "https://www.dominos.bg/gallery/pansizes/bgiparGluten_Freebg.png",
                             "description": "Gluten Free Dough  (+ 3,10лв)",
-                            "price": 16.0
+                            "price": 16.0,
                         }
                     ],
                     [
@@ -2005,7 +1858,7 @@ class Command(BaseCommand):
                             "type": "Голяма",
                             "picture": "https://www.dominos.bg/gallery/pansizes/bgiparTraditional_panbg.png",
                             "description": "Нашето традиционно тесто",
-                            "price": 15.9
+                            "price": 15.9,
                         }
                     ],
                     [
@@ -2013,7 +1866,7 @@ class Command(BaseCommand):
                             "type": "Голяма",
                             "picture": "https://www.dominos.bg/gallery/pansizes/bgiparItalian_style_panbg.png",
                             "description": "Тесто италиански стил",
-                            "price": 15.9
+                            "price": 15.9,
                         }
                     ],
                     [
@@ -2021,7 +1874,7 @@ class Command(BaseCommand):
                             "type": "Голяма",
                             "picture": "https://www.dominos.bg/gallery/pansizes/bgiparThin_and_crispy_panbg.png",
                             "description": "Тънко и хрупкаво тесто",
-                            "price": 15.9
+                            "price": 15.9,
                         }
                     ],
                     [
@@ -2029,7 +1882,7 @@ class Command(BaseCommand):
                             "type": "Голяма",
                             "picture": "https://www.dominos.bg/gallery/pansizes/bgiparPhiladelphia_panbg.png",
                             "description": "Прясно омесено тесто с коричка пълнена със сирене Philadelphia (+2,50лв)",
-                            "price": 18.4
+                            "price": 18.4,
                         }
                     ],
                     [
@@ -2037,7 +1890,7 @@ class Command(BaseCommand):
                             "type": "Голяма",
                             "picture": "https://www.dominos.bg/gallery/pansizes/bgiparLarge_mozzarella_crustbg.png",
                             "description": "Прясно омесено тесто с коричка, пълнена с моцарела (+2,50лв.)",
-                            "price": 18.4
+                            "price": 18.4,
                         }
                     ],
                     [
@@ -2045,7 +1898,7 @@ class Command(BaseCommand):
                             "type": "Голяма",
                             "picture": "https://www.dominos.bg/gallery/pansizes/bgiparLarge_pepperoni_crustbg.png",
                             "description": "Прясно омесено тесто с коричка, пълнена с пеперони (+2,50лв.)",
-                            "price": 18.4
+                            "price": 18.4,
                         }
                     ],
                     [
@@ -2053,7 +1906,7 @@ class Command(BaseCommand):
                             "type": "Джъмбо",
                             "picture": "https://www.dominos.bg/gallery/pansizes/bgiparTraditional_panbg.png",
                             "description": "Нашето традиционно тесто",
-                            "price": 17.9
+                            "price": 17.9,
                         }
                     ],
                     [
@@ -2061,9 +1914,9 @@ class Command(BaseCommand):
                             "type": "Джъмбо",
                             "picture": "https://www.dominos.bg/gallery/pansizes/bgiparItalian_style_panbg.png",
                             "description": "Тесто италиански стил",
-                            "price": 17.9
+                            "price": 17.9,
                         }
-                    ]
+                    ],
                 ],
                 "ingredients": [
                     "Доматен сос",
@@ -2071,15 +1924,10 @@ class Command(BaseCommand):
                     "Песто сос",
                     "Пармезан",
                     "Моцарела",
-                    "Пресни домати"
+                    "Пресни домати",
                 ],
                 "ingredient_groups": {
-                    "spices": [
-                        "Риган",
-                        "Босилек",
-                        "Песто сос",
-                        "Пармезан снежинки"
-                    ],
+                    "spices": ["Риган", "Босилек", "Песто сос", "Пармезан снежинки"],
                     "meats": [
                         "Пиле",
                         "Пиле гирос",
@@ -2089,7 +1937,7 @@ class Command(BaseCommand):
                         "Риба тон",
                         "Пушена шунка",
                         "Чоризо",
-                        "Пеперони"
+                        "Пеперони",
                     ],
                     "vegetables": [
                         "Сушени доматии",
@@ -2103,7 +1951,7 @@ class Command(BaseCommand):
                         "Пресни домати",
                         "Царевица",
                         "Рукола",
-                        "Черни маслини"
+                        "Черни маслини",
                     ],
                     "cheese": [
                         "Пармезан",
@@ -2112,19 +1960,15 @@ class Command(BaseCommand):
                         "Чедар сирене",
                         "Веган Моцарела",
                         "Краве сирене",
-                        "Топено сиренее"
+                        "Топено сиренее",
                     ],
-                    "sauce": [
-                        "Сметана",
-                        "Барбекю сос",
-                        "Доматен сос"
-                    ]
+                    "sauce": ["Сметана", "Барбекю сос", "Доматен сос"],
                 },
                 "product_main_picture": "https://www.dominos.bg/gallery/fmobile/1355medium.png",
                 "product_main_description": "доматен сос, моцарела, песто, Грана Падано, пресни домати, босилек",
                 "tag": {
                     "VEGETARIAN": "https://www.dominos.bg/images/tags/vegetarian.svg"
-                }
+                },
             },
             {
                 "product_name": "ХАВАЙ",
@@ -2135,7 +1979,7 @@ class Command(BaseCommand):
                             "type": "Средна",
                             "picture": "https://www.dominos.bg/gallery/pansizes/bgiparTraditional_panbg.png",
                             "description": "Нашето традиционно тесто",
-                            "price": 11.9
+                            "price": 11.9,
                         }
                     ],
                     [
@@ -2143,7 +1987,7 @@ class Command(BaseCommand):
                             "type": "Средна",
                             "picture": "https://www.dominos.bg/gallery/pansizes/bgiparItalian_style_panbg.png",
                             "description": "Тесто италиански стил",
-                            "price": 11.9
+                            "price": 11.9,
                         }
                     ],
                     [
@@ -2151,7 +1995,7 @@ class Command(BaseCommand):
                             "type": "Средна",
                             "picture": "https://www.dominos.bg/gallery/pansizes/bgiparGluten_Freebg.png",
                             "description": "Gluten Free Dough  (+ 3,10лв)",
-                            "price": 15.0
+                            "price": 15.0,
                         }
                     ],
                     [
@@ -2159,7 +2003,7 @@ class Command(BaseCommand):
                             "type": "Голяма",
                             "picture": "https://www.dominos.bg/gallery/pansizes/bgiparTraditional_panbg.png",
                             "description": "Нашето традиционно тесто",
-                            "price": 14.9
+                            "price": 14.9,
                         }
                     ],
                     [
@@ -2167,7 +2011,7 @@ class Command(BaseCommand):
                             "type": "Голяма",
                             "picture": "https://www.dominos.bg/gallery/pansizes/bgiparItalian_style_panbg.png",
                             "description": "Тесто италиански стил",
-                            "price": 14.9
+                            "price": 14.9,
                         }
                     ],
                     [
@@ -2175,7 +2019,7 @@ class Command(BaseCommand):
                             "type": "Голяма",
                             "picture": "https://www.dominos.bg/gallery/pansizes/bgiparThin_and_crispy_panbg.png",
                             "description": "Тънко и хрупкаво тесто",
-                            "price": 14.9
+                            "price": 14.9,
                         }
                     ],
                     [
@@ -2183,7 +2027,7 @@ class Command(BaseCommand):
                             "type": "Голяма",
                             "picture": "https://www.dominos.bg/gallery/pansizes/bgiparPhiladelphia_panbg.png",
                             "description": "Прясно омесено тесто с коричка пълнена със сирене Philadelphia (+2,50лв)",
-                            "price": 17.4
+                            "price": 17.4,
                         }
                     ],
                     [
@@ -2191,7 +2035,7 @@ class Command(BaseCommand):
                             "type": "Голяма",
                             "picture": "https://www.dominos.bg/gallery/pansizes/bgiparLarge_mozzarella_crustbg.png",
                             "description": "Прясно омесено тесто с коричка, пълнена с моцарела (+2,50лв.)",
-                            "price": 17.4
+                            "price": 17.4,
                         }
                     ],
                     [
@@ -2199,7 +2043,7 @@ class Command(BaseCommand):
                             "type": "Голяма",
                             "picture": "https://www.dominos.bg/gallery/pansizes/bgiparLarge_pepperoni_crustbg.png",
                             "description": "Прясно омесено тесто с коричка, пълнена с пеперони (+2,50лв.)",
-                            "price": 17.4
+                            "price": 17.4,
                         }
                     ],
                     [
@@ -2207,7 +2051,7 @@ class Command(BaseCommand):
                             "type": "Джъмбо",
                             "picture": "https://www.dominos.bg/gallery/pansizes/bgiparTraditional_panbg.png",
                             "description": "Нашето традиционно тесто",
-                            "price": 16.9
+                            "price": 16.9,
                         }
                     ],
                     [
@@ -2215,23 +2059,13 @@ class Command(BaseCommand):
                             "type": "Джъмбо",
                             "picture": "https://www.dominos.bg/gallery/pansizes/bgiparItalian_style_panbg.png",
                             "description": "Тесто италиански стил",
-                            "price": 16.9
+                            "price": 16.9,
                         }
-                    ]
-                ],
-                "ingredients": [
-                    "Доматен сос",
-                    "Моцарела",
-                    "Пушена шунка",
-                    "Ананас"
-                ],
-                "ingredient_groups": {
-                    "spices": [
-                        "Босилек",
-                        "Песто сос",
-                        "Пармезан снежинки",
-                        "Риган"
                     ],
+                ],
+                "ingredients": ["Доматен сос", "Моцарела", "Пушена шунка", "Ананас"],
+                "ingredient_groups": {
+                    "spices": ["Босилек", "Песто сос", "Пармезан снежинки", "Риган"],
                     "meats": [
                         "Пушен бекон",
                         "Вентричина",
@@ -2241,7 +2075,7 @@ class Command(BaseCommand):
                         "Чоризо",
                         "Пеперони",
                         "Пиле",
-                        "Пиле гирос"
+                        "Пиле гирос",
                     ],
                     "vegetables": [
                         "Халапеньо-люти чушки",
@@ -2255,7 +2089,7 @@ class Command(BaseCommand):
                         "Рукола",
                         "Черни маслини",
                         "Сушени доматии",
-                        "Лук"
+                        "Лук",
                     ],
                     "cheese": [
                         "Моцарела",
@@ -2264,17 +2098,13 @@ class Command(BaseCommand):
                         "Краве сирене",
                         "Топено сиренее",
                         "Пармезан",
-                        "Ементалл"
+                        "Ементалл",
                     ],
-                    "sauce": [
-                        "Сметана",
-                        "Барбекю сос",
-                        "Доматен сос"
-                    ]
+                    "sauce": ["Сметана", "Барбекю сос", "Доматен сос"],
                 },
                 "product_main_picture": "https://www.dominos.bg/gallery/fmobile/1313medium.png",
                 "product_main_description": "доматен сос, моцарела, шунка, ананас",
-                "tag": {}
+                "tag": {},
             },
             {
                 "product_name": "ФОРМАДЖИ",
@@ -2285,7 +2115,7 @@ class Command(BaseCommand):
                             "type": "Средна",
                             "picture": "https://www.dominos.bg/gallery/pansizes/bgiparTraditional_panbg.png",
                             "description": "Нашето традиционно тесто",
-                            "price": 12.9
+                            "price": 12.9,
                         }
                     ],
                     [
@@ -2293,7 +2123,7 @@ class Command(BaseCommand):
                             "type": "Средна",
                             "picture": "https://www.dominos.bg/gallery/pansizes/bgiparItalian_style_panbg.png",
                             "description": "Тесто италиански стил",
-                            "price": 12.9
+                            "price": 12.9,
                         }
                     ],
                     [
@@ -2301,7 +2131,7 @@ class Command(BaseCommand):
                             "type": "Средна",
                             "picture": "https://www.dominos.bg/gallery/pansizes/bgiparGluten_Freebg.png",
                             "description": "Gluten Free Dough  (+ 3,10лв)",
-                            "price": 16.0
+                            "price": 16.0,
                         }
                     ],
                     [
@@ -2309,7 +2139,7 @@ class Command(BaseCommand):
                             "type": "Голяма",
                             "picture": "https://www.dominos.bg/gallery/pansizes/bgiparTraditional_panbg.png",
                             "description": "Нашето традиционно тесто",
-                            "price": 15.9
+                            "price": 15.9,
                         }
                     ],
                     [
@@ -2317,7 +2147,7 @@ class Command(BaseCommand):
                             "type": "Голяма",
                             "picture": "https://www.dominos.bg/gallery/pansizes/bgiparItalian_style_panbg.png",
                             "description": "Тесто италиански стил",
-                            "price": 15.9
+                            "price": 15.9,
                         }
                     ],
                     [
@@ -2325,7 +2155,7 @@ class Command(BaseCommand):
                             "type": "Голяма",
                             "picture": "https://www.dominos.bg/gallery/pansizes/bgiparThin_and_crispy_panbg.png",
                             "description": "Тънко и хрупкаво тесто",
-                            "price": 15.9
+                            "price": 15.9,
                         }
                     ],
                     [
@@ -2333,7 +2163,7 @@ class Command(BaseCommand):
                             "type": "Голяма",
                             "picture": "https://www.dominos.bg/gallery/pansizes/bgiparPhiladelphia_panbg.png",
                             "description": "Прясно омесено тесто с коричка пълнена със сирене Philadelphia (+2,50лв)",
-                            "price": 18.4
+                            "price": 18.4,
                         }
                     ],
                     [
@@ -2341,7 +2171,7 @@ class Command(BaseCommand):
                             "type": "Голяма",
                             "picture": "https://www.dominos.bg/gallery/pansizes/bgiparLarge_mozzarella_crustbg.png",
                             "description": "Прясно омесено тесто с коричка, пълнена с моцарела (+2,50лв.)",
-                            "price": 18.4
+                            "price": 18.4,
                         }
                     ],
                     [
@@ -2349,7 +2179,7 @@ class Command(BaseCommand):
                             "type": "Голяма",
                             "picture": "https://www.dominos.bg/gallery/pansizes/bgiparLarge_pepperoni_crustbg.png",
                             "description": "Прясно омесено тесто с коричка, пълнена с пеперони (+2,50лв.)",
-                            "price": 18.4
+                            "price": 18.4,
                         }
                     ],
                     [
@@ -2357,7 +2187,7 @@ class Command(BaseCommand):
                             "type": "Джъмбо",
                             "picture": "https://www.dominos.bg/gallery/pansizes/bgiparTraditional_panbg.png",
                             "description": "Нашето традиционно тесто",
-                            "price": 17.9
+                            "price": 17.9,
                         }
                     ],
                     [
@@ -2365,24 +2195,19 @@ class Command(BaseCommand):
                             "type": "Джъмбо",
                             "picture": "https://www.dominos.bg/gallery/pansizes/bgiparItalian_style_panbg.png",
                             "description": "Тесто италиански стил",
-                            "price": 17.9
+                            "price": 17.9,
                         }
-                    ]
+                    ],
                 ],
                 "ingredients": [
                     "Доматен сос",
                     "Пармезан",
                     "Моцарела",
                     "Чедар сирене",
-                    "Краве сирене"
+                    "Краве сирене",
                 ],
                 "ingredient_groups": {
-                    "spices": [
-                        "Риган",
-                        "Босилек",
-                        "Пармезан снежинки",
-                        "Песто сос"
-                    ],
+                    "spices": ["Риган", "Босилек", "Пармезан снежинки", "Песто сос"],
                     "meats": [
                         "Пушена шунка",
                         "Чоризо",
@@ -2392,7 +2217,7 @@ class Command(BaseCommand):
                         "Пушен бекон",
                         "Вентричина",
                         "Пикантно телешко",
-                        "Риба тон"
+                        "Риба тон",
                     ],
                     "vegetables": [
                         "Царевица",
@@ -2406,7 +2231,7 @@ class Command(BaseCommand):
                         "Ананас",
                         "Пресни зелени чушки",
                         "Кисeли краставички",
-                        "Пресни домати"
+                        "Пресни домати",
                     ],
                     "cheese": [
                         "Топено сиренее",
@@ -2415,19 +2240,15 @@ class Command(BaseCommand):
                         "Моцарела",
                         "Чедар сирене",
                         "Веган Моцарела",
-                        "Краве сирене"
+                        "Краве сирене",
                     ],
-                    "sauce": [
-                        "Сметана",
-                        "Барбекю сос",
-                        "Доматен сос"
-                    ]
+                    "sauce": ["Сметана", "Барбекю сос", "Доматен сос"],
                 },
                 "product_main_picture": "https://www.dominos.bg/gallery/fmobile/1312medium.png",
                 "product_main_description": "доматен сос, моцарела, чедар, краве сирене, пармезан",
                 "tag": {
                     "VEGETARIAN": "https://www.dominos.bg/images/tags/vegetarian.svg"
-                }
+                },
             },
             {
                 "product_name": "ЕКСТРАВАГАНЗА",
@@ -2438,7 +2259,7 @@ class Command(BaseCommand):
                             "type": "Средна",
                             "picture": "https://www.dominos.bg/gallery/pansizes/bgiparTraditional_panbg.png",
                             "description": "Нашето традиционно тесто",
-                            "price": 14.9
+                            "price": 14.9,
                         }
                     ],
                     [
@@ -2446,7 +2267,7 @@ class Command(BaseCommand):
                             "type": "Средна",
                             "picture": "https://www.dominos.bg/gallery/pansizes/bgiparItalian_style_panbg.png",
                             "description": "Тесто италиански стил",
-                            "price": 14.9
+                            "price": 14.9,
                         }
                     ],
                     [
@@ -2454,7 +2275,7 @@ class Command(BaseCommand):
                             "type": "Средна",
                             "picture": "https://www.dominos.bg/gallery/pansizes/bgiparGluten_Freebg.png",
                             "description": "Gluten Free Dough  (+ 3,10лв)",
-                            "price": 18.0
+                            "price": 18.0,
                         }
                     ],
                     [
@@ -2462,7 +2283,7 @@ class Command(BaseCommand):
                             "type": "Голяма",
                             "picture": "https://www.dominos.bg/gallery/pansizes/bgiparTraditional_panbg.png",
                             "description": "Нашето традиционно тесто",
-                            "price": 17.9
+                            "price": 17.9,
                         }
                     ],
                     [
@@ -2470,7 +2291,7 @@ class Command(BaseCommand):
                             "type": "Голяма",
                             "picture": "https://www.dominos.bg/gallery/pansizes/bgiparItalian_style_panbg.png",
                             "description": "Тесто италиански стил",
-                            "price": 17.9
+                            "price": 17.9,
                         }
                     ],
                     [
@@ -2478,7 +2299,7 @@ class Command(BaseCommand):
                             "type": "Голяма",
                             "picture": "https://www.dominos.bg/gallery/pansizes/bgiparThin_and_crispy_panbg.png",
                             "description": "Тънко и хрупкаво тесто",
-                            "price": 17.9
+                            "price": 17.9,
                         }
                     ],
                     [
@@ -2486,7 +2307,7 @@ class Command(BaseCommand):
                             "type": "Голяма",
                             "picture": "https://www.dominos.bg/gallery/pansizes/bgiparPhiladelphia_panbg.png",
                             "description": "Прясно омесено тесто с коричка пълнена със сирене Philadelphia (+2,50лв)",
-                            "price": 20.4
+                            "price": 20.4,
                         }
                     ],
                     [
@@ -2494,7 +2315,7 @@ class Command(BaseCommand):
                             "type": "Голяма",
                             "picture": "https://www.dominos.bg/gallery/pansizes/bgiparLarge_mozzarella_crustbg.png",
                             "description": "Прясно омесено тесто с коричка, пълнена с моцарела (+2,50лв.)",
-                            "price": 20.4
+                            "price": 20.4,
                         }
                     ],
                     [
@@ -2502,7 +2323,7 @@ class Command(BaseCommand):
                             "type": "Голяма",
                             "picture": "https://www.dominos.bg/gallery/pansizes/bgiparLarge_pepperoni_crustbg.png",
                             "description": "Прясно омесено тесто с коричка, пълнена с пеперони (+2,50лв.)",
-                            "price": 20.4
+                            "price": 20.4,
                         }
                     ],
                     [
@@ -2510,7 +2331,7 @@ class Command(BaseCommand):
                             "type": "Джъмбо",
                             "picture": "https://www.dominos.bg/gallery/pansizes/bgiparTraditional_panbg.png",
                             "description": "Нашето традиционно тесто",
-                            "price": 19.9
+                            "price": 19.9,
                         }
                     ],
                     [
@@ -2518,9 +2339,9 @@ class Command(BaseCommand):
                             "type": "Джъмбо",
                             "picture": "https://www.dominos.bg/gallery/pansizes/bgiparItalian_style_panbg.png",
                             "description": "Тесто италиански стил",
-                            "price": 19.9
+                            "price": 19.9,
                         }
-                    ]
+                    ],
                 ],
                 "ingredients": [
                     "Доматен сос",
@@ -2530,15 +2351,10 @@ class Command(BaseCommand):
                     "Пресни гъби",
                     "Пресни зелени чушки",
                     "Черни маслини",
-                    "Лук"
+                    "Лук",
                 ],
                 "ingredient_groups": {
-                    "spices": [
-                        "Босилек",
-                        "Песто сос",
-                        "Пармезан снежинки",
-                        "Риган"
-                    ],
+                    "spices": ["Босилек", "Песто сос", "Пармезан снежинки", "Риган"],
                     "meats": [
                         "Пушен бекон",
                         "Вентричина",
@@ -2548,7 +2364,7 @@ class Command(BaseCommand):
                         "Чоризо",
                         "Пеперони",
                         "Пиле",
-                        "Пиле гирос"
+                        "Пиле гирос",
                     ],
                     "vegetables": [
                         "Халапеньо-люти чушки",
@@ -2562,7 +2378,7 @@ class Command(BaseCommand):
                         "Рукола",
                         "Черни маслини",
                         "Сушени доматии",
-                        "Лук"
+                        "Лук",
                     ],
                     "cheese": [
                         "Моцарела",
@@ -2571,17 +2387,13 @@ class Command(BaseCommand):
                         "Краве сирене",
                         "Топено сиренее",
                         "Пармезан",
-                        "Ементалл"
+                        "Ементалл",
                     ],
-                    "sauce": [
-                        "Сметана",
-                        "Барбекю сос",
-                        "Доматен сос"
-                    ]
+                    "sauce": ["Сметана", "Барбекю сос", "Доматен сос"],
                 },
                 "product_main_picture": "https://www.dominos.bg/gallery/fmobile/1631medium.png",
                 "product_main_description": "Моцарела, доматен сос, шунка, пеперони, лук, чушки, маслини, гъби",
-                "tag": {}
+                "tag": {},
             },
             {
                 "product_name": "БУРГЕР ПИЦА",
@@ -2592,7 +2404,7 @@ class Command(BaseCommand):
                             "type": "Средна",
                             "picture": "https://www.dominos.bg/gallery/pansizes/bgiparTraditional_panbg.png",
                             "description": "Нашето традиционно тесто",
-                            "price": 13.9
+                            "price": 13.9,
                         }
                     ],
                     [
@@ -2600,7 +2412,7 @@ class Command(BaseCommand):
                             "type": "Средна",
                             "picture": "https://www.dominos.bg/gallery/pansizes/bgiparItalian_style_panbg.png",
                             "description": "Тесто италиански стил",
-                            "price": 13.9
+                            "price": 13.9,
                         }
                     ],
                     [
@@ -2608,7 +2420,7 @@ class Command(BaseCommand):
                             "type": "Средна",
                             "picture": "https://www.dominos.bg/gallery/pansizes/bgiparGluten_Freebg.png",
                             "description": "Gluten Free Dough  (+ 3,10лв)",
-                            "price": 17.0
+                            "price": 17.0,
                         }
                     ],
                     [
@@ -2616,7 +2428,7 @@ class Command(BaseCommand):
                             "type": "Голяма",
                             "picture": "https://www.dominos.bg/gallery/pansizes/bgiparTraditional_panbg.png",
                             "description": "Нашето традиционно тесто",
-                            "price": 16.9
+                            "price": 16.9,
                         }
                     ],
                     [
@@ -2624,7 +2436,7 @@ class Command(BaseCommand):
                             "type": "Голяма",
                             "picture": "https://www.dominos.bg/gallery/pansizes/bgiparItalian_style_panbg.png",
                             "description": "Тесто италиански стил",
-                            "price": 16.9
+                            "price": 16.9,
                         }
                     ],
                     [
@@ -2632,7 +2444,7 @@ class Command(BaseCommand):
                             "type": "Голяма",
                             "picture": "https://www.dominos.bg/gallery/pansizes/bgiparThin_and_crispy_panbg.png",
                             "description": "Тънко и хрупкаво тесто",
-                            "price": 16.9
+                            "price": 16.9,
                         }
                     ],
                     [
@@ -2640,7 +2452,7 @@ class Command(BaseCommand):
                             "type": "Голяма",
                             "picture": "https://www.dominos.bg/gallery/pansizes/bgiparPhiladelphia_panbg.png",
                             "description": "Прясно омесено тесто с коричка пълнена със сирене Philadelphia (+2,50лв)",
-                            "price": 19.4
+                            "price": 19.4,
                         }
                     ],
                     [
@@ -2648,7 +2460,7 @@ class Command(BaseCommand):
                             "type": "Голяма",
                             "picture": "https://www.dominos.bg/gallery/pansizes/bgiparLarge_mozzarella_crustbg.png",
                             "description": "Прясно омесено тесто с коричка, пълнена с моцарела (+2,50лв.)",
-                            "price": 19.4
+                            "price": 19.4,
                         }
                     ],
                     [
@@ -2656,7 +2468,7 @@ class Command(BaseCommand):
                             "type": "Голяма",
                             "picture": "https://www.dominos.bg/gallery/pansizes/bgiparLarge_pepperoni_crustbg.png",
                             "description": "Прясно омесено тесто с коричка, пълнена с пеперони (+2,50лв.)",
-                            "price": 19.4
+                            "price": 19.4,
                         }
                     ],
                     [
@@ -2664,7 +2476,7 @@ class Command(BaseCommand):
                             "type": "Джъмбо",
                             "picture": "https://www.dominos.bg/gallery/pansizes/bgiparTraditional_panbg.png",
                             "description": "Нашето традиционно тесто",
-                            "price": 18.9
+                            "price": 18.9,
                         }
                     ],
                     [
@@ -2672,9 +2484,9 @@ class Command(BaseCommand):
                             "type": "Джъмбо",
                             "picture": "https://www.dominos.bg/gallery/pansizes/bgiparItalian_style_panbg.png",
                             "description": "Тесто италиански стил",
-                            "price": 18.9
+                            "price": 18.9,
                         }
-                    ]
+                    ],
                 ],
                 "ingredients": [
                     "Моцарела",
@@ -2682,15 +2494,10 @@ class Command(BaseCommand):
                     "Пикантно телешко",
                     "Лук",
                     "Кисeли краставички",
-                    "Пресни домати"
+                    "Пресни домати",
                 ],
                 "ingredient_groups": {
-                    "spices": [
-                        "Риган",
-                        "Босилек",
-                        "Песто сос",
-                        "Пармезан снежинки"
-                    ],
+                    "spices": ["Риган", "Босилек", "Песто сос", "Пармезан снежинки"],
                     "meats": [
                         "Пиле",
                         "Пиле гирос",
@@ -2700,7 +2507,7 @@ class Command(BaseCommand):
                         "Риба тон",
                         "Пушена шунка",
                         "Чоризо",
-                        "Пеперони"
+                        "Пеперони",
                     ],
                     "vegetables": [
                         "Черни маслини",
@@ -2714,7 +2521,7 @@ class Command(BaseCommand):
                         "Кисeли краставички",
                         "Пресни домати",
                         "Царевица",
-                        "Рукола"
+                        "Рукола",
                     ],
                     "cheese": [
                         "Пармезан",
@@ -2723,17 +2530,13 @@ class Command(BaseCommand):
                         "Чедар сирене",
                         "Веган Моцарела",
                         "Краве сирене",
-                        "Топено сиренее"
+                        "Топено сиренее",
                     ],
-                    "sauce": [
-                        "Сметана",
-                        "Барбекю сос",
-                        "Доматен сос"
-                    ]
+                    "sauce": ["Сметана", "Барбекю сос", "Доматен сос"],
                 },
                 "product_main_picture": "https://www.dominos.bg/gallery/fmobile/1505medium.png",
                 "product_main_description": "бургер сос, кисели краставички, моцарела, чедар, лук, домати, пикантно телешко",
-                "tag": {}
+                "tag": {},
             },
             {
                 "product_name": "ПОСТНА V.2",
@@ -2744,7 +2547,7 @@ class Command(BaseCommand):
                             "type": "Средна",
                             "picture": "https://www.dominos.bg/gallery/pansizes/bgiparTraditional_panbg.png",
                             "description": "Нашето традиционно тесто",
-                            "price": 11.9
+                            "price": 11.9,
                         }
                     ],
                     [
@@ -2752,7 +2555,7 @@ class Command(BaseCommand):
                             "type": "Средна",
                             "picture": "https://www.dominos.bg/gallery/pansizes/bgiparItalian_style_panbg.png",
                             "description": "Тесто италиански стил",
-                            "price": 11.9
+                            "price": 11.9,
                         }
                     ],
                     [
@@ -2760,7 +2563,7 @@ class Command(BaseCommand):
                             "type": "Средна",
                             "picture": "https://www.dominos.bg/gallery/pansizes/bgiparGluten_Freebg.png",
                             "description": "Gluten Free Dough  (+ 3,10лв)",
-                            "price": 15.0
+                            "price": 15.0,
                         }
                     ],
                     [
@@ -2768,7 +2571,7 @@ class Command(BaseCommand):
                             "type": "Голяма",
                             "picture": "https://www.dominos.bg/gallery/pansizes/bgiparTraditional_panbg.png",
                             "description": "Нашето традиционно тесто",
-                            "price": 14.9
+                            "price": 14.9,
                         }
                     ],
                     [
@@ -2776,7 +2579,7 @@ class Command(BaseCommand):
                             "type": "Голяма",
                             "picture": "https://www.dominos.bg/gallery/pansizes/bgiparItalian_style_panbg.png",
                             "description": "Тесто италиански стил",
-                            "price": 14.9
+                            "price": 14.9,
                         }
                     ],
                     [
@@ -2784,7 +2587,7 @@ class Command(BaseCommand):
                             "type": "Голяма",
                             "picture": "https://www.dominos.bg/gallery/pansizes/bgiparThin_and_crispy_panbg.png",
                             "description": "Тънко и хрупкаво тесто",
-                            "price": 14.9
+                            "price": 14.9,
                         }
                     ],
                     [
@@ -2792,7 +2595,7 @@ class Command(BaseCommand):
                             "type": "Джъмбо",
                             "picture": "https://www.dominos.bg/gallery/pansizes/bgiparTraditional_panbg.png",
                             "description": "Нашето традиционно тесто",
-                            "price": 16.9
+                            "price": 16.9,
                         }
                     ],
                     [
@@ -2800,9 +2603,9 @@ class Command(BaseCommand):
                             "type": "Джъмбо",
                             "picture": "https://www.dominos.bg/gallery/pansizes/bgiparItalian_style_panbg.png",
                             "description": "Тесто италиански стил",
-                            "price": 16.9
+                            "price": 16.9,
                         }
-                    ]
+                    ],
                 ],
                 "ingredients": [
                     "Доматен сос",
@@ -2810,15 +2613,10 @@ class Command(BaseCommand):
                     "Пресни гъби",
                     "Пресни домати",
                     "Черни маслини",
-                    "Сушени доматии"
+                    "Сушени доматии",
                 ],
                 "ingredient_groups": {
-                    "spices": [
-                        "Босилек",
-                        "Пармезан снежинки",
-                        "Песто сос",
-                        "Риган"
-                    ],
+                    "spices": ["Босилек", "Пармезан снежинки", "Песто сос", "Риган"],
                     "meats": [
                         "Пушен бекон",
                         "Вентричина",
@@ -2828,7 +2626,7 @@ class Command(BaseCommand):
                         "Чоризо",
                         "Пеперони",
                         "Пиле",
-                        "Пиле гирос"
+                        "Пиле гирос",
                     ],
                     "vegetables": [
                         "Пресни гъби",
@@ -2842,7 +2640,7 @@ class Command(BaseCommand):
                         "Черни маслини",
                         "Сушени доматии",
                         "Лук",
-                        "Халапеньо-люти чушки"
+                        "Халапеньо-люти чушки",
                     ],
                     "cheese": [
                         "Моцарела",
@@ -2851,20 +2649,16 @@ class Command(BaseCommand):
                         "Краве сирене",
                         "Топено сиренее",
                         "Пармезан",
-                        "Ементалл"
+                        "Ементалл",
                     ],
-                    "sauce": [
-                        "Сметана",
-                        "Барбекю сос",
-                        "Доматен сос"
-                    ]
+                    "sauce": ["Сметана", "Барбекю сос", "Доматен сос"],
                 },
                 "product_main_picture": "https://www.dominos.bg/gallery/fmobile/1616medium.png",
                 "product_main_description": "доматен сос, веган моцарела, сушени домати, пресни домати, гъби, маслини * може да съдържа следи от лактоза*",
                 "tag": {
                     "VEGETARIAN": "https://www.dominos.bg/images/tags/vegetarian.svg",
-                    "ПОСТЕНЕ": "https://www.dominos.bg/images/tags/fasting.svg"
-                }
+                    "ПОСТЕНЕ": "https://www.dominos.bg/images/tags/fasting.svg",
+                },
             },
             {
                 "product_name": "СМОУКИ БЕЙКЪН",
@@ -2875,7 +2669,7 @@ class Command(BaseCommand):
                             "type": "Средна",
                             "picture": "https://www.dominos.bg/gallery/pansizes/bgiparTraditional_panbg.png",
                             "description": "Нашето традиционно тесто",
-                            "price": 12.9
+                            "price": 12.9,
                         }
                     ],
                     [
@@ -2883,7 +2677,7 @@ class Command(BaseCommand):
                             "type": "Средна",
                             "picture": "https://www.dominos.bg/gallery/pansizes/bgiparItalian_style_panbg.png",
                             "description": "Тесто италиански стил",
-                            "price": 12.9
+                            "price": 12.9,
                         }
                     ],
                     [
@@ -2891,7 +2685,7 @@ class Command(BaseCommand):
                             "type": "Средна",
                             "picture": "https://www.dominos.bg/gallery/pansizes/bgiparGluten_Freebg.png",
                             "description": "Gluten Free Dough  (+ 3,10лв)",
-                            "price": 16.0
+                            "price": 16.0,
                         }
                     ],
                     [
@@ -2899,7 +2693,7 @@ class Command(BaseCommand):
                             "type": "Голяма",
                             "picture": "https://www.dominos.bg/gallery/pansizes/bgiparTraditional_panbg.png",
                             "description": "Нашето традиционно тесто",
-                            "price": 15.9
+                            "price": 15.9,
                         }
                     ],
                     [
@@ -2907,7 +2701,7 @@ class Command(BaseCommand):
                             "type": "Голяма",
                             "picture": "https://www.dominos.bg/gallery/pansizes/bgiparItalian_style_panbg.png",
                             "description": "Тесто италиански стил",
-                            "price": 15.9
+                            "price": 15.9,
                         }
                     ],
                     [
@@ -2915,7 +2709,7 @@ class Command(BaseCommand):
                             "type": "Голяма",
                             "picture": "https://www.dominos.bg/gallery/pansizes/bgiparThin_and_crispy_panbg.png",
                             "description": "Тънко и хрупкаво тесто",
-                            "price": 15.9
+                            "price": 15.9,
                         }
                     ],
                     [
@@ -2923,7 +2717,7 @@ class Command(BaseCommand):
                             "type": "Голяма",
                             "picture": "https://www.dominos.bg/gallery/pansizes/bgiparPhiladelphia_panbg.png",
                             "description": "Прясно омесено тесто с коричка пълнена със сирене Philadelphia (+2,50лв)",
-                            "price": 18.4
+                            "price": 18.4,
                         }
                     ],
                     [
@@ -2931,7 +2725,7 @@ class Command(BaseCommand):
                             "type": "Голяма",
                             "picture": "https://www.dominos.bg/gallery/pansizes/bgiparLarge_mozzarella_crustbg.png",
                             "description": "Прясно омесено тесто с коричка, пълнена с моцарела (+2,50лв.)",
-                            "price": 18.4
+                            "price": 18.4,
                         }
                     ],
                     [
@@ -2939,7 +2733,7 @@ class Command(BaseCommand):
                             "type": "Голяма",
                             "picture": "https://www.dominos.bg/gallery/pansizes/bgiparLarge_pepperoni_crustbg.png",
                             "description": "Прясно омесено тесто с коричка, пълнена с пеперони (+2,50лв.)",
-                            "price": 18.4
+                            "price": 18.4,
                         }
                     ],
                     [
@@ -2947,7 +2741,7 @@ class Command(BaseCommand):
                             "type": "Джъмбо",
                             "picture": "https://www.dominos.bg/gallery/pansizes/bgiparTraditional_panbg.png",
                             "description": "Нашето традиционно тесто",
-                            "price": 17.9
+                            "price": 17.9,
                         }
                     ],
                     [
@@ -2955,24 +2749,19 @@ class Command(BaseCommand):
                             "type": "Джъмбо",
                             "picture": "https://www.dominos.bg/gallery/pansizes/bgiparItalian_style_panbg.png",
                             "description": "Тесто италиански стил",
-                            "price": 17.9
+                            "price": 17.9,
                         }
-                    ]
+                    ],
                 ],
                 "ingredients": [
                     "Сметана",
                     "Моцарела",
                     "Топено сиренее",
                     "Пушен бекон",
-                    "Черни маслини"
+                    "Черни маслини",
                 ],
                 "ingredient_groups": {
-                    "spices": [
-                        "Босилек",
-                        "Песто сос",
-                        "Пармезан снежинки",
-                        "Риган"
-                    ],
+                    "spices": ["Босилек", "Песто сос", "Пармезан снежинки", "Риган"],
                     "meats": [
                         "Пиле гирос",
                         "Пушен бекон",
@@ -2982,7 +2771,7 @@ class Command(BaseCommand):
                         "Пушена шунка",
                         "Чоризо",
                         "Пеперони",
-                        "Пиле"
+                        "Пиле",
                     ],
                     "vegetables": [
                         "Лук",
@@ -2996,7 +2785,7 @@ class Command(BaseCommand):
                         "Царевица",
                         "Рукола",
                         "Черни маслини",
-                        "Сушени доматии"
+                        "Сушени доматии",
                     ],
                     "cheese": [
                         "Ементалл",
@@ -3005,17 +2794,13 @@ class Command(BaseCommand):
                         "Веган Моцарела",
                         "Краве сирене",
                         "Топено сиренее",
-                        "Пармезан"
+                        "Пармезан",
                     ],
-                    "sauce": [
-                        "Сметана",
-                        "Барбекю сос",
-                        "Доматен сос"
-                    ]
+                    "sauce": ["Сметана", "Барбекю сос", "Доматен сос"],
                 },
                 "product_main_picture": "https://www.dominos.bg/gallery/fmobile/1644medium.png",
                 "product_main_description": "сметана, моцарела, бекон, пушено топено сирене, маслини",
-                "tag": {}
+                "tag": {},
             },
             {
                 "product_name": "ЧИК –ЧИ –РИК",
@@ -3026,7 +2811,7 @@ class Command(BaseCommand):
                             "type": "Средна",
                             "picture": "https://www.dominos.bg/gallery/pansizes/bgiparTraditional_panbg.png",
                             "description": "Нашето традиционно тесто",
-                            "price": 14.9
+                            "price": 14.9,
                         }
                     ],
                     [
@@ -3034,7 +2819,7 @@ class Command(BaseCommand):
                             "type": "Средна",
                             "picture": "https://www.dominos.bg/gallery/pansizes/bgiparItalian_style_panbg.png",
                             "description": "Тесто италиански стил",
-                            "price": 14.9
+                            "price": 14.9,
                         }
                     ],
                     [
@@ -3042,7 +2827,7 @@ class Command(BaseCommand):
                             "type": "Средна",
                             "picture": "https://www.dominos.bg/gallery/pansizes/bgiparGluten_Freebg.png",
                             "description": "Gluten Free Dough  (+ 3,10лв)",
-                            "price": 18.0
+                            "price": 18.0,
                         }
                     ],
                     [
@@ -3050,7 +2835,7 @@ class Command(BaseCommand):
                             "type": "Голяма",
                             "picture": "https://www.dominos.bg/gallery/pansizes/bgiparTraditional_panbg.png",
                             "description": "Нашето традиционно тесто",
-                            "price": 17.9
+                            "price": 17.9,
                         }
                     ],
                     [
@@ -3058,7 +2843,7 @@ class Command(BaseCommand):
                             "type": "Голяма",
                             "picture": "https://www.dominos.bg/gallery/pansizes/bgiparItalian_style_panbg.png",
                             "description": "Тесто италиански стил",
-                            "price": 17.9
+                            "price": 17.9,
                         }
                     ],
                     [
@@ -3066,7 +2851,7 @@ class Command(BaseCommand):
                             "type": "Голяма",
                             "picture": "https://www.dominos.bg/gallery/pansizes/bgiparThin_and_crispy_panbg.png",
                             "description": "Тънко и хрупкаво тесто",
-                            "price": 17.9
+                            "price": 17.9,
                         }
                     ],
                     [
@@ -3074,7 +2859,7 @@ class Command(BaseCommand):
                             "type": "Голяма",
                             "picture": "https://www.dominos.bg/gallery/pansizes/bgiparPhiladelphia_panbg.png",
                             "description": "Прясно омесено тесто с коричка пълнена със сирене Philadelphia (+2,50лв)",
-                            "price": 20.4
+                            "price": 20.4,
                         }
                     ],
                     [
@@ -3082,7 +2867,7 @@ class Command(BaseCommand):
                             "type": "Голяма",
                             "picture": "https://www.dominos.bg/gallery/pansizes/bgiparLarge_mozzarella_crustbg.png",
                             "description": "Прясно омесено тесто с коричка, пълнена с моцарела (+2,50лв.)",
-                            "price": 20.4
+                            "price": 20.4,
                         }
                     ],
                     [
@@ -3090,7 +2875,7 @@ class Command(BaseCommand):
                             "type": "Голяма",
                             "picture": "https://www.dominos.bg/gallery/pansizes/bgiparLarge_pepperoni_crustbg.png",
                             "description": "Прясно омесено тесто с коричка, пълнена с пеперони (+2,50лв.)",
-                            "price": 20.4
+                            "price": 20.4,
                         }
                     ],
                     [
@@ -3098,7 +2883,7 @@ class Command(BaseCommand):
                             "type": "Джъмбо",
                             "picture": "https://www.dominos.bg/gallery/pansizes/bgiparTraditional_panbg.png",
                             "description": "Нашето традиционно тесто",
-                            "price": 19.9
+                            "price": 19.9,
                         }
                     ],
                     [
@@ -3106,24 +2891,19 @@ class Command(BaseCommand):
                             "type": "Джъмбо",
                             "picture": "https://www.dominos.bg/gallery/pansizes/bgiparItalian_style_panbg.png",
                             "description": "Тесто италиански стил",
-                            "price": 19.9
+                            "price": 19.9,
                         }
-                    ]
+                    ],
                 ],
                 "ingredients": [
                     "Доматен сос",
                     "Топено сиренее",
                     "Моцарела",
                     "Пиле",
-                    "Царевица"
+                    "Царевица",
                 ],
                 "ingredient_groups": {
-                    "spices": [
-                        "Песто сос",
-                        "Пармезан снежинки",
-                        "Риган",
-                        "Босилек"
-                    ],
+                    "spices": ["Песто сос", "Пармезан снежинки", "Риган", "Босилек"],
                     "meats": [
                         "Риба тон",
                         "Пушена шунка",
@@ -3133,7 +2913,7 @@ class Command(BaseCommand):
                         "Пиле гирос",
                         "Пушен бекон",
                         "Вентричина",
-                        "Пикантно телешко"
+                        "Пикантно телешко",
                     ],
                     "vegetables": [
                         "Пресни домати",
@@ -3147,7 +2927,7 @@ class Command(BaseCommand):
                         "Карамелизиран лук",
                         "Ананас",
                         "Пресни зелени чушки",
-                        "Кисeли краставички"
+                        "Кисeли краставички",
                     ],
                     "cheese": [
                         "Топено сиренее",
@@ -3156,17 +2936,13 @@ class Command(BaseCommand):
                         "Моцарела",
                         "Чедар сирене",
                         "Веган Моцарела",
-                        "Краве сирене"
+                        "Краве сирене",
                     ],
-                    "sauce": [
-                        "Сметана",
-                        "Барбекю сос",
-                        "Доматен сос"
-                    ]
+                    "sauce": ["Сметана", "Барбекю сос", "Доматен сос"],
                 },
                 "product_main_picture": "https://www.dominos.bg/gallery/fmobile/1342medium.png",
                 "product_main_description": "доматен сос, моцарела, крехко пиле, топено сирене, царевица",
-                "tag": {}
+                "tag": {},
             },
             {
                 "product_name": "ПЕПЕРОНИ КЛАСИК",
@@ -3177,7 +2953,7 @@ class Command(BaseCommand):
                             "type": "Средна",
                             "picture": "https://www.dominos.bg/gallery/pansizes/bgiparTraditional_panbg.png",
                             "description": "Нашето традиционно тесто",
-                            "price": 14.9
+                            "price": 14.9,
                         }
                     ],
                     [
@@ -3185,7 +2961,7 @@ class Command(BaseCommand):
                             "type": "Средна",
                             "picture": "https://www.dominos.bg/gallery/pansizes/bgiparItalian_style_panbg.png",
                             "description": "Тесто италиански стил",
-                            "price": 14.9
+                            "price": 14.9,
                         }
                     ],
                     [
@@ -3193,7 +2969,7 @@ class Command(BaseCommand):
                             "type": "Средна",
                             "picture": "https://www.dominos.bg/gallery/pansizes/bgiparGluten_Freebg.png",
                             "description": "Gluten Free Dough  (+ 3,10лв)",
-                            "price": 18.0
+                            "price": 18.0,
                         }
                     ],
                     [
@@ -3201,7 +2977,7 @@ class Command(BaseCommand):
                             "type": "Голяма",
                             "picture": "https://www.dominos.bg/gallery/pansizes/bgiparTraditional_panbg.png",
                             "description": "Нашето традиционно тесто",
-                            "price": 17.9
+                            "price": 17.9,
                         }
                     ],
                     [
@@ -3209,7 +2985,7 @@ class Command(BaseCommand):
                             "type": "Голяма",
                             "picture": "https://www.dominos.bg/gallery/pansizes/bgiparItalian_style_panbg.png",
                             "description": "Тесто италиански стил",
-                            "price": 17.9
+                            "price": 17.9,
                         }
                     ],
                     [
@@ -3217,7 +2993,7 @@ class Command(BaseCommand):
                             "type": "Голяма",
                             "picture": "https://www.dominos.bg/gallery/pansizes/bgiparThin_and_crispy_panbg.png",
                             "description": "Тънко и хрупкаво тесто",
-                            "price": 17.9
+                            "price": 17.9,
                         }
                     ],
                     [
@@ -3225,7 +3001,7 @@ class Command(BaseCommand):
                             "type": "Голяма",
                             "picture": "https://www.dominos.bg/gallery/pansizes/bgiparPhiladelphia_panbg.png",
                             "description": "Прясно омесено тесто с коричка пълнена със сирене Philadelphia (+2,50лв)",
-                            "price": 20.4
+                            "price": 20.4,
                         }
                     ],
                     [
@@ -3233,7 +3009,7 @@ class Command(BaseCommand):
                             "type": "Голяма",
                             "picture": "https://www.dominos.bg/gallery/pansizes/bgiparLarge_mozzarella_crustbg.png",
                             "description": "Прясно омесено тесто с коричка, пълнена с моцарела (+2,50лв.)",
-                            "price": 20.4
+                            "price": 20.4,
                         }
                     ],
                     [
@@ -3241,7 +3017,7 @@ class Command(BaseCommand):
                             "type": "Голяма",
                             "picture": "https://www.dominos.bg/gallery/pansizes/bgiparLarge_pepperoni_crustbg.png",
                             "description": "Прясно омесено тесто с коричка, пълнена с пеперони (+2,50лв.)",
-                            "price": 20.4
+                            "price": 20.4,
                         }
                     ],
                     [
@@ -3249,7 +3025,7 @@ class Command(BaseCommand):
                             "type": "Джъмбо",
                             "picture": "https://www.dominos.bg/gallery/pansizes/bgiparTraditional_panbg.png",
                             "description": "Нашето традиционно тесто",
-                            "price": 19.9
+                            "price": 19.9,
                         }
                     ],
                     [
@@ -3257,22 +3033,13 @@ class Command(BaseCommand):
                             "type": "Джъмбо",
                             "picture": "https://www.dominos.bg/gallery/pansizes/bgiparItalian_style_panbg.png",
                             "description": "Тесто италиански стил",
-                            "price": 19.9
+                            "price": 19.9,
                         }
-                    ]
-                ],
-                "ingredients": [
-                    "Доматен сос",
-                    "Extra Моцарела",
-                    "Extra Пеперони"
-                ],
-                "ingredient_groups": {
-                    "spices": [
-                        "Риган",
-                        "Босилек",
-                        "Пармезан снежинки",
-                        "Песто сос"
                     ],
+                ],
+                "ingredients": ["Доматен сос", "Extra Моцарела", "Extra Пеперони"],
+                "ingredient_groups": {
+                    "spices": ["Риган", "Босилек", "Пармезан снежинки", "Песто сос"],
                     "meats": [
                         "Пушена шунка",
                         "Чоризо",
@@ -3282,7 +3049,7 @@ class Command(BaseCommand):
                         "Пушен бекон",
                         "Вентричина",
                         "Пикантно телешко",
-                        "Риба тон"
+                        "Риба тон",
                     ],
                     "vegetables": [
                         "Царевица",
@@ -3296,7 +3063,7 @@ class Command(BaseCommand):
                         "Ананас",
                         "Пресни зелени чушки",
                         "Кисeли краставички",
-                        "Пресни домати"
+                        "Пресни домати",
                     ],
                     "cheese": [
                         "Топено сиренее",
@@ -3305,19 +3072,13 @@ class Command(BaseCommand):
                         "Моцарела",
                         "Чедар сирене",
                         "Веган Моцарела",
-                        "Краве сирене"
+                        "Краве сирене",
                     ],
-                    "sauce": [
-                        "Сметана",
-                        "Барбекю сос",
-                        "Доматен сос"
-                    ]
+                    "sauce": ["Сметана", "Барбекю сос", "Доматен сос"],
                 },
                 "product_main_picture": "https://www.dominos.bg/gallery/fmobile/1293medium.png",
                 "product_main_description": "доматен сос, моцарела, допълнително моцарела, пеперони, допълнително пеперони",
-                "tag": {
-                    "SPICY": "https://www.dominos.bg/images/tags/spicy.svg"
-                }
+                "tag": {"SPICY": "https://www.dominos.bg/images/tags/spicy.svg"},
             },
             {
                 "product_name": "ШУНКА КЛАСИК",
@@ -3328,7 +3089,7 @@ class Command(BaseCommand):
                             "type": "Средна",
                             "picture": "https://www.dominos.bg/gallery/pansizes/bgiparTraditional_panbg.png",
                             "description": "Нашето традиционно тесто",
-                            "price": 11.9
+                            "price": 11.9,
                         }
                     ],
                     [
@@ -3336,7 +3097,7 @@ class Command(BaseCommand):
                             "type": "Средна",
                             "picture": "https://www.dominos.bg/gallery/pansizes/bgiparItalian_style_panbg.png",
                             "description": "Тесто италиански стил",
-                            "price": 11.9
+                            "price": 11.9,
                         }
                     ],
                     [
@@ -3344,7 +3105,7 @@ class Command(BaseCommand):
                             "type": "Средна",
                             "picture": "https://www.dominos.bg/gallery/pansizes/bgiparGluten_Freebg.png",
                             "description": "Gluten Free Dough  (+ 3,10лв)",
-                            "price": 15.0
+                            "price": 15.0,
                         }
                     ],
                     [
@@ -3352,7 +3113,7 @@ class Command(BaseCommand):
                             "type": "Голяма",
                             "picture": "https://www.dominos.bg/gallery/pansizes/bgiparTraditional_panbg.png",
                             "description": "Нашето традиционно тесто",
-                            "price": 14.9
+                            "price": 14.9,
                         }
                     ],
                     [
@@ -3360,7 +3121,7 @@ class Command(BaseCommand):
                             "type": "Голяма",
                             "picture": "https://www.dominos.bg/gallery/pansizes/bgiparItalian_style_panbg.png",
                             "description": "Тесто италиански стил",
-                            "price": 14.9
+                            "price": 14.9,
                         }
                     ],
                     [
@@ -3368,7 +3129,7 @@ class Command(BaseCommand):
                             "type": "Голяма",
                             "picture": "https://www.dominos.bg/gallery/pansizes/bgiparThin_and_crispy_panbg.png",
                             "description": "Тънко и хрупкаво тесто",
-                            "price": 14.9
+                            "price": 14.9,
                         }
                     ],
                     [
@@ -3376,7 +3137,7 @@ class Command(BaseCommand):
                             "type": "Голяма",
                             "picture": "https://www.dominos.bg/gallery/pansizes/bgiparPhiladelphia_panbg.png",
                             "description": "Прясно омесено тесто с коричка пълнена със сирене Philadelphia (+2,50лв)",
-                            "price": 17.4
+                            "price": 17.4,
                         }
                     ],
                     [
@@ -3384,7 +3145,7 @@ class Command(BaseCommand):
                             "type": "Голяма",
                             "picture": "https://www.dominos.bg/gallery/pansizes/bgiparLarge_mozzarella_crustbg.png",
                             "description": "Прясно омесено тесто с коричка, пълнена с моцарела (+2,50лв.)",
-                            "price": 17.4
+                            "price": 17.4,
                         }
                     ],
                     [
@@ -3392,7 +3153,7 @@ class Command(BaseCommand):
                             "type": "Голяма",
                             "picture": "https://www.dominos.bg/gallery/pansizes/bgiparLarge_pepperoni_crustbg.png",
                             "description": "Прясно омесено тесто с коричка, пълнена с пеперони (+2,50лв.)",
-                            "price": 17.4
+                            "price": 17.4,
                         }
                     ],
                     [
@@ -3400,7 +3161,7 @@ class Command(BaseCommand):
                             "type": "Джъмбо",
                             "picture": "https://www.dominos.bg/gallery/pansizes/bgiparTraditional_panbg.png",
                             "description": "Нашето традиционно тесто",
-                            "price": 16.9
+                            "price": 16.9,
                         }
                     ],
                     [
@@ -3408,24 +3169,19 @@ class Command(BaseCommand):
                             "type": "Джъмбо",
                             "picture": "https://www.dominos.bg/gallery/pansizes/bgiparItalian_style_panbg.png",
                             "description": "Тесто италиански стил",
-                            "price": 16.9
+                            "price": 16.9,
                         }
-                    ]
+                    ],
                 ],
                 "ingredients": [
                     "Доматен сос",
                     "Моцарела",
                     "Пушена шунка",
                     "Пресни гъби",
-                    "Пресни зелени чушки"
+                    "Пресни зелени чушки",
                 ],
                 "ingredient_groups": {
-                    "spices": [
-                        "Босилек",
-                        "Пармезан снежинки",
-                        "Песто сос",
-                        "Риган"
-                    ],
+                    "spices": ["Босилек", "Пармезан снежинки", "Песто сос", "Риган"],
                     "meats": [
                         "Риба тон",
                         "Пушена шунка",
@@ -3435,7 +3191,7 @@ class Command(BaseCommand):
                         "Пиле гирос",
                         "Пушен бекон",
                         "Вентричина",
-                        "Пикантно телешко"
+                        "Пикантно телешко",
                     ],
                     "vegetables": [
                         "Пресни домати",
@@ -3449,7 +3205,7 @@ class Command(BaseCommand):
                         "Карамелизиран лук",
                         "Ананас",
                         "Пресни зелени чушки",
-                        "Кисeли краставички"
+                        "Кисeли краставички",
                     ],
                     "cheese": [
                         "Краве сирене",
@@ -3458,17 +3214,13 @@ class Command(BaseCommand):
                         "Ементалл",
                         "Моцарела",
                         "Чедар сирене",
-                        "Веган Моцарела"
+                        "Веган Моцарела",
                     ],
-                    "sauce": [
-                        "Сметана",
-                        "Барбекю сос",
-                        "Доматен сос"
-                    ]
+                    "sauce": ["Сметана", "Барбекю сос", "Доматен сос"],
                 },
                 "product_main_picture": "https://www.dominos.bg/gallery/fmobile/1292medium.png",
                 "product_main_description": "доматен сос, моцарела, шунка, зелени чушки, пресни гъби",
-                "tag": {}
+                "tag": {},
             },
             {
                 "product_name": "ПИЦА ТОН",
@@ -3479,7 +3231,7 @@ class Command(BaseCommand):
                             "type": "Средна",
                             "picture": "https://www.dominos.bg/gallery/pansizes/bgiparTraditional_panbg.png",
                             "description": "Нашето традиционно тесто",
-                            "price": 13.9
+                            "price": 13.9,
                         }
                     ],
                     [
@@ -3487,7 +3239,7 @@ class Command(BaseCommand):
                             "type": "Средна",
                             "picture": "https://www.dominos.bg/gallery/pansizes/bgiparItalian_style_panbg.png",
                             "description": "Тесто италиански стил",
-                            "price": 13.9
+                            "price": 13.9,
                         }
                     ],
                     [
@@ -3495,7 +3247,7 @@ class Command(BaseCommand):
                             "type": "Средна",
                             "picture": "https://www.dominos.bg/gallery/pansizes/bgiparGluten_Freebg.png",
                             "description": "Gluten Free Dough  (+ 3,10лв)",
-                            "price": 17.0
+                            "price": 17.0,
                         }
                     ],
                     [
@@ -3503,7 +3255,7 @@ class Command(BaseCommand):
                             "type": "Голяма",
                             "picture": "https://www.dominos.bg/gallery/pansizes/bgiparTraditional_panbg.png",
                             "description": "Нашето традиционно тесто",
-                            "price": 16.9
+                            "price": 16.9,
                         }
                     ],
                     [
@@ -3511,7 +3263,7 @@ class Command(BaseCommand):
                             "type": "Голяма",
                             "picture": "https://www.dominos.bg/gallery/pansizes/bgiparItalian_style_panbg.png",
                             "description": "Тесто италиански стил",
-                            "price": 16.9
+                            "price": 16.9,
                         }
                     ],
                     [
@@ -3519,7 +3271,7 @@ class Command(BaseCommand):
                             "type": "Голяма",
                             "picture": "https://www.dominos.bg/gallery/pansizes/bgiparThin_and_crispy_panbg.png",
                             "description": "Тънко и хрупкаво тесто",
-                            "price": 16.9
+                            "price": 16.9,
                         }
                     ],
                     [
@@ -3527,7 +3279,7 @@ class Command(BaseCommand):
                             "type": "Голяма",
                             "picture": "https://www.dominos.bg/gallery/pansizes/bgiparPhiladelphia_panbg.png",
                             "description": "Прясно омесено тесто с коричка пълнена със сирене Philadelphia (+2,50лв)",
-                            "price": 19.4
+                            "price": 19.4,
                         }
                     ],
                     [
@@ -3535,7 +3287,7 @@ class Command(BaseCommand):
                             "type": "Голяма",
                             "picture": "https://www.dominos.bg/gallery/pansizes/bgiparLarge_mozzarella_crustbg.png",
                             "description": "Прясно омесено тесто с коричка, пълнена с моцарела (+2,50лв.)",
-                            "price": 19.4
+                            "price": 19.4,
                         }
                     ],
                     [
@@ -3543,7 +3295,7 @@ class Command(BaseCommand):
                             "type": "Голяма",
                             "picture": "https://www.dominos.bg/gallery/pansizes/bgiparLarge_pepperoni_crustbg.png",
                             "description": "Прясно омесено тесто с коричка, пълнена с пеперони (+2,50лв.)",
-                            "price": 19.4
+                            "price": 19.4,
                         }
                     ],
                     [
@@ -3551,7 +3303,7 @@ class Command(BaseCommand):
                             "type": "Джъмбо",
                             "picture": "https://www.dominos.bg/gallery/pansizes/bgiparTraditional_panbg.png",
                             "description": "Нашето традиционно тесто",
-                            "price": 18.9
+                            "price": 18.9,
                         }
                     ],
                     [
@@ -3559,24 +3311,19 @@ class Command(BaseCommand):
                             "type": "Джъмбо",
                             "picture": "https://www.dominos.bg/gallery/pansizes/bgiparItalian_style_panbg.png",
                             "description": "Тесто италиански стил",
-                            "price": 18.9
+                            "price": 18.9,
                         }
-                    ]
+                    ],
                 ],
                 "ingredients": [
                     "Доматен сос",
                     "Моцарела",
                     "Риба тон",
                     "Пресни домати",
-                    "Лук"
+                    "Лук",
                 ],
                 "ingredient_groups": {
-                    "spices": [
-                        "Босилек",
-                        "Песто сос",
-                        "Пармезан снежинки",
-                        "Риган"
-                    ],
+                    "spices": ["Босилек", "Песто сос", "Пармезан снежинки", "Риган"],
                     "meats": [
                         "Пушен бекон",
                         "Вентричина",
@@ -3586,7 +3333,7 @@ class Command(BaseCommand):
                         "Чоризо",
                         "Пеперони",
                         "Пиле",
-                        "Пиле гирос"
+                        "Пиле гирос",
                     ],
                     "vegetables": [
                         "Халапеньо-люти чушки",
@@ -3600,7 +3347,7 @@ class Command(BaseCommand):
                         "Рукола",
                         "Черни маслини",
                         "Сушени доматии",
-                        "Лук"
+                        "Лук",
                     ],
                     "cheese": [
                         "Моцарела",
@@ -3609,17 +3356,13 @@ class Command(BaseCommand):
                         "Краве сирене",
                         "Топено сиренее",
                         "Пармезан",
-                        "Ементалл"
+                        "Ементалл",
                     ],
-                    "sauce": [
-                        "Сметана",
-                        "Барбекю сос",
-                        "Доматен сос"
-                    ]
+                    "sauce": ["Сметана", "Барбекю сос", "Доматен сос"],
                 },
                 "product_main_picture": "https://www.dominos.bg/gallery/fmobile/1363medium.png",
                 "product_main_description": "доматен сос, моцарела, риба тон, пресни домати, лук",
-                "tag": {}
+                "tag": {},
             },
             {
                 "product_name": "МАСТЪР БУРГЕР ПИЦА",
@@ -3630,7 +3373,7 @@ class Command(BaseCommand):
                             "type": "Средна",
                             "picture": "https://www.dominos.bg/gallery/pansizes/bgiparTraditional_panbg.png",
                             "description": "Нашето традиционно тесто",
-                            "price": 14.9
+                            "price": 14.9,
                         }
                     ],
                     [
@@ -3638,7 +3381,7 @@ class Command(BaseCommand):
                             "type": "Средна",
                             "picture": "https://www.dominos.bg/gallery/pansizes/bgiparItalian_style_panbg.png",
                             "description": "Тесто италиански стил",
-                            "price": 14.9
+                            "price": 14.9,
                         }
                     ],
                     [
@@ -3646,7 +3389,7 @@ class Command(BaseCommand):
                             "type": "Средна",
                             "picture": "https://www.dominos.bg/gallery/pansizes/bgiparGluten_Freebg.png",
                             "description": "Gluten Free Dough  (+ 3,10лв)",
-                            "price": 18.0
+                            "price": 18.0,
                         }
                     ],
                     [
@@ -3654,7 +3397,7 @@ class Command(BaseCommand):
                             "type": "Голяма",
                             "picture": "https://www.dominos.bg/gallery/pansizes/bgiparTraditional_panbg.png",
                             "description": "Нашето традиционно тесто",
-                            "price": 17.9
+                            "price": 17.9,
                         }
                     ],
                     [
@@ -3662,7 +3405,7 @@ class Command(BaseCommand):
                             "type": "Голяма",
                             "picture": "https://www.dominos.bg/gallery/pansizes/bgiparItalian_style_panbg.png",
                             "description": "Тесто италиански стил",
-                            "price": 17.9
+                            "price": 17.9,
                         }
                     ],
                     [
@@ -3670,7 +3413,7 @@ class Command(BaseCommand):
                             "type": "Голяма",
                             "picture": "https://www.dominos.bg/gallery/pansizes/bgiparThin_and_crispy_panbg.png",
                             "description": "Тънко и хрупкаво тесто",
-                            "price": 17.9
+                            "price": 17.9,
                         }
                     ],
                     [
@@ -3678,7 +3421,7 @@ class Command(BaseCommand):
                             "type": "Голяма",
                             "picture": "https://www.dominos.bg/gallery/pansizes/bgiparPhiladelphia_panbg.png",
                             "description": "Прясно омесено тесто с коричка пълнена със сирене Philadelphia (+2,50лв)",
-                            "price": 20.4
+                            "price": 20.4,
                         }
                     ],
                     [
@@ -3686,7 +3429,7 @@ class Command(BaseCommand):
                             "type": "Голяма",
                             "picture": "https://www.dominos.bg/gallery/pansizes/bgiparLarge_mozzarella_crustbg.png",
                             "description": "Прясно омесено тесто с коричка, пълнена с моцарела (+2,50лв.)",
-                            "price": 20.4
+                            "price": 20.4,
                         }
                     ],
                     [
@@ -3694,7 +3437,7 @@ class Command(BaseCommand):
                             "type": "Голяма",
                             "picture": "https://www.dominos.bg/gallery/pansizes/bgiparLarge_pepperoni_crustbg.png",
                             "description": "Прясно омесено тесто с коричка, пълнена с пеперони (+2,50лв.)",
-                            "price": 20.4
+                            "price": 20.4,
                         }
                     ],
                     [
@@ -3702,7 +3445,7 @@ class Command(BaseCommand):
                             "type": "Джъмбо",
                             "picture": "https://www.dominos.bg/gallery/pansizes/bgiparTraditional_panbg.png",
                             "description": "Нашето традиционно тесто",
-                            "price": 19.9
+                            "price": 19.9,
                         }
                     ],
                     [
@@ -3710,24 +3453,19 @@ class Command(BaseCommand):
                             "type": "Джъмбо",
                             "picture": "https://www.dominos.bg/gallery/pansizes/bgiparItalian_style_panbg.png",
                             "description": "Тесто италиански стил",
-                            "price": 19.9
+                            "price": 19.9,
                         }
-                    ]
+                    ],
                 ],
                 "ingredients": [
                     "Барбекю сос",
                     "Моцарела",
                     "Пиле",
                     "Карамелизиран лук",
-                    "Пресни домати"
+                    "Пресни домати",
                 ],
                 "ingredient_groups": {
-                    "spices": [
-                        "Риган",
-                        "Босилек",
-                        "Песто сос",
-                        "Пармезан снежинки"
-                    ],
+                    "spices": ["Риган", "Босилек", "Песто сос", "Пармезан снежинки"],
                     "meats": [
                         "Пиле",
                         "Пиле гирос",
@@ -3737,7 +3475,7 @@ class Command(BaseCommand):
                         "Риба тон",
                         "Пушена шунка",
                         "Чоризо",
-                        "Пеперони"
+                        "Пеперони",
                     ],
                     "vegetables": [
                         "Сушени доматии",
@@ -3751,7 +3489,7 @@ class Command(BaseCommand):
                         "Пресни домати",
                         "Царевица",
                         "Рукола",
-                        "Черни маслини"
+                        "Черни маслини",
                     ],
                     "cheese": [
                         "Пармезан",
@@ -3760,27 +3498,23 @@ class Command(BaseCommand):
                         "Чедар сирене",
                         "Веган Моцарела",
                         "Краве сирене",
-                        "Топено сиренее"
+                        "Топено сиренее",
                     ],
-                    "sauce": [
-                        "Сметана",
-                        "Барбекю сос",
-                        "Доматен сос"
-                    ]
+                    "sauce": ["Сметана", "Барбекю сос", "Доматен сос"],
                 },
                 "product_main_picture": "https://www.dominos.bg/gallery/fmobile/1535medium.png",
                 "product_main_description": "барбекю сос , моцарела, карамелизиран лук, пилешко филе, домати, бургер сос",
-                "tag": {}
-            }
+                "tag": {},
+            },
         ]
 
         for data in pizzas:
             item = Pizza.objects.create(
-                name=data['product_name'],
-                details_description=', '.join(data['ingredients']),
+                name=data["product_name"],
+                details_description=", ".join(data["ingredients"]),
                 details_image=f"pizzas/details/{data['product_picture'].split('/')[-1]}",
                 front_image=f"pizzas/front/{data['product_main_picture'].split('/')[-1]}",
-                front_description=data['product_main_description'],
-                price=data['dough_types'][0][0]['price'],
+                front_description=data["product_main_description"],
+                price=data["dough_types"][0][0]["price"],
             )
-            self.stdout.write(self.style.SUCCESS(f'Successfully created Pizza: {item}'))
+            self.stdout.write(self.style.SUCCESS(f"Successfully created Pizza: {item}"))

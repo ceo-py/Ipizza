@@ -22,5 +22,5 @@ from django.conf.urls.static import static
 from apps.common.views import index
 
 urlpatterns = [
-    path("", index, name='index'),
+    path("", index, name="index"),
 ]

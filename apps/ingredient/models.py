@@ -31,5 +31,6 @@ class Sauce(BaseModel):
 
 
 class Tag(BaseModel):
-    tag_image = models.ImageField(upload_to='tags/', validators=(CV.validate_image_size,))
-
+    tag_image = models.ImageField(
+        upload_to="tags/", validators=(CV.validate_image_size,)
+    )

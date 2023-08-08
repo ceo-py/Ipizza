@@ -4,7 +4,7 @@ from apps.appetizer.models import Appetizer
 
 
 class Command(BaseCommand):
-    help = 'Populate the Appetizer model with initial data.'
+    help = "Populate the Appetizer model with initial data."
 
     def handle(self, *args, **kwargs):
         Appetizers = [
@@ -15,7 +15,7 @@ class Command(BaseCommand):
                 "price": 4.5,
                 "tag": {
                     "VEGETARIAN": "https://www.dominos.bg/images/tags/vegetarian.svg"
-                }
+                },
             },
             {
                 "product_name": "Картофки Уеджис",
@@ -24,22 +24,24 @@ class Command(BaseCommand):
                 "price": 4.5,
                 "tag": {
                     "VEGETARIAN": "https://www.dominos.bg/images/tags/vegetarian.svg"
-                }
+                },
             },
             {
                 "product_name": "Моцарелени пръчици",
                 "product_picture": "appetizers/1230ipar.png",
                 "ingredient": "5 броя хрупкави моцарелени пръчици със сос барбекю",
                 "price": 7.5,
-                "tag": {}
-            }
+                "tag": {},
+            },
         ]
 
         for data in Appetizers:
             item = Appetizer.objects.create(
-                name=data['product_name'],
-                description=data['ingredient'],
-                image=data['product_picture'],
-                price=data['price'],
+                name=data["product_name"],
+                description=data["ingredient"],
+                image=data["product_picture"],
+                price=data["price"],
             )
-            self.stdout.write(self.style.SUCCESS(f'Successfully created Appetizer: {item}'))
+            self.stdout.write(
+                self.style.SUCCESS(f"Successfully created Appetizer: {item}")
+            )

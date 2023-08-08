@@ -8,7 +8,6 @@ User = get_user_model()
 
 
 class CustomLoginForm(AuthenticationForm):
-
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.__set_attributes()
@@ -22,7 +21,7 @@ class CustomLoginForm(AuthenticationForm):
 
 class RegisterForm(forms.ModelForm):
     password = forms.CharField(widget=forms.PasswordInput)
-    password_2 = forms.CharField(label='Confirm Password', widget=forms.PasswordInput)
+    password_2 = forms.CharField(label="Confirm Password", widget=forms.PasswordInput)
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
@@ -39,10 +38,10 @@ class RegisterForm(forms.ModelForm):
 
     class Meta:
         model = User
-        fields = ['email', 'password', 'password_2']
+        fields = ["email", "password", "password_2"]
 
     def clean_email(self):
-        email = self.cleaned_data.get('email')
+        email = self.cleaned_data.get("email")
         qs = User.objects.filter(email=email)
         if qs.exists():
             raise forms.ValidationError("This email is taken")
@@ -57,10 +56,14 @@ class RegisterForm(forms.ModelForm):
             raise forms.ValidationError("Password must be at least 8 characters long")
 
         if not any(char.isupper() for char in password):
-            raise forms.ValidationError("Password must contain at least one uppercase letter")
+            raise forms.ValidationError(
+                "Password must contain at least one uppercase letter"
+            )
 
         if not any(char.islower() for char in password):
-            raise forms.ValidationError("Password must contain at least one lowercase letter")
+            raise forms.ValidationError(
+                "Password must contain at least one lowercase letter"
+            )
 
         if not any(char.isdigit() for char in password):
             raise forms.ValidationError("Password must contain at least one digit")
@@ -84,11 +87,11 @@ class RegisterForm(forms.ModelForm):
 class UserAdminCreationForm(forms.ModelForm):
 
     password = forms.CharField(widget=forms.PasswordInput)
-    password_2 = forms.CharField(label='Confirm Password', widget=forms.PasswordInput)
+    password_2 = forms.CharField(label="Confirm Password", widget=forms.PasswordInput)
 
     class Meta:
         model = User
-        fields = ['email']
+        fields = ["email"]
 
     def clean(self):
 
@@ -113,7 +116,7 @@ class UserAdminChangeForm(forms.ModelForm):
 
     class Meta:
         model = User
-        fields = ['email', 'password', 'is_active', 'admin']
+        fields = ["email", "password", "is_active", "admin"]
 
     def clean_password(self):
         return self.initial["password"]

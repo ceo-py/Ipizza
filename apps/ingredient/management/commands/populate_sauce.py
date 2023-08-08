@@ -4,17 +4,15 @@ from apps.ingredient.models import Sauce
 
 
 class Command(BaseCommand):
-    help = 'Populate the Sauces model with initial data.'
+    help = "Populate the Sauces model with initial data."
 
     def handle(self, *args, **kwargs):
-        Sauces = [
-        "Сметана",
-        "Барбекю сос",
-        "Доматен сос"
-      ]
+        Sauces = ["Сметана", "Барбекю сос", "Доматен сос"]
 
         for item in Sauces:
             create_object = Sauce.objects.create(
                 name=item,
             )
-            self.stdout.write(self.style.SUCCESS(f'Successfully created Sauces: {create_object}'))
+            self.stdout.write(
+                self.style.SUCCESS(f"Successfully created Sauces: {create_object}")
+            )

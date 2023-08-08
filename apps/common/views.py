@@ -4,4 +4,4 @@ from django.shortcuts import render
 
 
 def index(request):
-    return render(request, 'common/index.html', {'not_menu': True})
+    return render(request, "common/index.html", {"not_menu": True})

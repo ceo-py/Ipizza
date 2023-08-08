@@ -4,7 +4,7 @@ from apps.pasta.models import Pasta
 
 
 class Command(BaseCommand):
-    help = 'Populate the Pasta model with initial data.'
+    help = "Populate the Pasta model with initial data."
 
     def handle(self, *args, **kwargs):
         pastas = [
@@ -12,26 +12,16 @@ class Command(BaseCommand):
                 "product_name": "ПАСТА КАРБОНАРА + ПРИБОРИ",
                 "product_picture": "pastas/front/1242large.png",
                 "dough_types": [],
-                "ingredients": [
-                    "Сметана",
-                    "Пармезан",
-                    "Пушен бекон",
-                    "Пресни гъби"
-                ],
+                "ingredients": ["Сметана", "Пармезан", "Пушен бекон", "Пресни гъби"],
                 "ingredient_groups": {
-                    "spices": [
-                        "Босилек",
-                        "Песто сос",
-                        "Риган",
-                        "Пармезан снежинки"
-                    ],
+                    "spices": ["Босилек", "Песто сос", "Риган", "Пармезан снежинки"],
                     "meats": [
                         "Пушен бекон",
                         "Пиле",
                         "Пикантно телешко",
                         "Риба тон",
                         "Пеперони",
-                        "Чоризо"
+                        "Чоризо",
                     ],
                     "vegetables": [
                         "Сушени доматии",
@@ -41,48 +31,35 @@ class Command(BaseCommand):
                         "Черни маслини",
                         "Пресни зелени чушки",
                         "Халапеньо-люти чушки",
-                        "Пресни домати"
+                        "Пресни домати",
                     ],
                     "cheese": [
                         "Ементалл",
                         "Пармезан",
                         "Моцарела",
                         "Чедар сирене",
-                        "Краве сирене"
+                        "Краве сирене",
                     ],
-                    "sauce": [
-                        "Барбекю сос",
-                        "Доматен сос",
-                        "Сметана"
-                    ]
+                    "sauce": ["Барбекю сос", "Доматен сос", "Сметана"],
                 },
                 "product_main_picture": "/pastas/details/1242ipar.png",
                 "product_main_description": "Паста, сметана, гъби, бекон, пармезан",
-                "tag": {}
+                "tag": {},
             },
             {
                 "product_name": "НАПОЛИТАНА +ПРИБОРИ",
                 "product_picture": "pastas/front/1243large.png",
                 "dough_types": [],
-                "ingredients": [
-                    "Доматен сос",
-                    "Песто сос",
-                    "Пармезан"
-                ],
+                "ingredients": ["Доматен сос", "Песто сос", "Пармезан"],
                 "ingredient_groups": {
-                    "spices": [
-                        "Босилек",
-                        "Песто сос",
-                        "Риган",
-                        "Пармезан снежинки"
-                    ],
+                    "spices": ["Босилек", "Песто сос", "Риган", "Пармезан снежинки"],
                     "meats": [
                         "Пушен бекон",
                         "Пиле",
                         "Пикантно телешко",
                         "Риба тон",
                         "Пеперони",
-                        "Чоризо"
+                        "Чоризо",
                     ],
                     "vegetables": [
                         "Сушени доматии",
@@ -92,49 +69,35 @@ class Command(BaseCommand):
                         "Черни маслини",
                         "Пресни зелени чушки",
                         "Халапеньо-люти чушки",
-                        "Пресни домати"
+                        "Пресни домати",
                     ],
                     "cheese": [
                         "Чедар сирене",
                         "Краве сирене",
                         "Ементалл",
                         "Пармезан",
-                        "Моцарела"
+                        "Моцарела",
                     ],
-                    "sauce": [
-                        "Барбекю сос",
-                        "Доматен сос",
-                        "Сметана"
-                    ]
+                    "sauce": ["Барбекю сос", "Доматен сос", "Сметана"],
                 },
                 "product_main_picture": "/pastas/details/1243ipar.png",
                 "product_main_description": "Паста, доматен сос, песто, пармезан",
-                "tag": {}
+                "tag": {},
             },
             {
                 "product_name": "ПАСТА ПЕПЕРОНИ +ПРИБОРИ",
                 "product_picture": "pastas/front/843large.png",
                 "dough_types": [],
-                "ingredients": [
-                    "Доматен сос",
-                    "Сметана",
-                    "Пармезан",
-                    "Пеперони"
-                ],
+                "ingredients": ["Доматен сос", "Сметана", "Пармезан", "Пеперони"],
                 "ingredient_groups": {
-                    "spices": [
-                        "Босилек",
-                        "Песто сос",
-                        "Риган",
-                        "Пармезан снежинки"
-                    ],
+                    "spices": ["Босилек", "Песто сос", "Риган", "Пармезан снежинки"],
                     "meats": [
                         "Пушен бекон",
                         "Пиле",
                         "Пикантно телешко",
                         "Риба тон",
                         "Пеперони",
-                        "Чоризо"
+                        "Чоризо",
                     ],
                     "vegetables": [
                         "Сушени доматии",
@@ -144,51 +107,35 @@ class Command(BaseCommand):
                         "Черни маслини",
                         "Пресни зелени чушки",
                         "Халапеньо-люти чушки",
-                        "Пресни домати"
+                        "Пресни домати",
                     ],
                     "cheese": [
                         "Чедар сирене",
                         "Краве сирене",
                         "Ементалл",
                         "Пармезан",
-                        "Моцарела"
+                        "Моцарела",
                     ],
-                    "sauce": [
-                        "Барбекю сос",
-                        "Доматен сос",
-                        "Сметана"
-                    ]
+                    "sauce": ["Барбекю сос", "Доматен сос", "Сметана"],
                 },
                 "product_main_picture": "/pastas/details/843ipar.png",
                 "product_main_description": "Паста, доматен сос, сметана, пеперони, пармезан",
-                "tag": {
-                    "SPICY": "https://www.dominos.bg/images/tags/spicy.svg"
-                }
+                "tag": {"SPICY": "https://www.dominos.bg/images/tags/spicy.svg"},
             },
             {
                 "product_name": "МАК ЕНД ЧИЙЗ +ПРИБОРИ",
                 "product_picture": "pastas/front/1591large.png",
                 "dough_types": [],
-                "ingredients": [
-                    "Сметана",
-                    "Ементалл",
-                    "Пармезан",
-                    "Чедар сирене"
-                ],
+                "ingredients": ["Сметана", "Ементалл", "Пармезан", "Чедар сирене"],
                 "ingredient_groups": {
-                    "spices": [
-                        "Песто сос",
-                        "Риган",
-                        "Пармезан снежинки",
-                        "Босилек"
-                    ],
+                    "spices": ["Песто сос", "Риган", "Пармезан снежинки", "Босилек"],
                     "meats": [
                         "Пикантно телешко",
                         "Риба тон",
                         "Пеперони",
                         "Чоризо",
                         "Пушен бекон",
-                        "Пиле"
+                        "Пиле",
                     ],
                     "vegetables": [
                         "Царевица",
@@ -198,34 +145,30 @@ class Command(BaseCommand):
                         "Халапеньо-люти чушки",
                         "Пресни домати",
                         "Сушени доматии",
-                        "Лук"
+                        "Лук",
                     ],
                     "cheese": [
                         "Ементалл",
                         "Пармезан",
                         "Моцарела",
                         "Чедар сирене",
-                        "Краве сирене"
+                        "Краве сирене",
                     ],
-                    "sauce": [
-                        "Барбекю сос",
-                        "Доматен сос",
-                        "Сметана"
-                    ]
+                    "sauce": ["Барбекю сос", "Доматен сос", "Сметана"],
                 },
                 "product_main_picture": "/pastas/details/1591ipar.png",
                 "product_main_description": "Паста, ементал, пармезан и чедър, сметана",
-                "tag": {}
-            }
+                "tag": {},
+            },
         ]
 
         for data in pastas:
             item = Pasta.objects.create(
-                name=data['product_name'],
-                details_description=', '.join(data['ingredients']),
-                details_image=data['product_picture'],
-                front_image=data['product_main_picture'],
-                front_description=data['product_main_description'],
+                name=data["product_name"],
+                details_description=", ".join(data["ingredients"]),
+                details_image=data["product_picture"],
+                front_image=data["product_main_picture"],
+                front_description=data["product_main_description"],
                 price=0,
             )
-            self.stdout.write(self.style.SUCCESS(f'Successfully created Pasta: {item}'))
+            self.stdout.write(self.style.SUCCESS(f"Successfully created Pasta: {item}"))

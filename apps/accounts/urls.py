@@ -21,7 +21,7 @@ from apps.accounts.views import CustomLoginView, CustomLogoutView, RegisterUserV
 from apps.menu.views import ItemListView
 
 urlpatterns = [
-                  path('login/', CustomLoginView.as_view(), name='login'),
-                  path('logout/', CustomLogoutView.as_view(), name='logout'),
-                  path('register/', RegisterUserView.as_view(), name='register_user'),
-              ]
+    path("login/", CustomLoginView.as_view(), name="login"),
+    path("logout/", CustomLogoutView.as_view(), name="logout"),
+    path("register/", RegisterUserView.as_view(), name="register_user"),
+]
