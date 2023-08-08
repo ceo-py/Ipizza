@@ -17,7 +17,7 @@ class CartView(View):
         user = request.user
         context = {
             'items': CartItem.objects.filter(user=user),
-            'cart_items': sum(x.quantity for x in CartItem.objects.filter(user=self.request.user))
+            'cart_items': sum(x.quantity for x in CartItem.objects.filter(user=self.request.user)),
         }
 
         return render(request, self.template_name, context)

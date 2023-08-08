@@ -96,7 +96,7 @@
 
 
     // + - buttons logic
-    $('.q-btn').on('click', function () {
+    $('.dec, .inc').on('click', function () {
         var $button = $(this);
         var singlePrice = parseFloat($button.closest('tr').find('.single-price').text());
         var $totalPrice = $button.closest('tr').find('.total-price');
@@ -143,6 +143,18 @@
         // Store the active menu item in local storage
         localStorage.setItem('activeMenu', menu);
     });
+
+
+    // handle cart remove header
+    $(document).on('click', '.header-cart-item-img', function () {
+        const $tdElement = $(this)
+        const itemName = $tdElement.data()
+        $tdElement.parent().remove();
+        apiDeleteCart(itemName).done(function () {
+            loadHeaderCartItems();
+        });
+    })
+
 
     //handle cart remove btn
     $('.delete-btn').on('click', function () {
@@ -219,7 +231,7 @@
         const dataJson = {
             'item_name': item_name,
         }
-        apiRequest('/api/delete/', 'DELETE', dataJson)
+        return apiRequest('/api/delete/', 'DELETE', dataJson)
     }
 
     // api request
@@ -232,7 +244,7 @@
                 }
             }
         });
-        $.ajax({
+        return $.ajax({
             url: url,
             type: methodType,
             data: data,
@@ -251,19 +263,59 @@
         const price = button.data('price');
         const picture = button.data('image');
         const quantity = button.closest('tr').find('input[type="number"]').val();
-        const csrfToken = getCookie('csrftoken');
-        // console.log(csrfToken)
-        // console.log(item_name)
-        // console.log(price)
-        // console.log(quantity)
-        // console.log(picture)
         const dataJson = {
             'item_name': item_name,
             'quantity': quantity,
             'picture': picture,
             'price': price,
         }
+        const totalItemsCart = $('body').find('.icon-header-noti');
+        totalItemsCart.attr('data-notify', parseInt(totalItemsCart.attr('data-notify')) + parseInt(quantity));
         apiRequest('/api/add/', 'POST', dataJson)
+    })
+
+
+    // load the items To Cart Header
+
+    function loadHeaderCartItems() {
+        const headerCart = $('.header-cart-wrapitem');
+        const headerCartTotal = $('.header-cart-total');
+        headerCart.empty().append('<i class="zmdi zmdi-hc-spin zmdi-spinner" style="font-size: 100px"</i>');
+        headerCartTotal.text('0 лв.')// Make an API call to fetch the cart items
+        $.ajax({
+            url: '/api/get/',
+            type: 'get',
+            dataType: 'json',
+            success: function (response) {
+                // Clear any existing items
+                headerCart.empty();
+
+                // Loop through the cart items and generate HTML
+                for (const item of response.items) {
+                    const li = $('<li class="header-cart-item flex-w flex-t m-b-12"></li>');
+                    li.append(`
+                    <div class="header-cart-item-img" data-produce="${item.item_name}">
+                        <img src="/media/${item.picture}" alt="IMG">
+                    </div>
+                    <div class="header-cart-item-txt p-t-8">
+                        <a href="#" class="header-cart-item-name m-b-18 hov-cl1 trans-04">${item.item_name}</a>
+                        <span class="header-cart-item-info">${item.quantity} x ${item.price} лв.</span>
+                    </div>
+                `);
+                    headerCart.append(li);
+                }
+                headerCartTotal.text(`${(response.total_price).toFixed(2)} лв.`)
+            },
+            error: function (xhr, status, error) {
+                console.error('Error fetching cart items:', error);
+                headerCart.empty().append('<p>Error loading cart.</p>');
+            }
+        });
+    }
+
+    //header cart items load
+    $('.icon-header-noti').on('click', function () {
+        loadHeaderCartItems()
     })
 
 

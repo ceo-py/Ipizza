@@ -1,15 +1,20 @@
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
-from api.serializers import UserProfileSerializer, CartSerializer, CartDeleteItemSerializer
+from api.serializers import CartSerializer, CartDeleteItemSerializer
 from apps.checkout.models import CartItem
+from django.db.models import Sum, F
 
 
-# @api_view(['GET'])
-# def api_get_cart(request):
-#     items = CartItem.objects.all(user=request.user)
-#     serializer = UserProfileSerializer(items, many=True)
-#
-#     return Response(serializer.data)
+@api_view(['GET'])
+def api_get_cart_header(request):
+    items = CartItem.objects.filter(user=request.user)
+    total_price = items.annotate(item_total=F('price') * F('quantity')).aggregate(total_price=Sum('item_total'))['total_price']
+    serializer = CartSerializer(items, many=True)
+    response_data = {
+        'items': serializer.data,
+        'total_price': total_price
+    }
+    return Response(response_data)
 
 
 @api_view(['POST'])
