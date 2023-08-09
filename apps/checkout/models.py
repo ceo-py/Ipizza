@@ -56,6 +56,7 @@ class UserProfile(models.Model):
     address = models.CharField(max_length=200, verbose_name="Адрес")
 
     cart = models.ForeignKey(CartItem, null=True, blank=True, on_delete=models.SET_NULL)
+    registration_date = models.DateTimeField(auto_now_add=True, verbose_name="Дата на регистрация")
 
     # purchase_history = models.ForeignKey(PurchaseHistory, null=True, blank=True, on_delete=models.SET_NULL)
 
@@ -64,3 +65,6 @@ class UserProfile(models.Model):
 
     def name(self):
         return f"{self.first_name} {self.last_name}"
+
+    def reg_date(self):
+        return self.registration_date

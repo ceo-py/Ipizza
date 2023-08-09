@@ -135,7 +135,7 @@
                                         </div>
                                     </div>
                                     <ul>
-                                        <li><a href="{% url 'register_user' %}">За мен</a></li>
+                                        <li><a href="{% url 'profile' %}">За мен</a></li>
                                         <li><a href="#">Адреси</a></li>
                                         <li><a href="#">Поръчки</a></li>
                                         <li><a href="{% url 'logout' %}">Изход</a></li>
@@ -179,12 +179,12 @@
 
                                 <div class="header-cart-buttons flex-w w-full">
                                     <a href="{% url 'cart' %}"
-                                       class="flex-c-m stext-101 cl0 size-107 bg3 bor2 hov-btn3 p-lr-15 trans-04 m-r-8 m-b-10">
+                                       class="flex-c-m stext-101 cl0 size-107 bg16 bor2 hov-btn16 p-lr-15 trans-04 m-r-8 m-b-10">
                                         Количка
                                     </a>
 
                                     <a href="shoping-cart.html"
-                                       class="flex-c-m stext-101 cl0 size-107 bg3 bor2 hov-btn3 p-lr-15 trans-04 m-b-10">
+                                       class="flex-c-m stext-101 cl0 size-107 bg16 bor2 hov-btn16 p-lr-15 trans-04 m-b-10">
                                         Плати
                                     </a>
                                 </div>
@@ -230,6 +230,8 @@
         <script src="{% static 'common/vendor/superfish/hoverIntent.js' %}"></script>
         <script src="{% static 'common/vendor/superfish/superfish.min.js' %}"></script>
         <script src="{% static 'common/vendor/owlcarousel/owl.carousel.min.js' %}"></script>
+        <script src="{% static 'common/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+
         {% block script %}
         {% endblock %}
         <!-- Main Javascript File -->

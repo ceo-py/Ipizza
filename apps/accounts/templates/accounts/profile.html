@@ -1,0 +1,15 @@
+{% extends 'forms.html' %}
+{% block action %}
+    {% url 'profile' %}
+{% endblock %}
+{% block form_contetn %}
+    <h2 class="mb-4 login-text-col">ЗА МЕН</h2>
+    {{ form.first_name }}
+    {{ form.last_name }}
+    {{ form.telephone_number }}
+    {{ form.address }}
+    {{ reg_date }}
+    {{ email }}
+    {{ is_active }}
+    <button type="submit" class="btn btn-light">Запази</button>
+{% endblock %}

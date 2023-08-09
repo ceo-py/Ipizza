@@ -1,3 +1,4 @@
+from django.db.models import Sum
 from django.shortcuts import get_object_or_404
 from django.views.generic import ListView, DetailView
 from apps.appetizer.models import Appetizer
@@ -43,9 +44,8 @@ class ItemListView(ListView):
         context["model_name"] = self.kwargs["model"]
 
         if self.request.user.is_authenticated:
-            context["cart_items"] = sum(
-                x.quantity for x in CartItem.objects.filter(user=self.request.user)
-            )
+            cart_items_sum = CartItem.objects.filter(user=self.request.user).aggregate(Sum('quantity'))['quantity__sum']
+            context["cart_items"] = cart_items_sum if cart_items_sum else 0
 
         return context
 
@@ -65,9 +65,8 @@ class ItemDetailView(DetailView):
         context = super().get_context_data(**kwargs)
 
         if self.request.user.is_authenticated:
-            context["cart_items"] = sum(
-                x.quantity for x in CartItem.objects.filter(user=self.request.user)
-            )
+            cart_items_sum = CartItem.objects.filter(user=self.request.user).aggregate(Sum('quantity'))['quantity__sum']
+            context["cart_items"] = cart_items_sum if cart_items_sum else 0
             context["spices"] = Spice.objects.all()
             context["meats"] = Meat.objects.all()
             context["vegetables"] = Vegetable.objects.all()

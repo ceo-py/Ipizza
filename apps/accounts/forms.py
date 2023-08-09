@@ -23,6 +23,21 @@ class RegisterForm(forms.ModelForm):
     password = forms.CharField(widget=forms.PasswordInput)
     password_2 = forms.CharField(label="Confirm Password", widget=forms.PasswordInput)
 
+    # field_attrs = {
+    #     "email": {
+    #         "placeholder": "Email",
+    #         "class": "form-control m-b-25",
+    #     },
+    #     "password": {
+    #         "placeholder": "Парола",
+    #         "class": "form-control m-b-25",
+    #     },
+    #     "password_2": {
+    #         "placeholder": "Потвърди паролата",
+    #         "class": "form-control m-b-25",
+    #     },
+    # }
+
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.__set_attributes()
@@ -85,7 +100,6 @@ class RegisterForm(forms.ModelForm):
 
 
 class UserAdminCreationForm(forms.ModelForm):
-
     password = forms.CharField(widget=forms.PasswordInput)
     password_2 = forms.CharField(label="Confirm Password", widget=forms.PasswordInput)
 
@@ -111,7 +125,6 @@ class UserAdminCreationForm(forms.ModelForm):
 
 
 class UserAdminChangeForm(forms.ModelForm):
-
     password = ReadOnlyPasswordHashField()
 
     class Meta:
@@ -120,3 +133,27 @@ class UserAdminChangeForm(forms.ModelForm):
 
     def clean_password(self):
         return self.initial["password"]
+
+
+class UserProfileForm(forms.ModelForm):
+    class Meta:
+        model = UserProfile
+        fields = ['first_name', 'last_name', 'telephone_number', 'address']
+
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        self.__set_class()
+
+    def __set_class(self):
+        for field in self.fields.values():
+            field.widget.attrs.update({
+                'class': 'form-control m-b-25',
+                'placeholder': field.label
+            })
+
+    def save(self, user=None, commit=True):
+        instance = super().save(commit=False)
+        instance.user = user
+        if commit:
+            instance.save()
+        return instance

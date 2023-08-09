@@ -19,6 +19,7 @@ from django.urls import path, include
 from django.conf import settings
 from django.conf.urls.static import static
 
+from apps.accounts.views import ProfileView
 from apps.menu.views import ItemListView, ItemDetailView
 
 urlpatterns = [
@@ -26,6 +27,7 @@ urlpatterns = [
                   path("", include("apps.accounts.urls")),
                   path("", include("apps.common.urls")),
                   path("api/", include("api.urls")),
+                  path('profile/', ProfileView.as_view(), name='profile'),
                   path("checkout/", include("apps.checkout.urls")),
                   path('<str:model>/<int:pk>/', ItemDetailView.as_view(), name='details'),
                   path('<str:model>/', ItemListView.as_view(), name='item-list'),
