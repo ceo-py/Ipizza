@@ -16,6 +16,10 @@ class CustomValidation:
         return not user.is_authenticated
 
     @staticmethod
+    def logged_in(user):
+        return user.is_authenticated
+
+    @staticmethod
     def validate_only_letters(value):
         if not value.isalpha():
             raise ValidationError("The name should contain only letters.")

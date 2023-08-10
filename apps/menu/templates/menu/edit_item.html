@@ -1,0 +1,20 @@
+{% extends 'forms.html' %}
+{% block form_contetn %}
+    <h2 class="mb-4 login-text-col">Детайли</h2>
+    <form method="post" enctype="multipart/form-data">
+        {{ form.as_p }}
+        {% csrf_token %}
+        <button type="submit" class="btn btn-light">Промени</button>
+    </form>
+{% endblock %}
+{% block additional_info %}
+    <div class="alert alert-danger">
+        <strong>Упълномощеният служител има възможността да редактира информацията за продуктите, включително цени,
+            снимки, описания
+            и други съществени детайли. Този процес е улеснен благодарение на HTML текста, който може лесно да се
+            променя. Това
+            осигурява бърза и гъвкава актуализация на продуктовите данни, гарантирайки, че информацията винаги е
+            актуална и
+            точна за клиентите.</strong>
+    </div>
+{% endblock %}

@@ -1,4 +1,4 @@
-from django.contrib.auth.models import BaseUserManager, AbstractBaseUser
+from django.contrib.auth.models import BaseUserManager, AbstractBaseUser, Group
 from django.db import models
 from django.contrib.auth.models import User
 
@@ -55,13 +55,15 @@ class User(AbstractBaseUser):
         unique=True,
     )
     is_active = models.BooleanField(default=True)
-    staff = models.BooleanField(default=False)  # a admin user; non super-user
-    admin = models.BooleanField(default=False)  # a superuser
+    staff = models.BooleanField(default=False)
+    admin = models.BooleanField(default=False)
 
-    # notice the absence of a "Password field", that is built in.
+    groups = models.ManyToManyField(Group, related_name='email', blank=True)
+
+
 
     USERNAME_FIELD = "email"
-    REQUIRED_FIELDS = []  # Email & Password are required by default.
+    REQUIRED_FIELDS = []
 
     objects = UserManager()
 

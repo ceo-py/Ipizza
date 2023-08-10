@@ -280,7 +280,7 @@
     function loadHeaderCartItems() {
         const headerCart = $('.header-cart-wrapitem');
         const headerCartTotal = $('.header-cart-total');
-        headerCart.empty().append('<i class="zmdi zmdi-hc-spin zmdi-spinner" style="font-size: 100px"</i>');
+        headerCart.empty().append('<i class="zmdi zmdi-hc-spin zmdi-spinner" style="font-size: 100px"></i>');
         headerCartTotal.text('0 лв.')// Make an API call to fetch the cart items
         $.ajax({
             url: '/api/get/',

@@ -8,8 +8,35 @@
     {{ form.last_name }}
     {{ form.telephone_number }}
     {{ form.address }}
-    {{ reg_date }}
-    {{ email }}
-    {{ is_active }}
     <button type="submit" class="btn btn-light">Запази</button>
+{% endblock %}
+{% block additional_info %}
+    <div class="alert alert-danger">
+        <strong>Потребител : {{ email }}</strong>
+        <ul>
+            <li>Регистриран на : {{ reg_date }}</li>
+
+            <li>Достъп :
+                <ul>
+                    {% if is_admin %}
+                        <li>
+                            Администратор <i class="zmdi zmdi-badge-check zmdi-hc-lg"></i>
+                        </li>
+                    {% endif %}
+                    {% if is_staff %}
+                        <li>
+                            Персонал - {{ group }} <i class="zmdi zmdi-badge-check zmdi-hc-lg"></i>
+                        </li>
+                    {% endif %}
+                    {% if is_active %}
+                        <li>
+                            Активен <i class="zmdi zmdi-badge-check zmdi-hc-lg"></i>
+                        </li>
+                    {% endif %}
+                </ul>
+
+            </li>
+
+        </ul>
+    </div>
 {% endblock %}

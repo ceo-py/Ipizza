@@ -1,0 +1,54 @@
+{% extends 'base.html' %}
+{% block content %}
+    <div class="cart-page">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-8">
+                    <div class="cart-page-inner">
+                        <div class="table-responsive" id="cart">
+                            <table class="table table-bordered">
+                                <thead class="thead-dark">
+                                    <tr>
+                                        <th>Продукт</th>
+                                        <th>Описание</th>
+                                        <th>Промени</th>
+                                        <th>Добави</th>
+                                        <th>Премахни</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="align-middle">
+                                    {% for item in items %}
+                                        <tr>
+                                            <td>
+                                                <div class="img">
+                                                    <a href="#"><img
+                                                            src="/media/{{ item.image }}"
+                                                            alt="Image"></a>
+                                                    <p>{{ item.product_name }}</p>
+                                                </div>
+                                            </td>
+                                            <td>{{ item }}</td>
+                                            <td>
+                                                <a href="{% url 'item-edit' model_name item.id %}">
+                                                    <i class="zmdi zmdi-edit zmdi-hc-2x hov-edit"></i>
+                                                </a>
+                                            </td>
+                                            <td>
+                                                <a href="{% url 'item-create' model_name %}">
+                                                    <i class="zmdi zmdi-edit zmdi-hc-2x hov-edit"></i>
+                                                </a>
+                                            </td>
+                                            <td><a href="{% url 'item-delete' model_name item.id %}">
+                                                <i class="zmdi zmdi-delete zmdi-hc-2x hov-delete"></i>
+                                            </a></td>
+                                        </tr>
+                                    {% endfor %}
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

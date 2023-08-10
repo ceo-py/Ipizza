@@ -20,15 +20,13 @@ from django.conf import settings
 from django.conf.urls.static import static
 
 from apps.accounts.views import ProfileView
-from apps.menu.views import ItemListView, ItemDetailView
 
 urlpatterns = [
-                  path("admin/", admin.site.urls),
-                  path("", include("apps.accounts.urls")),
-                  path("", include("apps.common.urls")),
-                  path("api/", include("api.urls")),
+                  path('admin/', admin.site.urls),
+                  path('', include('apps.accounts.urls')),
+                  path('', include('apps.common.urls')),
+                  path("api/", include('api.urls')),
                   path('profile/', ProfileView.as_view(), name='profile'),
-                  path("checkout/", include("apps.checkout.urls")),
-                  path('<str:model>/<int:pk>/', ItemDetailView.as_view(), name='details'),
-                  path('<str:model>/', ItemListView.as_view(), name='item-list'),
+                  path('checkout/', include("apps.checkout.urls")),
+                  path('item/', include("apps.menu.urls")),
               ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

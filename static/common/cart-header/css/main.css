@@ -3288,6 +3288,16 @@ input.num-product::-webkit-inner-spin-button {
     color: #006400;
 }
 
+.hov-delete:hover {
+    color: red;
+}
+
+.hov-edit:hover {
+    color: #006400;
+}
+
+
+
 .hov-btn3:hover i {
     color: #fff;
 }

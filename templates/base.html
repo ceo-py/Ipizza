@@ -136,8 +136,12 @@
                                     </div>
                                     <ul>
                                         <li><a href="{% url 'profile' %}">За мен</a></li>
-                                        <li><a href="#">Адреси</a></li>
-                                        <li><a href="#">Поръчки</a></li>
+                                        {% if user.is_staff or user.is_admin %}
+                                            {% for model in models %}
+                                                <li><a href="{% url 'items-menu' model %}"
+                                                       data-menu="{{ model }}">{{ model }}</a></li>
+                                            {% endfor %}
+                                        {% endif %}
                                         <li><a href="{% url 'logout' %}">Изход</a></li>
                                     </ul>
                                 </li>

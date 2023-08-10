@@ -9,3 +9,17 @@
     {{ form.password_2 }}
     <button type="submit" class="btn btn-light">Регистрация</button>
 {% endblock %}
+{% block additional_info %}
+    {% if form.errors %}
+        <div class="alert alert-danger">
+            <strong>Error:</strong>
+            <ul>
+                {% for errors in form.errors.values %}
+                    {% for error in errors %}
+                        <li>{{ error }}</li>
+                    {% endfor %}
+                {% endfor %}
+            </ul>
+        </div>
+    {% endif %}
+{% endblock %}

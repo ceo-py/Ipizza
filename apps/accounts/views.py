@@ -53,7 +53,22 @@ class ProfileView(LoginRequiredMixin, View):
             'reg_date': user_profile.registration_date,
             'email': user_profile.user,
             'is_active': request.user.is_active,
+            'is_staff': request.user.is_staff,
+            'is_admin': request.user.is_admin,
+            'group': self.request.user.groups.all()[0]
         }
+
+        group_info = []
+        selected_groups = self.request.user.groups.all()
+
+        for group in selected_groups:
+            models_in_group = sorted([set(group.permissions.all().values_list('content_type__model', flat=True))])
+            group_info.append({
+                'name': group.name,
+                'models': models_in_group,
+            })
+            context["models"] = models_in_group
+
         return render(request, self.template_name, context)
 
     def post(self, request, *args, **kwargs):
@@ -63,3 +78,4 @@ class ProfileView(LoginRequiredMixin, View):
             form.save(user=request.user)
             return redirect('profile')
         return render(request, self.template_name, {'form': form})
+

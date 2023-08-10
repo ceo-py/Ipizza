@@ -14,20 +14,8 @@
                 </div>
                 <div class="col-md-6">
                     <div class="login-col-2">
-
-                        {% if form.errors %}
-                            <div class="alert alert-danger">
-                                <strong>Error:</strong>
-                                <ul>
-                                    {% for errors in form.errors.values %}
-                                        {% for error in errors %}
-                                            <li>{{ error }}</li>
-                                        {% endfor %}
-                                    {% endfor %}
-                                </ul>
-                            </div>
-                        {% endif %}
-
+                        {% block additional_info %}
+                        {% endblock %}
                     </div>
                 </div>
             </div>
