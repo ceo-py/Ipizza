@@ -10,6 +10,7 @@ from django.views.generic import CreateView
 
 from apps.accounts.forms import RegisterForm, CustomLoginForm, UserProfileForm
 from apps.checkout.models import UserProfile
+from apps.menu.views import get_groups_models
 from custom_validations.cv import CustomValidation as CV
 
 
@@ -55,19 +56,10 @@ class ProfileView(LoginRequiredMixin, View):
             'is_active': request.user.is_active,
             'is_staff': request.user.is_staff,
             'is_admin': request.user.is_admin,
-            'group': self.request.user.groups.all()[0]
+            'group': self.request.user.groups.all()[0],
+            'models': get_groups_models(self.request.user.groups.all()),
+
         }
-
-        group_info = []
-        selected_groups = self.request.user.groups.all()
-
-        for group in selected_groups:
-            models_in_group = sorted([set(group.permissions.all().values_list('content_type__model', flat=True))])
-            group_info.append({
-                'name': group.name,
-                'models': models_in_group,
-            })
-            context["models"] = models_in_group
 
         return render(request, self.template_name, context)
 
@@ -78,4 +70,3 @@ class ProfileView(LoginRequiredMixin, View):
             form.save(user=request.user)
             return redirect('profile')
         return render(request, self.template_name, {'form': form})
-

@@ -169,6 +169,6 @@ class Command(BaseCommand):
                 details_image=data["product_picture"],
                 front_image=data["product_main_picture"],
                 front_description=data["product_main_description"],
-                price=0,
+                price=9.49,
             )
             self.stdout.write(self.style.SUCCESS(f"Successfully created Pasta: {item}"))

@@ -34,5 +34,5 @@ class Command(BaseCommand):
 
 """
 save backup db => python manage.py dumpdata_utf8 output_fileB.json
-load backup db => python .\manage.py loaddata .\output_fileB.json
+load backup db => python manage.py loaddata output_fileB.json
 """

@@ -1003,6 +1003,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 .cart-page {
     position: relative;
     margin-top: 30px;
+    min-height: 576px;
 }
 
 .cart-page .cart-page-inner {

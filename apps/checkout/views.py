@@ -2,6 +2,7 @@ from django.shortcuts import render
 from django.views import View
 
 from apps.checkout.models import CartItem
+from apps.menu.views import get_groups_models
 
 
 # Create your views here.
@@ -21,6 +22,7 @@ class CartView(View):
             "cart_items": sum(
                 x.quantity for x in CartItem.objects.filter(user=self.request.user)
             ),
+            "models": get_groups_models(self.request.user.groups.all()),
         }
 
         return render(request, self.template_name, context)

@@ -32,6 +32,24 @@ all_menu_models = {
     "drink": Drink,
 }
 
+models_names = {
+    "appetizer": 'Предястие Меню',
+    "pizza": 'Пицa Меню',
+    "chicken": 'Пиле Меню',
+    "pasta": 'Паста Меню',
+    "sandwich": 'Сандвич Меню',
+    "salad": 'Салата Меню',
+    "sauce": "Сос Меню",
+    "saucemenu": "Сос Меню",
+    "desert": "Десерт Меню",
+    "drink": 'Напитки Меню',
+}
+
+
+def get_groups_models(selected_groups):
+    for group in selected_groups:
+        return sorted(set(group.permissions.all().values_list('content_type__model', flat=True)))
+
 
 class ItemListView(ListView):
     model = None
@@ -51,20 +69,11 @@ class ItemListView(ListView):
         context["model_name"] = self.kwargs["model"]
 
         if self.request.user.is_authenticated:
-
-            group_info = []
-            selected_groups = self.request.user.groups.all()
-
-            for group in selected_groups:
-                models_in_group = set(group.permissions.all().values_list('content_type__model', flat=True))
-                group_info.append({
-                    'name': group.name,
-                    'models': models_in_group,
-                })
-                context["models"] = models_in_group
+            context["models"] = get_groups_models(self.request.user.groups.all())
 
             cart_items_sum = CartItem.objects.filter(user=self.request.user).aggregate(Sum('quantity'))['quantity__sum']
             context["cart_items"] = cart_items_sum if cart_items_sum else 0
+            context["models_names"] = models_names
 
         return context
 
@@ -88,17 +97,7 @@ class ItemDetailView(DetailView):
         context = super().get_context_data(**kwargs)
 
         if self.request.user.is_authenticated:
-
-            group_info = []
-            selected_groups = self.request.user.groups.all()
-
-            for group in selected_groups:
-                models_in_group = set(group.permissions.all().values_list('content_type__model', flat=True))
-                group_info.append({
-                    'name': group.name,
-                    'models': models_in_group,
-                })
-                context["models"] = models_in_group
+            context["models"] = get_groups_models(self.request.user.groups.all())
 
             cart_items_sum = CartItem.objects.filter(user=self.request.user).aggregate(Sum('quantity'))['quantity__sum']
             context["cart_items"] = cart_items_sum if cart_items_sum else 0
@@ -123,6 +122,7 @@ class MenuCategoryView(ListView):
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         context["model_name"] = self.kwargs["model"]
+        context["models"] = get_groups_models(self.request.user.groups.all())
 
         if self.request.user.is_authenticated:
             cart_items_sum = CartItem.objects.filter(user=self.request.user).aggregate(Sum('quantity'))['quantity__sum']
@@ -164,6 +164,7 @@ class EditItemView(DetailView):
         form_class = self.get_form_class()
         form = form_class(instance=self.object)
         context = self.get_context_data(object=self.object, form=form)
+        context["models"] = get_groups_models(self.request.user.groups.all())
         return self.render_to_response(context)
 
     def post(self, request, *args, **kwargs):
@@ -174,6 +175,7 @@ class EditItemView(DetailView):
             form.save()
             return redirect('items-menu', model=self.model.__name__.lower())
         context = self.get_context_data(object=self.object, form=form)
+        context["models"] = get_groups_models(self.request.user.groups.all())
         return self.render_to_response(context)
 
 
@@ -197,6 +199,7 @@ class CreateItemView(View):
         context = {
             'form': form,
             'model_name': model,
+            "models": get_groups_models(self.request.user.groups.all()),
         }
         return render(request, self.template_name, context)
 
@@ -208,5 +211,7 @@ class CreateItemView(View):
             return redirect('items-menu', model=model)
         context = {
             'form': form,
+            "models": get_groups_models(self.request.user.groups.all()),
+
         }
         return render(request, self.template_name, context)
