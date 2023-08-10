@@ -49,7 +49,6 @@ Below is the Entity-Relationship Diagram (ERD) representing the main models used
 4. Apply the database migrations:
 
    ```
-   python manage.py makemigrations
    python manage.py migrate
    ```
 
@@ -65,7 +64,7 @@ Below is the Entity-Relationship Diagram (ERD) representing the main models used
    python manage.py runserver
    ```
 
-7. Populate DataBase:
+7.Populate DataBase:
 
    ```
    python manage.py loaddata output_fileB.json
