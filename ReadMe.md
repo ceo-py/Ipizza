@@ -18,8 +18,6 @@ The application provides the following features:
 
 - **User Accounts**: Users can create accounts and log in to access additional features, such as order history and personalized preferences.
 
-- **Order Tracking**: Customers can track the status of their orders, providing them with real-time updates on their delivery or pick-up.
-
 - **Admin Panel**: The application provides an admin panel for restaurant staff to manage the menu, process orders, and view sales data.
 
 - **Responsive Design**: The web application is built with a responsive design, ensuring a seamless experience across various devices, including desktops, tablets, and mobile phones.
@@ -29,7 +27,7 @@ Overall, the project aims to enhance the restaurant's efficiency and customer sa
 
 Below is the Entity-Relationship Diagram (ERD) representing the main models used in the database:
 
-![Database Diagram](https://github.com/ceo-py/Ipizza/blob/master/diagram_db.png)
+![Database Diagram](https://github.com/ceo-py/Ipizza/blob/master/DB_DIAGRAM.png)
 
 ## Setup and Usage
 
@@ -66,6 +64,12 @@ Below is the Entity-Relationship Diagram (ERD) representing the main models used
    python manage.py runserver
    ```
 
-7. Access the admin panel at http://localhost:8000/admin/ and use the superuser credentials to log in.
+7.Populate DataBase:
+
+   ```
+   python manage.py loaddata output_fileB.json
+   ```
+
+8. Access the admin panel at http://localhost:8000/admin/ and use the superuser credentials to log in.
 
 8. Begin managing the pizza menu and ingredients via the admin panel.

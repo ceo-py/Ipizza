@@ -21,9 +21,15 @@
                                         <tr>
                                             <td>
                                                 <div class="img">
-                                                    <a href="#"><img
-                                                            src="/media/{{ item.image }}"
-                                                            alt="Image"></a>
+                                                    {% if item.image %}
+                                                        <a href="#"><img
+                                                                src="/media/{{ item.image }}"
+                                                                alt="Image"></a>
+                                                    {% else %}
+                                                        <a href="#"><img
+                                                                src="/media/{{ item.front_image }}"
+                                                                alt="Image"></a>
+                                                    {% endif %}
                                                     <p>{{ item.product_name }}</p>
                                                 </div>
                                             </td>
@@ -35,7 +41,7 @@
                                             </td>
                                             <td>
                                                 <a href="{% url 'item-create' model_name %}">
-                                                    <i class="zmdi zmdi-edit zmdi-hc-2x hov-edit"></i>
+                                                    <i class="zmdi zmdi-case-check zmdi-hc-2x hov-edit"></i>
                                                 </a>
                                             </td>
                                             <td><a href="{% url 'item-delete' model_name item.id %}">
