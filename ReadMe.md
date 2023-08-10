@@ -49,6 +49,7 @@ Below is the Entity-Relationship Diagram (ERD) representing the main models used
 4. Apply the database migrations:
 
    ```
+   python manage.py makemigrations
    python manage.py migrate
    ```
 
@@ -64,7 +65,7 @@ Below is the Entity-Relationship Diagram (ERD) representing the main models used
    python manage.py runserver
    ```
 
-7.Populate DataBase:
+7. Populate DataBase:
 
    ```
    python manage.py loaddata output_fileB.json
@@ -72,4 +73,4 @@ Below is the Entity-Relationship Diagram (ERD) representing the main models used
 
 8. Access the admin panel at http://localhost:8000/admin/ and use the superuser credentials to log in.
 
-8. Begin managing the pizza menu and ingredients via the admin panel.
+9. Begin managing the pizza menu and ingredients via the admin panel or web.
