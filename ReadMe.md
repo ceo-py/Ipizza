@@ -1,8 +1,25 @@
 # Ipizza
 
+# Website Deployment
+
+This repository outlines the seamless deployment of a dynamic website using a custom domain name, a customized Linux VPS setup, Apache2 configuration with an SSL certificate, and the fine-tuning of Apache2 and Django for optimal performance.
+
+## Key Features
+
+- **Custom Domain:** Utilize a personalized domain name.
+- **Custom Linux VPS:** Set up a tailored Linux Virtual Private Server (VPS) for hosting.
+- **Apache2 Configuration:** Configure the Apache2 web server.
+- **SSL Security:** Ensure data security with an SSL certificate.
+- **Apache2 and Django Integration:** Fine-tune the interaction between Apache2 and Django for seamless functionality.
+
+## Explore the Site
+
+You can visit the deployed site and experience its features firsthand by clicking [here](https://www.ceo-py.eu/).
+
 ## Description
 
 The project is a web application for a pizza restaurant that offers a diverse menu, including pizza, drinks, sandwiches, salads, pasta, and more. Users can customize their orders by adding or removing toppings from the items in the menu. They can add desired items to the cart and proceed to make payments for their order. The application aims to provide a user-friendly interface for managing orders and enhancing the overall dining experience.
+Deployment
 
 ## Features
 
@@ -14,13 +31,12 @@ The application provides the following features:
 
 - **Shopping Cart**: Customers can add multiple items to their cart and review their selections before proceeding to checkout.
 
-- **Seamless Checkout**: The application offers a smooth and secure checkout process, enabling customers to make online payments for their orders.
-
 - **User Accounts**: Users can create accounts and log in to access additional features, such as order history and personalized preferences.
 
 - **Admin Panel**: The application provides an admin panel for restaurant staff to manage the menu, process orders, and view sales data.
 
 - **Responsive Design**: The web application is built with a responsive design, ensuring a seamless experience across various devices, including desktops, tablets, and mobile phones.
+
 
 Overall, the project aims to enhance the restaurant's efficiency and customer satisfaction by offering a convenient and user-friendly platform for ordering food and beverages.
 ## Database Diagram
