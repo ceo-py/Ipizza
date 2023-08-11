@@ -48,6 +48,11 @@ class ProfileView(LoginRequiredMixin, View):
     form_class = UserProfileForm
 
     def get(self, request, *args, **kwargs):
+        group = {}
+        try:
+            group['group'] = self.request.user.groups.all()[0]
+        except IndexError as e:
+            print(e)
         user_profile = get_object_or_404(UserProfile, user=request.user)
         context = {
             'form': self.form_class(instance=user_profile),
@@ -56,10 +61,9 @@ class ProfileView(LoginRequiredMixin, View):
             'is_active': request.user.is_active,
             'is_staff': request.user.is_staff,
             'is_admin': request.user.is_admin,
-            'group': self.request.user.groups.all()[0],
             'models': get_groups_models(self.request.user.groups.all()),
-
         }
+        context.update(group)
 
         return render(request, self.template_name, context)
 
