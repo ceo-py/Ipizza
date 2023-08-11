@@ -66,28 +66,27 @@ class RegisterForm(forms.ModelForm):
         cleaned_data = super().clean()
         password = cleaned_data.get("password")
         password_2 = cleaned_data.get("password_2")
-        errors = {}
+        errors = []
 
         try:
             if len(password) < 8:
-                errors["password"] = "Password must be at least 8 characters long"
+                errors.append("Password must be at least 8 characters long")
 
             if not any(char.isupper() for char in password):
-                errors["password"] = "Password must contain at least one uppercase letter"
+                errors.append("Password must contain at least one uppercase letter")
 
             if not any(char.islower() for char in password):
-                errors["password"] = "Password must contain at least one lowercase letter"
+                errors.append("Password must contain at least one lowercase letter")
 
             if not any(char.isdigit() for char in password):
-                errors["password"] = "Password must contain at least one digit"
+                errors.append("Password must contain at least one digit")
 
             if password != password_2:
-                errors["password_2"] = "Passwords do not match"
+                errors.append("Passwords do not match")
         except:
-            errors['password'] = 'Password must be at least 8 characters long,' \
-                                 ' must contain at least one uppercase letter,' \
-                                 ' must contain at least one lowercase letter,' \
-                                 ' must contain at least one digit'
+            errors.append('Password must be at least 8 characters long, '
+                          'must contain at least one uppercase letter, '
+                          'must contain at least one lowercase letter, must contain at least one digit')
 
         if errors:
             raise forms.ValidationError(errors)
