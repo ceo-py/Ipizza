@@ -47,14 +47,17 @@ models_names = {
 
 
 def get_groups_models(selected_groups):
+    menu_model = {}
     for group in selected_groups:
-        return sorted(set(group.permissions.all().values_list('content_type__model', flat=True)))
+        for x in sorted(set(group.permissions.all().values_list('content_type__model', flat=True))):
+            menu_model[models_names[x]] = x
+
+        return menu_model
 
 
 class ItemListView(ListView):
     model = None
     context_object_name = "items"
-    ordering = ["name"]
 
     def get_template_names(self):
         model_name = self.kwargs["model"]
@@ -62,7 +65,7 @@ class ItemListView(ListView):
 
     def get_queryset(self):
         self.model = all_menu_models.get(self.kwargs["model"])
-        return self.model.objects.all()
+        return self.model.objects.all().order_by('name')
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
@@ -110,6 +113,10 @@ class ItemDetailView(DetailView):
         return context
 
 
+@method_decorator(
+    user_passes_test(CV.logged_in, login_url=reverse_lazy("index")),
+    name="dispatch",
+)
 class MenuCategoryView(ListView):
     model = None
     context_object_name = "items"
@@ -131,6 +138,10 @@ class MenuCategoryView(ListView):
         return context
 
 
+@method_decorator(
+    user_passes_test(CV.logged_in, login_url=reverse_lazy("index")),
+    name="dispatch",
+)
 class DeleteItemView(View):
     def get(self, request, model, pk):
         model_obj = all_menu_models.get(model)
@@ -141,6 +152,10 @@ class DeleteItemView(View):
         return redirect(menu_url)
 
 
+@method_decorator(
+    user_passes_test(CV.logged_in, login_url=reverse_lazy("index")),
+    name="dispatch",
+)
 class EditItemView(DetailView):
     template_name = 'menu/edit_item.html'
     model = None
@@ -179,6 +194,10 @@ class EditItemView(DetailView):
         return self.render_to_response(context)
 
 
+@method_decorator(
+    user_passes_test(CV.logged_in, login_url=reverse_lazy("index")),
+    name="dispatch",
+)
 class CreateItemView(View):
     template_name = 'menu/create_item.html'
 

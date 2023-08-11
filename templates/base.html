@@ -137,9 +137,9 @@
                                     <ul>
                                         <li><a href="{% url 'profile' %}">За мен</a></li>
                                         {% if user.is_staff or user.is_admin %}
-                                            {% for model in models %}
+                                            {% for menu, model in models.items %}
                                                 <li><a href="{% url 'items-menu' model %}"
-                                                       data-menu="{{ model }}">{{ model }}</a></li>
+                                                       data-menu="{{ model }}">{{ menu }}</a></li>
                                             {% endfor %}
                                         {% endif %}
                                         <li><a href="{% url 'logout' %}">Изход</a></li>

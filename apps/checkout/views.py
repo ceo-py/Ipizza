@@ -1,3 +1,4 @@
+from django.contrib.auth.mixins import LoginRequiredMixin
 from django.shortcuts import render
 from django.views import View
 
@@ -12,7 +13,7 @@ def checkout(request):
     return render(request, "checkout/checkout.html")
 
 
-class CartView(View):
+class CartView(LoginRequiredMixin, View):
     template_name = "checkout/cart.html"
 
     def get(self, request):
