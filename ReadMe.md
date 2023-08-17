@@ -14,7 +14,7 @@ This repository outlines the seamless deployment of a dynamic website using a cu
 
 ## Explore the Site
 
-You can visit the deployed site and experience its features firsthand by clicking [here](https://www.ceo-py.eu/).
+You can visit the deployed site and experience its features firsthand by clicking [here](https://ipizza.ceo-py.eu/).
 
 ## Description
 
